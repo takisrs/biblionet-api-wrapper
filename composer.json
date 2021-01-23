@@ -1,0 +1,17 @@
+{
+    "name": "takisrs/biblionet",
+    "description": "Biblionet api wrapper",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Panos Pantazopoulos",
+            "email": "takispadaz@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    }
+}

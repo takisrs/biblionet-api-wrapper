@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+    php:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: biblionet_php
+        stdin_open: true
+        tty: true
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - ../:/usr/src/biblionet
+    phpdoc:
+        image: phpdoc/phpdoc:3
+        container_name: biblionet_phpdoc
+        volumes:
+            - ../:/data
+        command: run -d . -t docs
+
