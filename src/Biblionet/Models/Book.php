@@ -2,7 +2,8 @@
 
 namespace Biblionet\Models;
 
-class Book{
+class Book
+{
 
     private $id;
     private $title;
@@ -110,40 +111,43 @@ class Book{
 
         $this->place = new Place($data->PlaceID, $data->Place);
 
-    
+
         $this->series = $data->Series;
         //$this->series = $data->Series;
 
         $this->subseries = $data->SubSeries;
-    
+
         $this->multiVolumeTitle = $data->MultiVolumeTitle;
-    
+
         $this->volumeNo = $data->VolumeNo;
-    
+
         $this->specifications = $data->Specifications;
         $this->webAddress = $data->WebAddress;
-    
+
         $this->comments = $data->Comments;
 
         $this->lastUpdated = $data->LastUpdate;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getTitle(){
+    public function getTitle()
+    {
         return $this->title;
     }
 
-    public function getCategory(){
+    public function getCategory()
+    {
         return $this->category;
     }
 
 
     /**
      * Get the value of image
-     */ 
+     */
     public function getImage()
     {
         return $this->image;
@@ -151,7 +155,7 @@ class Book{
 
     /**
      * Get the value of subtitle
-     */ 
+     */
     public function getSubtitle()
     {
         return $this->subtitle;
@@ -159,7 +163,7 @@ class Book{
 
     /**
      * Get the value of alternativeTitle
-     */ 
+     */
     public function getAlternativeTitle()
     {
         return $this->alternativeTitle;
@@ -167,7 +171,7 @@ class Book{
 
     /**
      * Get the value of originalTitle
-     */ 
+     */
     public function getOriginalTitle()
     {
         return $this->originalTitle;
@@ -175,7 +179,7 @@ class Book{
 
     /**
      * Get the value of isbn
-     */ 
+     */
     public function getIsbn()
     {
         return $this->isbn;
@@ -183,7 +187,7 @@ class Book{
 
     /**
      * Get the value of isbn2
-     */ 
+     */
     public function getIsbn2()
     {
         return $this->isbn2;
@@ -191,7 +195,7 @@ class Book{
 
     /**
      * Get the value of isbn3
-     */ 
+     */
     public function getIsbn3()
     {
         return $this->isbn3;
@@ -199,7 +203,7 @@ class Book{
 
     /**
      * Get the value of publisher
-     */ 
+     */
     public function getPublisher()
     {
         return $this->publisher;
@@ -207,7 +211,7 @@ class Book{
 
     /**
      * Get the value of writer
-     */ 
+     */
     public function getWriter()
     {
         return $this->writer;
@@ -215,7 +219,7 @@ class Book{
 
     /**
      * Get the value of firstPublishDate
-     */ 
+     */
     public function getFirstPublishDate()
     {
         return $this->firstPublishDate;
@@ -223,7 +227,7 @@ class Book{
 
     /**
      * Get the value of currentPublishDate
-     */ 
+     */
     public function getCurrentPublishDate()
     {
         return $this->currentPublishDate;
@@ -231,7 +235,7 @@ class Book{
 
     /**
      * Get the value of futurePublishDate
-     */ 
+     */
     public function getFuturePublishDate()
     {
         return $this->futurePublishDate;
@@ -239,7 +243,7 @@ class Book{
 
     /**
      * Get the value of place
-     */ 
+     */
     public function getPlace()
     {
         return $this->place;
@@ -247,7 +251,7 @@ class Book{
 
     /**
      * Get the value of type
-     */ 
+     */
     public function getType()
     {
         return $this->type;
@@ -255,7 +259,7 @@ class Book{
 
     /**
      * Get the value of editionNo
-     */ 
+     */
     public function getEditionNo()
     {
         return $this->editionNo;
@@ -263,7 +267,7 @@ class Book{
 
     /**
      * Get the value of cover
-     */ 
+     */
     public function getCover()
     {
         return $this->cover;
@@ -271,7 +275,7 @@ class Book{
 
     /**
      * Get the value of dimensions
-     */ 
+     */
     public function getDimensions()
     {
         return $this->dimensions;
@@ -279,7 +283,7 @@ class Book{
 
     /**
      * Get the value of pageNo
-     */ 
+     */
     public function getPageNo()
     {
         return $this->pageNo;
@@ -287,7 +291,7 @@ class Book{
 
     /**
      * Get the value of availability
-     */ 
+     */
     public function getAvailability()
     {
         return $this->availability;
@@ -295,7 +299,7 @@ class Book{
 
     /**
      * Get the value of price
-     */ 
+     */
     public function getPrice()
     {
         return $this->price;
@@ -303,7 +307,7 @@ class Book{
 
     /**
      * Get the value of vat
-     */ 
+     */
     public function getVat()
     {
         return $this->vat;
@@ -311,7 +315,7 @@ class Book{
 
     /**
      * Get the value of weight
-     */ 
+     */
     public function getWeight()
     {
         return $this->weight;
@@ -319,7 +323,7 @@ class Book{
 
     /**
      * Get the value of ageFrom
-     */ 
+     */
     public function getAgeFrom()
     {
         return $this->ageFrom;
@@ -327,7 +331,7 @@ class Book{
 
     /**
      * Get the value of ageTo
-     */ 
+     */
     public function getAgeTo()
     {
         return $this->ageTo;
@@ -335,7 +339,7 @@ class Book{
 
     /**
      * Get the value of summary
-     */ 
+     */
     public function getSummary()
     {
         return $this->summary;
@@ -343,7 +347,7 @@ class Book{
 
     /**
      * Get the value of language
-     */ 
+     */
     public function getLanguage()
     {
         return $this->language;
@@ -351,7 +355,7 @@ class Book{
 
     /**
      * Get the value of originalLanguage
-     */ 
+     */
     public function getOriginalLanguage()
     {
         return $this->originalLanguage;
@@ -359,7 +363,7 @@ class Book{
 
     /**
      * Get the value of translatedLanguage
-     */ 
+     */
     public function getTranslatedLanguage()
     {
         return $this->translatedLanguage;
@@ -367,7 +371,7 @@ class Book{
 
     /**
      * Get the value of series
-     */ 
+     */
     public function getSeries()
     {
         return $this->series;
@@ -375,7 +379,7 @@ class Book{
 
     /**
      * Get the value of subseries
-     */ 
+     */
     public function getSubseries()
     {
         return $this->subseries;
@@ -383,7 +387,7 @@ class Book{
 
     /**
      * Get the value of multiVolumeTitle
-     */ 
+     */
     public function getMultiVolumeTitle()
     {
         return $this->multiVolumeTitle;
@@ -391,7 +395,7 @@ class Book{
 
     /**
      * Get the value of volumeNo
-     */ 
+     */
     public function getVolumeNo()
     {
         return $this->volumeNo;
@@ -399,7 +403,7 @@ class Book{
 
     /**
      * Get the value of specifications
-     */ 
+     */
     public function getSpecifications()
     {
         return $this->specifications;
@@ -407,7 +411,7 @@ class Book{
 
     /**
      * Get the value of webAddress
-     */ 
+     */
     public function getWebAddress()
     {
         return $this->webAddress;
@@ -415,7 +419,7 @@ class Book{
 
     /**
      * Get the value of comments
-     */ 
+     */
     public function getComments()
     {
         return $this->comments;
@@ -423,7 +427,7 @@ class Book{
 
     /**
      * Get the value of lastUpdated
-     */ 
+     */
     public function getLastUpdated()
     {
         return $this->lastUpdated;

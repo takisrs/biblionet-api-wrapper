@@ -2,7 +2,8 @@
 
 namespace Biblionet\Models;
 
-class Language{
+class Language
+{
 
     private int $id;
     private string $name;
@@ -13,11 +14,13 @@ class Language{
         $this->name = $name;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getName(){
+    public function getName()
+    {
         return $this->name;
     }
 }

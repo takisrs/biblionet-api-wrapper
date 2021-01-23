@@ -46,7 +46,7 @@ class ApiFetcher
 
         if (!is_array($ids)) $ids = [$ids];
 
-        foreach ($ids as $id){
+        foreach ($ids as $id) {
             $fetchedBooks = $this->_fetchBookById($id);
             if ($fetchedBooks && is_array($fetchedBooks)) {
                 $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
@@ -86,7 +86,7 @@ class ApiFetcher
             while (true) {
                 $page++;
                 $fetchedBooks = $this->_fetchBooksByMonth($dt->format("Y"), $dt->format("m"), $this->resultsPerPage, $page);
-    
+
                 if ($fetchedBooks && is_array($fetchedBooks)) {
                     $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
                     continue;
@@ -94,22 +94,22 @@ class ApiFetcher
                     break;
                 }
             }
-
         }
 
         return $this;
     }
 
-    public function filter($field, $value, $operator = "=="){
+    public function filter($field, $value, $operator = "==")
+    {
         $totalCount = count($this->fetchedItems);
         $filteredCount = $totalCount;
-        if ($totalCount > 0){      
-            if (property_exists($this->fetchedItems[0], $field)){
-                $this->fetchedItems = array_filter($this->fetchedItems, function($item) use($field, $value, $operator){
+        if ($totalCount > 0) {
+            if (property_exists($this->fetchedItems[0], $field)) {
+                $this->fetchedItems = array_filter($this->fetchedItems, function ($item) use ($field, $value, $operator) {
                     return Helper::compare($item->$field, $value, $operator);
                 });
                 $filteredCount = count($this->fetchedItems);
-                $this->logger->log(Logger::INFO, 'filter', 'filter by '.$field.$operator.$value, 'filtered:'.$filteredCount.'/'.$totalCount);
+                $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . $value, 'filtered:' . $filteredCount . '/' . $totalCount);
             }
         }
 
@@ -169,7 +169,7 @@ class ApiFetcher
 
         foreach ($types as $type) {
             if (!in_array($type, array_keys($availableTypes))) {
-                $this->logger->log(Logger::ERROR, 'api', 'fill', 'wrong input => '.$type);
+                $this->logger->log(Logger::ERROR, 'api', 'fill', 'wrong input => ' . $type);
                 continue;
             }
 
@@ -178,13 +178,13 @@ class ApiFetcher
                 $counter = 0;
                 foreach ($this->fetchedItems as $key => $item) {
                     $counter++;
-                    $this->logger->log(Logger::INFO, 'api', "fetch ".$type." ".$counter."/".$total, $item->TitlesID, Helper::getPercentage($counter, $total));
+                    $this->logger->log(Logger::INFO, 'api', "fetch " . $type . " " . $counter . "/" . $total, $item->TitlesID, Helper::getPercentage($counter, $total));
                     $extraFields = $this->_fetchAssociations($availableTypes[$type], $item->TitlesID);
 
                     if ($extraFields && is_array($extraFields)) {
 
                         // remove unnecessary data
-                        $extraFields = array_map(function($item) {
+                        $extraFields = array_map(function ($item) {
                             if (isset($item->TitlesID)) unset($item->TitlesID);
                             if (isset($item->Title)) unset($item->Title);
                             if (isset($item->Titles)) unset($item->Titles);
@@ -207,7 +207,7 @@ class ApiFetcher
 
     private function _fetchBookById($id)
     {
-        $this->logger->log(Logger::INFO, 'api', "fetch", "book:".$id);
+        $this->logger->log(Logger::INFO, 'api', "fetch", "book:" . $id);
 
         try {
             $response = $this->client->request('POST', 'get_title', [
@@ -224,7 +224,7 @@ class ApiFetcher
 
             if (Helper::isJson($result))
                 return $this->_mapResponseToObjects(json_decode($result)[0]);
-            else 
+            else
                 return NULL;
         } catch (ClientException $e) {
             $this->logger->log(Logger::ERROR, 'api', 'ClientException', $e->getMessage());
@@ -256,7 +256,7 @@ class ApiFetcher
 
             if (Helper::isJson($result))
                 return $this->_mapResponseToObjects(json_decode($result)[0]);
-            else 
+            else
                 return NULL;
         } catch (ClientException $e) {
             $this->logger->log(Logger::ERROR, 'api', 'ClientException', $e->getMessage());
@@ -268,11 +268,10 @@ class ApiFetcher
     private function _mapResponseToObjects($responseData)
     {
         $books = [];
-        if (is_array($responseData)) foreach($responseData as $bookData){
+        if (is_array($responseData)) foreach ($responseData as $bookData) {
             array_push($books, new Book($bookData));
         }
 
         return $books;
-
     }
 }
