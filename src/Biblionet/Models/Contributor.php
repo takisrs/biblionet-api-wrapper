@@ -7,13 +7,17 @@ class Contributor
 
     private int $id;
     private string $name;
-    private string $type;
+    private string $typeId;
+    private string $typeName;
+    private int $order;
 
-    public function __construct($id, $name, $type)
+    public function __construct($id, $name, $typeId = 1, $typeName = 'Συγγραφέας', $order = 0)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->type = $type;
+        $this->typeId = $typeId;
+        $this->typeName = $typeName;
+        $this->order = $order;
     }
 
     public function getId()
@@ -26,8 +30,21 @@ class Contributor
         return $this->name;
     }
 
-    public function getType()
+    public function getTypeId()
     {
-        return $this->type;
+        return $this->typeId;
+    }
+
+    public function getTypeName()
+    {
+        return $this->typeName;
+    }
+
+    /**
+     * Get the value of order
+     */ 
+    public function getOrder()
+    {
+        return $this->order;
     }
 }
