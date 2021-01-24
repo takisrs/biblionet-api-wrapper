@@ -2,6 +2,9 @@
 
 namespace Biblionet\Models;
 
+/**
+ * The mode class of Category
+ */
 class Category{
 
     private int $id;
@@ -9,8 +12,8 @@ class Category{
 
     /**
      * category constructor
-     * @param int $id
-     * @param string $name
+     * @param int $id category id
+     * @param string $name category name
      */
     public function __construct($id, $name)
     {

@@ -2,23 +2,26 @@
 
 namespace Biblionet\Models;
 
+/**
+ * The model class if Book
+ */
 class Book
 {
 
-    private $id;
-    private $title;
-    private $image;
-    private $subtitle;
-    private $alternativeTitle;
-    private $originalTitle;
+    private int $id;
+    private string $title;
+    private string $image;
+    private string $subtitle;
+    private string $alternativeTitle;
+    private string $originalTitle;
 
-    private $isbn;
-    private $isbn2;
-    private $isbn3;
+    private string $isbn;
+    private string $isbn2;
+    private string $isbn3;
 
-    private $publisher;
+    private Company $publisher;
 
-    private $writer;
+    private Contributor $writer;
 
     private $firstPublishDate;
     private $currentPublishDate;
