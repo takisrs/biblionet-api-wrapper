@@ -12,6 +12,15 @@ use Biblionet\Models\Book;
 
 class ApiFetcher
 {
+
+    const FETCH_BY_MONTH = 1;
+    const FETCH_BY_ID = 2;
+
+    const FILL_CONTRIBUTORS = 'get_contributors';
+    const FILL_COMPANIES = 'get_title_companies';
+    const FILL_SUBJECTS = 'get_title_subject';
+    const FILL_OPTIONS = [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS];
+
     private string $apiUsername;
     private string $apiPassword;
 
@@ -21,7 +30,7 @@ class ApiFetcher
 
     private array $fetchedItems = [];
 
-    function __construct($username, $password, $log = [Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING], $timeout = 10, $resultsPerPage = 50)
+    function __construct($username, $password, $log = [Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING], $requestTimeout = 10, $resultsPerPage = 50)
     {
 
         $this->apiUsername = $username;
@@ -30,7 +39,7 @@ class ApiFetcher
 
         $this->client = new Client([
             'base_uri' => 'https://biblionet.gr/wp-json/biblionetwebservice/',
-            'timeout'  => $timeout
+            'timeout'  => $requestTimeout
         ]);
 
         $this->logger = new Logger($log);
@@ -41,64 +50,93 @@ class ApiFetcher
         return $this->fetchedItems;
     }
 
-    public function fetchById($ids)
-    {
-
-        if (!is_array($ids)) $ids = [$ids];
-
-        foreach ($ids as $id) {
-            $fetchedBooks = $this->_fetchBookById($id);
-            if ($fetchedBooks && is_array($fetchedBooks)) {
-                $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
-            }
-        }
-
-        return $this;
-    }
 
     /**
      * Fetch books from biblionet api.
      * 
-     * You may pass a single month as argument or two month the fetch as the books published in that range.
+     * You may pass a single month as argument or two month to fetch the books published in that range.
      * 
-     * @param date $from
-     * @param date|null $to
+     * @param ApiFetcher::FETCH_BY_ID | ApiFetcher::FETCH_BY_MONTH $fetchType
+     * @param date|null $fromMonth
+     * @param date|null $toMonth
+     * @param array|null $ids
      * 
      * @return object $this
      * 
      */
-    public function fetch($from, $to = NULL)
+    public function fetch($fetchType = ApiFetcher::FETCH_BY_MONTH, $fromMonth = NULL, $toMonth = NULL, $ids = [])
     {
-        $to = $to ?: date("Y-m");
+        switch ($fetchType) {
+            case ApiFetcher::FETCH_BY_MONTH:
+                $monthsToFetch = [];
 
-        $start = new \DateTime($from);
-        $start->modify('first day of this month');
+                $fromMonth = $fromMonth ?: date("Y-m");
+                $fromMonth = new \DateTime($fromMonth);
+                $fromMonth->modify('first day of this month');
 
-        $end  = new \DateTime($to);
-        $end->modify('first day of next month');
+                if ($toMonth) {
+                    $toMonth = new \DateTime($toMonth);
+                    $toMonth->modify('first day of next month');
 
-        $interval = \DateInterval::createFromDateString('1 month');
-        $period = new \DatePeriod($start, $interval, $end);
+                    $interval = \DateInterval::createFromDateString('1 month');
+                    $period = new \DatePeriod($fromMonth, $interval, $toMonth);
 
-        foreach ($period as $dt) {
-            $page = 0;
-
-            while (true) {
-                $page++;
-                $fetchedBooks = $this->_fetchBooksByMonth($dt->format("Y"), $dt->format("m"), $this->resultsPerPage, $page);
-
-                if ($fetchedBooks && is_array($fetchedBooks)) {
-                    $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
-                    continue;
+                    foreach ($period as $dt) {
+                        array_push($monthsToFetch, $dt);
+                    }
                 } else {
-                    break;
+                    array_push($monthsToFetch, $fromMonth);
                 }
-            }
+
+                foreach ($monthsToFetch as $month) {
+                    $page = 0;
+
+                    while (true) {
+                        $page++;
+
+                        $fetchedBooks = $this->_makeRequest('get_month_titles', [
+                            'year' => $month->format("Y"),
+                            'month' => $month->format("m"),
+                            'titles_per_page' => $this->resultsPerPage,
+                            'page' => $page
+                        ]);
+
+                        if ($fetchedBooks && is_array($fetchedBooks)) {
+                            $fetchedBooks = $this->_mapResponseToObjects($fetchedBooks);
+                            $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
+                            continue;
+                        } else {
+                            break;
+                        }
+                    }
+                }
+                break;
+            case ApiFetcher::FETCH_BY_ID:
+                if (count($ids) > 0) foreach ($ids as $id) {
+                    $fetchedBooks = $this->_makeRequest('get_title', ['title' => $id]);
+                    if ($fetchedBooks && is_array($fetchedBooks)) {
+                        $fetchedBooks = $this->_mapResponseToObjects($fetchedBooks);
+                        $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
+                    }
+                }
+                break;
+
+            default:
+                $this->logger->log(Logger::ERROR, 'fetch', 'provide a valid fetch option');
         }
 
         return $this;
     }
 
+
+    /**
+     * filter the fetched items.
+     *
+     * @param string $field
+     * @param string $value
+     * @param string $operator
+     * @return void
+     */
     public function filter($field, $value, $operator = "==")
     {
         $totalCount = count($this->fetchedItems);
@@ -106,7 +144,9 @@ class ApiFetcher
         if ($totalCount > 0) {
             if (property_exists($this->fetchedItems[0], $field)) {
                 $this->fetchedItems = array_filter($this->fetchedItems, function ($item) use ($field, $value, $operator) {
-                    return Helper::compare($item->$field, $value, $operator);
+                    $getter = 'return $item->get' . ucfirst($field).'();';
+                    echo eval($getter);
+                    return Helper::compare(eval($getter), $value, $operator);
                 });
                 $filteredCount = count($this->fetchedItems);
                 $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . $value, 'filtered:' . $filteredCount . '/' . $totalCount);
@@ -117,105 +157,74 @@ class ApiFetcher
         return $this;
     }
 
-    private function _fetchAssociations($options, $id)
+
+    /**
+     * Fill the already fetched items with more info by making new api calls
+     *
+     * @param array $types
+     * @return void
+     */
+    public function fill($types = self::FILL_OPTIONS)
     {
-
-        try {
-            $response = $this->client->request('POST', $options['apiMethod'], [
-                'form_params' => [
-                    'username' => $this->apiUsername,
-                    'password' => $this->apiPassword,
-                    'title' => $id
-                ]
-            ]);
-
-            $body = $response->getBody();
-
-            $result = $body->getContents();
-
-            return Helper::isJson($result) ? json_decode($result)[0] : NULL;
-        } catch (ClientException $e) {
-            $this->logger->log(Logger::ERROR, 'api', 'ClientException', $e->getMessage());
-        } catch (ConnectException $e) {
-            $this->logger->log(Logger::ERROR, 'api', 'ConnectException', $e->getMessage());
-        }
-    }
-
-
-    public function fill($types)
-    {
-
-        if (!is_array($types)) $types = [$types];
 
         if (count($this->fetchedItems) == 0) {
-            $this->logger->log(Logger::WARNING, 'api', 'fill', 'no items');
+            $this->logger->log(Logger::WARNING, 'api', 'fill', 'no items fetched');
             return $this;
         }
 
-        $availableTypes = [
-            'contributors' => [
-                'name' => 'contributors',
-                'apiMethod' => 'get_contributors'
-            ],
-            'companies' => [
-                'name' => 'companies',
-                'apiMethod' => 'get_title_companies'
-            ],
-            'subjects' => [
-                'name' => 'subjects',
-                'apiMethod' => 'get_title_subject'
-            ]
-        ];
-
         foreach ($types as $type) {
-            if (!in_array($type, array_keys($availableTypes))) {
+            if (!in_array($type, self::FILL_OPTIONS)) {
                 $this->logger->log(Logger::ERROR, 'api', 'fill', 'wrong input => ' . $type);
                 continue;
             }
 
-            try {
-                $total = count($this->fetchedItems);
-                $counter = 0;
-                foreach ($this->fetchedItems as $key => $item) {
-                    $counter++;
-                    $this->logger->log(Logger::INFO, 'api', "fetch " . $type . " " . $counter . "/" . $total, $item->TitlesID, Helper::getPercentage($counter, $total));
-                    $extraFields = $this->_fetchAssociations($availableTypes[$type], $item->TitlesID);
+            $total = count($this->fetchedItems);
+            $counter = 0;
+            foreach ($this->fetchedItems as $key => $item) {
+                $counter++;
+                $this->logger->log(Logger::INFO, 'api', "fetch " . $type . " " . $counter . "/" . $total, $item->getId(), Helper::getPercentage($counter, $total));
+                $extraFields = $this->_makeRequest($type, ['title' => $item->getId()]);
 
-                    if ($extraFields && is_array($extraFields)) {
-
-                        // remove unnecessary data
-                        $extraFields = array_map(function ($item) {
-                            if (isset($item->TitlesID)) unset($item->TitlesID);
-                            if (isset($item->Title)) unset($item->Title);
-                            if (isset($item->Titles)) unset($item->Titles);
-                            return $item;
-                        }, $extraFields);
-
-                        $this->fetchedItems[$key]->$type = $extraFields;
+                if ($extraFields && is_array($extraFields)) {
+                    switch ($type){
+                        case self::FILL_SUBJECTS:
+                            $this->fetchedItems[$key]->setSubjects($extraFields);
+                            break;
+                        case self::FILL_CONTRIBUTORS:
+                            $this->fetchedItems[$key]->setContributors($extraFields);
+                            break;
+                        case self::FILL_COMPANIES:
+                            $this->fetchedItems[$key]->setCompanies($extraFields);
+                            break;
                     }
+                        
                 }
-            } catch (ClientException $e) {
-                $this->logger->log(Logger::ERROR, 'api', 'ClientException', $e->getMessage());
-            } catch (ConnectException $e) {
-                $this->logger->log(Logger::ERROR, 'api', 'ConnectException', $e->getMessage());
             }
+
         }
 
         return $this;
     }
 
-
-    private function _fetchBookById($id)
+    /**
+     * Make the api request
+     *
+     * @param string $method the api method
+     * @param array $params an array with params for the api call except authentication params
+     * @return void
+     */
+    private function _makeRequest($method, $params)
     {
-        $this->logger->log(Logger::INFO, 'api', "fetch", "book:" . $id);
+        $this->logger->log(Logger::INFO, 'api', "request", json_encode($params));
+
+        $requestParams = [
+            'username' => $this->apiUsername,
+            'password' => $this->apiPassword
+        ] + $params;
 
         try {
-            $response = $this->client->request('POST', 'get_title', [
-                'form_params' => [
-                    'username' => $this->apiUsername,
-                    'password' => $this->apiPassword,
-                    'title' => $id
-                ]
+            $response = $this->client->request('POST', $method, [
+                'form_params' => $requestParams
             ]);
 
             $body = $response->getBody();
@@ -223,7 +232,7 @@ class ApiFetcher
             $result = $body->getContents();
 
             if (Helper::isJson($result))
-                return $this->_mapResponseToObjects(json_decode($result)[0]);
+                return json_decode($result)[0];
             else
                 return NULL;
         } catch (ClientException $e) {
@@ -234,37 +243,12 @@ class ApiFetcher
     }
 
 
-    private function _fetchBooksByMonth($year, $month, $titles_per_page, $page)
-    {
-        try {
-            $this->logger->log(Logger::INFO, 'api', 'fetch', $month . '/' . $year . ' : ' . $titles_per_page * ($page - 1) . '=>' . $titles_per_page * $page);
-
-            $response = $this->client->request('POST', 'get_month_titles', [
-                'form_params' => [
-                    'username' => $this->apiUsername,
-                    'password' => $this->apiPassword,
-                    'year' => $year,
-                    'month' => $month,
-                    'titles_per_page' => $titles_per_page,
-                    'page' => $page
-                ]
-            ]);
-
-            $body = $response->getBody();
-
-            $result = $body->getContents();
-
-            if (Helper::isJson($result))
-                return $this->_mapResponseToObjects(json_decode($result)[0]);
-            else
-                return NULL;
-        } catch (ClientException $e) {
-            $this->logger->log(Logger::ERROR, 'api', 'ClientException', $e->getMessage());
-        } catch (ConnectException $e) {
-            $this->logger->log(Logger::ERROR, 'api', 'ConnectException', $e->getMessage());
-        }
-    }
-
+    /**
+     * Map api response to predefined objects
+     *
+     * @param array $responseData
+     * @return void
+     */
     private function _mapResponseToObjects($responseData)
     {
         $books = [];
