@@ -68,6 +68,10 @@ class Book
 
     private $lastUpdated;
 
+    private array $subjects = [];
+    private array $contributors = [];
+    private array $companies = [];
+
     public function __construct($data)
     {
         $this->id = $data->TitlesID;
@@ -102,11 +106,13 @@ class Book
         $this->summary = $data->Summary;
 
         $this->language = new Language($data->LanguageID, $data->Language);
+        
         $this->originaLanguage = new Language($data->LanguageOriginalID, $data->LanguageOriginal);
+        
         $this->translatedLanguage = new Language($data->LanguageTranslatedFromID, $data->LanguageTranslatedFrom);
 
-        $this->publisher = new Publisher($data->PublisherID, $data->Publisher);
-        $this->writer = new Writer($data->WriterID, $data->WriterName);
+        $this->publisher = new Company($data->PublisherID, $data->Publisher);
+        $this->writer = new Contributor($data->WriterID, $data->WriterName);
         $this->category = new Category($data->CategoryID, $data->Category);
 
         $this->place = new Place($data->PlaceID, $data->Place);
@@ -127,6 +133,33 @@ class Book
         $this->comments = $data->Comments;
 
         $this->lastUpdated = $data->LastUpdate;
+    }
+
+    public function setSubjects($data){
+        foreach ($data as $item){
+            if (!empty($item->SubjectsID)){
+                $subject = new Subject($item->SubjectsID, $item->SubjectTitle, $item->SubjectDDC, $item->SubjectOrder);
+                array_push($this->subjects, $subject);
+            }
+        }
+    }
+
+    public function setContributors($data){
+        foreach ($data as $item){
+            if (!empty($item->ContributorID)){
+                $contributor = new Contributor($item->ContributorID, $item->ContributorFullName, $item->ContributorTypeID, $item->ContributorType, $item->PresentOrder);
+                array_push($this->contributors, $contributor);
+            }
+        }
+    }
+
+    public function setCompanies($data){
+        foreach ($data as $item){
+            if (!empty($item->CompanyID)){
+                $company = new Company($item->CompanyID, $item->CompanyName, $item->ComKindID, $item->ComKindType, $item->PresentOrder);
+                array_push($this->companies, $company);
+            }
+        }
     }
 
     public function getId()
