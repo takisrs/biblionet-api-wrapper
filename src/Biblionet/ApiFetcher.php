@@ -21,15 +21,40 @@ class ApiFetcher
     const FILL_SUBJECTS = 'get_title_subject';
     const FILL_OPTIONS = [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS];
 
+    /**
+     * biblionet api username
+     */
     private string $apiUsername;
+
+    /**
+     * biblionet api password
+     */
     private string $apiPassword;
 
+    /**
+     * the num of results that requested per call
+     */
     private int $resultsPerPage;
 
+    /**
+     * an instance of the Biblionet\Logger class
+     */
     private Logger $logger;
 
+    /**
+     * keep the array of fetched items as Biblionet\Models\Book objects
+     */
     private array $fetchedItems = [];
 
+    /**
+     * ApiFetcher constructor
+     * 
+     * @param string $username
+     * @param string $password
+     * @param array $log
+     * @param integer $requestTimeout
+     * @param integer $resultsPerPage
+     */
     function __construct($username, $password, $log = [Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING], $requestTimeout = 10, $resultsPerPage = 50)
     {
 
@@ -45,6 +70,11 @@ class ApiFetcher
         $this->logger = new Logger($log);
     }
 
+    /**
+     * Returns the fetched items
+     *
+     * @return array an array of Book objects
+     */
     public function getFetchedItems()
     {
         return $this->fetchedItems;
@@ -56,7 +86,7 @@ class ApiFetcher
      * 
      * You may pass a single month as argument or two month to fetch the books published in that range.
      * 
-     * @param ApiFetcher::FETCH_BY_ID | ApiFetcher::FETCH_BY_MONTH $fetchType
+     * @param string $fetchType
      * @param date|null $fromMonth
      * @param date|null $toMonth
      * @param array|null $ids
@@ -132,25 +162,29 @@ class ApiFetcher
     /**
      * filter the fetched items.
      *
-     * @param string $field
-     * @param string $value
-     * @param string $operator
+     * @param string $field provide a book property
+     * @param string $value the value to search for in the property
+     * @param string $operator the operation to use for the comparison
      * @return void
      */
     public function filter($field, $value, $operator = "==")
     {
         $totalCount = count($this->fetchedItems);
         $filteredCount = $totalCount;
+        $properties = explode('.', $field);
         if ($totalCount > 0) {
-            if (property_exists($this->fetchedItems[0], $field)) {
-                $this->fetchedItems = array_filter($this->fetchedItems, function ($item) use ($field, $value, $operator) {
-                    $getter = 'return $item->get' . ucfirst($field).'();';
-                    echo eval($getter);
+            if (property_exists($this->fetchedItems[0], $properties[0])) {
+                $this->fetchedItems = array_filter($this->fetchedItems, function ($item) use ($properties, $value, $operator) {
+                    $command = '';
+                    foreach ($properties as $prop){
+                        $command.='->get'.ucfirst($prop).'()';
+                    }
+                    $getter = 'return $item'.$command.';';
                     return Helper::compare(eval($getter), $value, $operator);
                 });
                 $filteredCount = count($this->fetchedItems);
                 $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . $value, 'filtered:' . $filteredCount . '/' . $totalCount);
-            }
+           }
         }
 
 
@@ -244,10 +278,10 @@ class ApiFetcher
 
 
     /**
-     * Map api response to predefined objects
+     * Map api response to the predefined models
      *
-     * @param array $responseData
-     * @return void
+     * @param array $responseData the data returned for the api request
+     * @return array a list of Book objects
      */
     private function _mapResponseToObjects($responseData)
     {
