@@ -3,8 +3,8 @@ version: "3.8"
 services:
     php:
         build: 
-            context: .
-            dockerfile: Dockerfile
+            context: ../
+            dockerfile: .docker/Dockerfile
         container_name: biblionet_php
         stdin_open: true
         tty: true
@@ -18,5 +18,5 @@ services:
         container_name: biblionet_phpdoc
         volumes:
             - ../:/data
-        command: run -d . -t docs
+        command: run
 

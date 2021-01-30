@@ -2,15 +2,47 @@
 
 namespace Biblionet;
 
+/**
+ * A helper class to output some logs.
+ * 
+ * @todo Add extra output options: file, mail etc
+ * @author Panagiotis Pantazopoulos <takispadaz@gmail.com>
+ */
 class Logger
 {
 
+    /**
+     * Success log type
+     */
     const SUCCESS = 'success';
+
+    /**
+     * Error log type
+     */
     const ERROR = 'error';
+
+    /**
+     * Info log type
+     */
     const INFO = 'info';
+
+    /**
+     * Warning log type
+     */
     const WARNING = 'warning';
 
+    /**
+     * The log types to handle
+     *
+     * @var array
+     */
     private $show = [];
+
+    /**
+     * The colors for each log type. For cli or web server output.
+     *
+     * @var array
+     */
     private $colors = [
         self::SUCCESS => ["CLI" => "32m", "WEB" => "#00FF00"],
         self::ERROR => ["CLI" => "31m", "WEB" => "#FF0000"],
@@ -18,21 +50,46 @@ class Logger
         self::WARNING => ["CLI" => "33m", "WEB" => "#FFFF00"]
     ];
 
+    /**
+     * Constructor.
+     * 
+     * @param array $show An array with the error types to be handled by the class
+     */
     public function __construct($show = [self::SUCCESS, self::ERROR, self::INFO, self::WARNING])
     {
         $this->show = $show;
     }
 
+    /**
+     * Enables the logging
+     *
+     * @return void
+     */
     public function enable()
     {
         $this->debug = true;
     }
 
+    /**
+     * Disables the logging
+     *
+     * @return void
+     */
     public function disable()
     {
         $this->debug = false;
     }
 
+    /**
+     * Logs an entry.
+     *
+     * @param string $type The type of the log entry
+     * @param string $entity
+     * @param string $title A title describing the log entry
+     * @param string $text A description for the log entry
+     * @param string $percentage A value indicating the percentage of completion
+     * @return void
+     */
     public function log($type, $entity, $title, $text = "", $percentage = NULL)
     {
 
@@ -62,7 +119,6 @@ class Logger
 
             ob_flush();
             flush();
-            //TODO: add logging to database
         }
     }
 }

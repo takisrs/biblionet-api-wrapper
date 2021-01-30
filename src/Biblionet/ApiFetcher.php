@@ -10,15 +10,48 @@ use GuzzleHttp\Client;
 
 use Biblionet\Models\Book;
 
+/**
+ * A wrapper php class for biblionet api.
+ * 
+ * This library will help you fetch books' data from biblionei database.
+ * It provides some helpful methods that simplify the communication with their api.
+ * 
+ * @link https://biblionet.gr/webservice/ Biblionet API documentation
+ * 
+ * @author Panagiots Pantazopoulos <takispadaz@gmail.com>
+ * 
+ */
 class ApiFetcher
 {
 
+    /**
+     * Pass this to fetch(), to fetch by month
+     */
     const FETCH_BY_MONTH = 1;
+
+    /**
+     * Pass this to fetch(), to fetch by id
+     */
     const FETCH_BY_ID = 2;
 
+    /**
+     * Pass to fill() to fetch books' contributors
+     */
     const FILL_CONTRIBUTORS = 'get_contributors';
+
+    /**
+     * Pass to fill() to fetch books' companies
+     */
     const FILL_COMPANIES = 'get_title_companies';
+
+    /**
+     * Pass to fill() to fetch books' subjects
+     */
     const FILL_SUBJECTS = 'get_title_subject';
+
+    /**
+     * An array with all the available fill options
+     */
     const FILL_OPTIONS = [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS];
 
     /**
@@ -37,23 +70,25 @@ class ApiFetcher
     private int $resultsPerPage;
 
     /**
-     * an instance of the Biblionet\Logger class
+     * an instance of the logger class
+     * @see Biblionet\Logger the logger class
      */
     private Logger $logger;
 
     /**
      * keep the array of fetched items as Biblionet\Models\Book objects
+     * @see Biblionet\Models\Book the model of Book
      */
     private array $fetchedItems = [];
 
     /**
      * ApiFetcher constructor
      * 
-     * @param string $username
-     * @param string $password
-     * @param array $log
-     * @param integer $requestTimeout
-     * @param integer $resultsPerPage
+     * @param string $username Biblionet's api username that required for authentication
+     * @param string $password Biblionet's api password that required for authentication
+     * @param array $log Configure the Logger class
+     * @param integer $requestTimeout The timeout in seconds for an api request
+     * @param integer $resultsPerPage Number of items to fetch per request. Max value is 50
      */
     function __construct($username, $password, $log = [Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING], $requestTimeout = 10, $resultsPerPage = 50)
     {
@@ -71,9 +106,12 @@ class ApiFetcher
     }
 
     /**
-     * Returns the fetched items
+     * Returns the fetched items.
+     * 
+     * Use this method to get all the data that have been fetch from biblionet's api.
      *
      * @return array an array of Book objects
+     * @see \Biblionet\Models\Book Book model class
      */
     public function getFetchedItems()
     {
@@ -82,30 +120,30 @@ class ApiFetcher
 
 
     /**
-     * Fetch books from biblionet api.
+     * Fetch books from biblionet's api.
      * 
-     * You may pass a single month as argument or two month to fetch the books published in that range.
+     * You may call with method to fetch data for a specific book, or provide a month to fetch books published in that month. 
+     * You may also provide two months to fetch books published in that range.
      * 
-     * @param string $fetchType
-     * @param date|null $fromMonth
-     * @param date|null $toMonth
-     * @param array|null $ids
+     * @param string $fetchType Provide the fetch type.
+     * @param string|int|array $param1 Depending on the fetch type, you may input a month or an array with specific book id
+     * @param date $param2 Used only when fetchType = ApiFetcher::FETCH_BY_MONTH.
      * 
      * @return object $this
      * 
      */
-    public function fetch($fetchType = ApiFetcher::FETCH_BY_MONTH, $fromMonth = NULL, $toMonth = NULL, $ids = [])
+    public function fetch($fetchType = ApiFetcher::FETCH_BY_MONTH, $param1 = NULL, $param2 = NULL)
     {
         switch ($fetchType) {
             case ApiFetcher::FETCH_BY_MONTH:
                 $monthsToFetch = [];
 
-                $fromMonth = $fromMonth ?: date("Y-m");
+                $fromMonth = $param1 ?: date("Y-m");
                 $fromMonth = new \DateTime($fromMonth);
                 $fromMonth->modify('first day of this month');
 
-                if ($toMonth) {
-                    $toMonth = new \DateTime($toMonth);
+                if ($param2) {
+                    $toMonth = new \DateTime($param2);
                     $toMonth->modify('first day of next month');
 
                     $interval = \DateInterval::createFromDateString('1 month');
@@ -142,8 +180,16 @@ class ApiFetcher
                 }
                 break;
             case ApiFetcher::FETCH_BY_ID:
-                if (count($ids) > 0) foreach ($ids as $id) {
-                    $fetchedBooks = $this->_makeRequest('get_title', ['title' => $id]);
+                if (is_array($param1)){
+                    if (count($param1) > 0) foreach ($param1 as $id) {
+                        $fetchedBooks = $this->_makeRequest('get_title', ['title' => $id]);
+                        if ($fetchedBooks && is_array($fetchedBooks)) {
+                            $fetchedBooks = $this->_mapResponseToObjects($fetchedBooks);
+                            $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
+                        }
+                    }
+                } else {
+                    $fetchedBooks = $this->_makeRequest('get_title', ['title' => $param1]);
                     if ($fetchedBooks && is_array($fetchedBooks)) {
                         $fetchedBooks = $this->_mapResponseToObjects($fetchedBooks);
                         $this->fetchedItems = array_merge($this->fetchedItems, $fetchedBooks);
@@ -160,12 +206,15 @@ class ApiFetcher
 
 
     /**
-     * filter the fetched items.
+     * Filter the already fetched items.
+     * 
+     * Use this method to narrow down book that have already been fetched.
+     * You may, for example, use this method to keep only the hardcopy books from the fetched items.
      *
      * @param string $field provide a book property
      * @param string $value the value to search for in the property
      * @param string $operator the operation to use for the comparison
-     * @return void
+     * @return object
      */
     public function filter($field, $value, $operator = "==")
     {
@@ -193,10 +242,13 @@ class ApiFetcher
 
 
     /**
-     * Fill the already fetched items with more info by making new api calls
+     * Fill with extra data the already fetched items.
+     * 
+     * You may use this method to fetch extra data from biblionet's api for the books that you have fetch with the fetch() method.
+     * This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow.
      *
      * @param array $types
-     * @return void
+     * @return object
      */
     public function fill($types = self::FILL_OPTIONS)
     {
@@ -241,11 +293,13 @@ class ApiFetcher
     }
 
     /**
-     * Make the api request
+     * Makes the api request.
+     * 
+     * Just a helper method to make the requested api request with the help of Guzzle
      *
      * @param string $method the api method
      * @param array $params an array with params for the api call except authentication params
-     * @return void
+     * @return null|array
      */
     private function _makeRequest($method, $params)
     {
@@ -278,10 +332,10 @@ class ApiFetcher
 
 
     /**
-     * Map api response to the predefined models
+     * Maps api response to the predefined models.
      *
-     * @param array $responseData the data returned for the api request
-     * @return array a list of Book objects
+     * @param array $responseData the data returned by the api request
+     * @return array a list of Book std objects
      */
     private function _mapResponseToObjects($responseData)
     {

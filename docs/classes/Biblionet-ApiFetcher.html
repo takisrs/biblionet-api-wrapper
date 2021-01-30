@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Documentation</title>
+    <title>Biblionet API Wrapper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
     <link rel="icon" href="images/favicon.ico"/>
@@ -18,7 +18,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Documentation</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Biblionet API Wrapper</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -50,26 +50,9 @@
         
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
-                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/biblionet.html"><abbr title="\Biblionet">Biblionet</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/biblionet.html"><abbr title="\Biblionet">Biblionet</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/biblionet-models.html"><abbr title="\Biblionet\Models">Models</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/composer.html"><abbr title="\Composer">Composer</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/composer-autoload.html"><abbr title="\Composer\Autoload">Autoload</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/guzzlehttp.html"><abbr title="\GuzzleHttp">GuzzleHttp</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/guzzlehttp-cookie.html"><abbr title="\GuzzleHttp\Cookie">Cookie</abbr></a></li>
-                                            <li><a href="namespaces/guzzlehttp-exception.html"><abbr title="\GuzzleHttp\Exception">Exception</abbr></a></li>
-                                            <li><a href="namespaces/guzzlehttp-handler.html"><abbr title="\GuzzleHttp\Handler">Handler</abbr></a></li>
-                                            <li><a href="namespaces/guzzlehttp-promise.html"><abbr title="\GuzzleHttp\Promise">Promise</abbr></a></li>
-                                            <li><a href="namespaces/guzzlehttp-psr7.html"><abbr title="\GuzzleHttp\Psr7">Psr7</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/psr.html"><abbr title="\Psr">Psr</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/psr-http.html"><abbr title="\Psr\Http">Http</abbr></a></li>
                                     </ul>
                         </section>
 
@@ -104,12 +87,39 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 </aside>
 
-        
+            <p class="phpdocumentor-summary">A wrapper php class for biblionet api.</p>
+
+    <section class="phpdocumentor-description"><p>This library will help you fetch books' data from biblionei database.
+It provides some helpful methods that simplify the communication with their api.</p>
+</section>
 
 
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">link</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <a class="phpdocumentor-tag-link" href="https://biblionet.gr/webservice/"> <p>Biblionet API documentation</p>
+ </a>
+                    
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">author</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Panagiots Pantazopoulos <a href="mailto:takispadaz@gmail.com">takispadaz@gmail.com</a></p>
+</section>
+
+                                    </dd>
+                        </dl>
 
 
 
@@ -122,116 +132,305 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_ID">FETCH_BY_ID</a>
+    <span>
+        &nbsp;= 2                    </span>
+</dt>
+<dd>Pass this to fetch(), to fetch by id</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH">FETCH_BY_MONTH</a>
+    <span>
+        &nbsp;= 1                    </span>
+</dt>
+<dd>Pass this to fetch(), to fetch by month</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_COMPANIES">FILL_COMPANIES</a>
+    <span>
+        &nbsp;= &#039;get_title_companies&#039;                    </span>
+</dt>
+<dd>Pass to fill() to fetch books&#039; companies</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS">FILL_CONTRIBUTORS</a>
+    <span>
+        &nbsp;= &#039;get_contributors&#039;                    </span>
+</dt>
+<dd>Pass to fill() to fetch books&#039; contributors</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_OPTIONS">FILL_OPTIONS</a>
+    <span>
+        &nbsp;= [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]                    </span>
+</dt>
+<dd>An array with all the available fill options</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS">FILL_SUBJECTS</a>
+    <span>
+        &nbsp;= &#039;get_title_subject&#039;                    </span>
+</dt>
+<dd>Pass to fill() to fetch books&#039; subjects</dd>
+
                 <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Biblionet-ApiFetcher.html#property_apiPassword">$apiPassword</a>
     <span>
                 &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>biblionet api password</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Biblionet-ApiFetcher.html#property_apiUsername">$apiUsername</a>
     <span>
                 &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>biblionet api username</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Biblionet-ApiFetcher.html#property_fetchedItems">$fetchedItems</a>
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
-<dd></dd>
+<dd>keep the array of fetched items as Biblionet\Models\Book objects</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Biblionet-ApiFetcher.html#property_logger">$logger</a>
     <span>
                 &nbsp;: <a href="classes/Biblionet-Logger.html"><abbr title="\Biblionet\Logger">Logger</abbr></a>            </span>
 </dt>
-<dd></dd>
+<dd>an instance of the logger class</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Biblionet-ApiFetcher.html#property_resultsPerPage">$resultsPerPage</a>
     <span>
                 &nbsp;: int            </span>
 </dt>
-<dd></dd>
+<dd>the num of results that requested per call</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Biblionet-ApiFetcher.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>ApiFetcher constructor</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Biblionet-ApiFetcher.html#method_fetch">fetch()</a>
     <span>
                         &nbsp;: object    </span>
 </dt>
-<dd>Fetch books from biblionet api.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-ApiFetcher.html#method_fetchById">fetchById()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>Fetch books from biblionet&#039;s api.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Biblionet-ApiFetcher.html#method_fill">fill()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                        &nbsp;: object    </span>
 </dt>
-<dd></dd>
+<dd>Fill with extra data the already fetched items.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Biblionet-ApiFetcher.html#method_filter">filter()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                        &nbsp;: object    </span>
 </dt>
-<dd></dd>
+<dd>Filter the already fetched items.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Biblionet-ApiFetcher.html#method_getFetchedItems">getFetchedItems()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Returns the fetched items.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Biblionet-ApiFetcher.html#method__fetchAssociations">_fetchAssociations()</a>
+    <a href="classes/Biblionet-ApiFetcher.html#method__makeRequest">_makeRequest()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                        &nbsp;: null|array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Biblionet-ApiFetcher.html#method__fetchBookById">_fetchBookById()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Biblionet-ApiFetcher.html#method__fetchBooksByMonth">_fetchBooksByMonth()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>Makes the api request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Biblionet-ApiFetcher.html#method__mapResponseToObjects">_mapResponseToObjects()</a>
     <span>
-                        &nbsp;: mixed    </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd></dd>
+<dd>Maps api response to the predefined models.</dd>
 
         </dl>
 
 
 
         
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/Biblionet-ApiFetcher.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FETCH_BY_ID">
+        FETCH_BY_ID
+        <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_ID" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">35</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Pass this to fetch(), to fetch by id</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">FETCH_BY_ID</span>
+    = <span class="phpdocumentor-signature__default-value">2</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FETCH_BY_MONTH">
+        FETCH_BY_MONTH
+        <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">30</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Pass this to fetch(), to fetch by month</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">FETCH_BY_MONTH</span>
+    = <span class="phpdocumentor-signature__default-value">1</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FILL_COMPANIES">
+        FILL_COMPANIES
+        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_COMPANIES" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">45</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Pass to fill() to fetch books&#039; companies</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">FILL_COMPANIES</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;get_title_companies&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FILL_CONTRIBUTORS">
+        FILL_CONTRIBUTORS
+        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Pass to fill() to fetch books&#039; contributors</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">FILL_CONTRIBUTORS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;get_contributors&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FILL_OPTIONS">
+        FILL_OPTIONS
+        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_OPTIONS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">55</span>
+</aside>
+
+        <p class="phpdocumentor-summary">An array with all the available fill options</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">FILL_OPTIONS</span>
+    = <span class="phpdocumentor-signature__default-value">[self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FILL_SUBJECTS">
+        FILL_SUBJECTS
+        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">50</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Pass to fill() to fetch books&#039; subjects</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">FILL_SUBJECTS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;get_title_subject&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
 
         
     <section class="phpdocumentor-properties">
@@ -255,17 +454,19 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">biblionet api password</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$apiPassword</span>
     </code>
 
-    
+        <section class="phpdocumentor-description"></section>
+
     
 
 </article>
@@ -285,17 +486,19 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">biblionet api username</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$apiUsername</span>
     </code>
 
-    
+        <section class="phpdocumentor-description"></section>
+
     
 
 </article>
@@ -315,18 +518,36 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">keep the array of fetched items as Biblionet\Models\Book objects</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$fetchedItems</span>
      = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
+        <section class="phpdocumentor-description"></section>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\Biblionet\Biblionet\Models\Book">Book</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>the model of Book</p>
+</section>
+
+                                    </dd>
+                        </dl>
 
 </article>
                     <article
@@ -345,18 +566,36 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">76</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">an instance of the logger class</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type"><a href="classes/Biblionet-Logger.html"><abbr title="\Biblionet\Logger">Logger</abbr></a></span>
     <span class="phpdocumentor-signature__name">$logger</span>
     </code>
 
+        <section class="phpdocumentor-description"></section>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\Biblionet\Biblionet\Logger">Logger</abbr></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>the logger class</p>
+</section>
+
+                                    </dd>
+                        </dl>
 
 </article>
                     <article
@@ -375,17 +614,19 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">the num of results that requested per call</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$resultsPerPage</span>
     </code>
 
-    
+        <section class="phpdocumentor-description"></section>
+
     
 
 </article>
@@ -409,51 +650,63 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">93</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">ApiFetcher constructor</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$username</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$log</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timeout</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$resultsPerPage</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">50</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$username</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$log</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requestTimeout</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$resultsPerPage</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">50</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-    
+        <section class="phpdocumentor-description"></section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$username</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Biblionet's api username that required for authentication</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$password</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Biblionet's api password that required for authentication</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$log</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[Logger::SUCCESS, Logger::ERROR, Logger::INFO, Logger::WARNING]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Configure the Logger class</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$timeout</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$requestTimeout</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                  = <span class="phpdocumentor-signature__argument__default-value">10</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The timeout in seconds for an api request</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$resultsPerPage</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                  = <span class="phpdocumentor-signature__argument__default-value">50</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Number of items to fetch per request. Max value is 50</p>
+</section>
+
             </dd>
             </dl>
 
@@ -479,34 +732,46 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">135</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Fetch books from biblionet api.</p>
+        <p class="phpdocumentor-summary">Fetch books from biblionet&#039;s api.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">fetch</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$from</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$to</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
+                <span class="phpdocumentor-signature__name">fetch</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fetchType</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">ApiFetcher::FETCH_BY_MONTH</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|int|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param1</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param2</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
 
-        <section class="phpdocumentor-description"><p>You may pass a single month as argument or two month the fetch as the books published in that range.</p>
+        <section class="phpdocumentor-description"><p>You may call with method to fetch data for a specific book, or provide a month to fetch books published in that month.
+You may also provide two months to fetch books published in that range.</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$from</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr></span>
-                            </dt>
+                <span class="phpdocumentor-signature__argument__name">$fetchType</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">ApiFetcher::FETCH_BY_MONTH</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>Provide the fetch type.</p>
+</section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$to</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr>|null</span>
+                <span class="phpdocumentor-signature__argument__name">$param1</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|int|array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">NULL</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>Depending on the fetch type, you may input a month or an array with specific book id</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$param2</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">NULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Used only when fetchType = ApiFetcher::FETCH_BY_MONTH.</p>
+</section>
 
             </dd>
             </dl>
@@ -527,48 +792,6 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_fetchById">
-        fetchById()
-        <a href="classes/Biblionet-ApiFetcher.html#method_fetchById" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">44</span>
-</aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">fetchById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ids</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$ids</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_fill">
         fill()
         <a href="classes/Biblionet-ApiFetcher.html#method_fill" class="headerlink"><i class="fas fa-link"></i></a>
@@ -576,30 +799,35 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">145</span>
+    <span class="phpdocumentor-element-found-in__line">253</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">Fill with extra data the already fetched items.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">fill</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$types</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">fill</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$types</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::FILL_OPTIONS</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>You may use this method to fetch extra data from biblionet's api for the books that you have fetch with the fetch() method.
+This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$types</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::FILL_OPTIONS</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"></section>
+
             </dd>
             </dl>
 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">object</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -618,44 +846,54 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">103</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">Filter the already fetched items.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$operator</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&quot;==&quot;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$operator</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&quot;==&quot;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>Use this method to narrow down book that have already been fetched.
+You may, for example, use this method to keep only the hardcopy books from the fetched items.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$field</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>provide a book property</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$value</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>the value to search for in the property</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$operator</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&quot;==&quot;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>the operation to use for the comparison</p>
+</section>
+
             </dd>
             </dl>
 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">object</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -674,22 +912,42 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns the fetched items.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFetchedItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">getFetchedItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>Use this method to get all the data that have been fetch from biblionet's api.</p>
+</section>
 
     
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a></span>
+                                        
+                                                 <section class="phpdocumentor-description"><p>Book model class</p>
+</section>
+
+                                    </dd>
+                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>an array of Book objects</p>
+</section>
 
     
 </article>
@@ -699,149 +957,51 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method__fetchAssociations">
-        _fetchAssociations()
-        <a href="classes/Biblionet-ApiFetcher.html#method__fetchAssociations" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method__makeRequest">
+        _makeRequest()
+        <a href="classes/Biblionet-ApiFetcher.html#method__makeRequest" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">120</span>
+    <span class="phpdocumentor-element-found-in__line">304</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">Makes the api request.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">_fetchAssociations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">_makeRequest</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$method</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">null|array&lt;string|int, mixed&gt;</span></code>
 
-    
+        <section class="phpdocumentor-description"><p>Just a helper method to make the requested api request with the help of Guzzle</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$options</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$method</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>the api method</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$params</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>an array with params for the api call except authentication params</p>
+</section>
+
             </dd>
             </dl>
 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method__fetchBookById">
-        _fetchBookById()
-        <a href="classes/Biblionet-ApiFetcher.html#method__fetchBookById" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">208</span>
-</aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">_fetchBookById</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method__fetchBooksByMonth">
-        _fetchBooksByMonth()
-        <a href="classes/Biblionet-ApiFetcher.html#method__fetchBooksByMonth" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">237</span>
-</aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">_fetchBooksByMonth</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$year</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$month</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$titles_per_page</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$page</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$year</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$month</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$titles_per_page</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$page</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">null|array&lt;string|int, mixed&gt;</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -860,32 +1020,37 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">268</span>
+    <span class="phpdocumentor-element-found-in__line">340</span>
 </aside>
 
-    
+        <p class="phpdocumentor-summary">Maps api response to the predefined models.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">_mapResponseToObjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$responseData</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">_mapResponseToObjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$responseData</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-    
+        <section class="phpdocumentor-description"></section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$responseData</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>the data returned by the api request</p>
+</section>
+
             </dd>
             </dl>
 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"></section>
+            <section class="phpdocumentor-description"><p>a list of Book std objects</p>
+</section>
 
     
 </article>

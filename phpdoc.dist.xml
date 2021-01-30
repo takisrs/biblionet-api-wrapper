@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>Biblionet API Wrapper</title>
+    <transformer>
+        <target>docs</target>
+    </transformer>
+    <files>
+        <directory>src</directory>
+        <ignore>test/*</ignore>
+    </files>
+</phpdoc>

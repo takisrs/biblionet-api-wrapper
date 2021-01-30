@@ -78,7 +78,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    Place
+    Subject
 
     
     
@@ -86,12 +86,12 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Place.php"><a href="files/src-biblionet-models-place.html"><abbr title="src/Biblionet/Models/Place.php">Place.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">8</span>
 </aside>
 
-            <p class="phpdocumentor-summary">The model class of Place</p>
+            <p class="phpdocumentor-summary">The model class of subject</p>
 
     <section class="phpdocumentor-description"></section>
 
@@ -109,39 +109,67 @@
 
 <dl class="phpdocumentor-table-of-contents">
                 <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-Models-Place.html#property_id">$id</a>
+    <a href="classes/Biblionet-Models-Subject.html#property_ddc">$ddc</a>
+    <span>
+                &nbsp;: string            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Biblionet-Models-Subject.html#property_id">$id</a>
     <span>
                 &nbsp;: int            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-Models-Place.html#property_name">$name</a>
+    <a href="classes/Biblionet-Models-Subject.html#property_name">$name</a>
     <span>
                 &nbsp;: string            </span>
 </dt>
 <dd></dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Biblionet-Models-Subject.html#property_order">$order</a>
+    <span>
+                &nbsp;: int            </span>
+</dt>
+<dd></dd>
+
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Models-Place.html#method___construct">__construct()</a>
+    <a href="classes/Biblionet-Models-Subject.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Place constructor</dd>
+<dd>Subject constructor</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Models-Place.html#method_getId">getId()</a>
+    <a href="classes/Biblionet-Models-Subject.html#method_getDdc">getDdc()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Get the DDC of subject</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Biblionet-Models-Subject.html#method_getId">getId()</a>
     <span>
                         &nbsp;: int    </span>
 </dt>
-<dd>Get the id of the place</dd>
+<dd>Get the id of subject</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Models-Place.html#method_getName">getName()</a>
+    <a href="classes/Biblionet-Models-Subject.html#method_getName">getName()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
-<dd>Get the name of the place</dd>
+<dd>Get the name of subject</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Biblionet-Models-Subject.html#method_getOrder">getOrder()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Get the order of subject</dd>
 
         </dl>
 
@@ -153,8 +181,38 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Biblionet-Models-Place.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Biblionet-Models-Subject.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_ddc">
+        $ddc
+        <a href="classes/Biblionet-Models-Subject.html#property_ddc" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">13</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$ddc</span>
+    </code>
+
+    
+    
+
+</article>
                     <article
         class="
             phpdocumentor-element
@@ -164,12 +222,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_id">
         $id
-        <a href="classes/Biblionet-Models-Place.html#property_id" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Biblionet-Models-Subject.html#property_id" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Place.php"><a href="files/src-biblionet-models-place.html"><abbr title="src/Biblionet/Models/Place.php">Place.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">11</span>
 </aside>
@@ -194,12 +252,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_name">
         $name
-        <a href="classes/Biblionet-Models-Place.html#property_name" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Biblionet-Models-Subject.html#property_name" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Place.php"><a href="files/src-biblionet-models-place.html"><abbr title="src/Biblionet/Models/Place.php">Place.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">12</span>
 </aside>
@@ -215,12 +273,42 @@
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_order">
+        $order
+        <a href="classes/Biblionet-Models-Subject.html#property_order" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">14</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$order</span>
+    </code>
+
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Biblionet-Models-Place.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Biblionet-Models-Subject.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -230,19 +318,19 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Biblionet-Models-Place.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Biblionet-Models-Subject.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Place.php"><a href="files/src-biblionet-models-place.html"><abbr title="src/Biblionet/Models/Place.php">Place.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Place constructor</p>
+        <p class="phpdocumentor-summary">Subject constructor</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ddc</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -259,6 +347,22 @@
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$name</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$ddc</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -281,17 +385,51 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getId">
-        getId()
-        <a href="classes/Biblionet-Models-Place.html#method_getId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getDdc">
+        getDdc()
+        <a href="classes/Biblionet-Models-Subject.html#method_getDdc" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Place.php"><a href="files/src-biblionet-models-place.html"><abbr title="src/Biblionet/Models/Place.php">Place.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Get the id of the place</p>
+        <p class="phpdocumentor-summary">Get the DDC of subject</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getDdc</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getId">
+        getId()
+        <a href="classes/Biblionet-Models-Subject.html#method_getId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">37</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get the id of subject</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -317,15 +455,15 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_getName">
         getName()
-        <a href="classes/Biblionet-Models-Place.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Biblionet-Models-Subject.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Place.php"><a href="files/src-biblionet-models-place.html"><abbr title="src/Biblionet/Models/Place.php">Place.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Get the name of the place</p>
+        <p class="phpdocumentor-summary">Get the name of subject</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -338,6 +476,40 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getOrder">
+        getOrder()
+        <a href="classes/Biblionet-Models-Subject.html#method_getOrder" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Models/Subject.php"><a href="files/src-biblionet-models-subject.html"><abbr title="src/Biblionet/Models/Subject.php">Subject.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">63</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get the order of subject</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getOrder</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -359,7 +531,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Biblionet-Models-Place.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Biblionet-Models-Subject.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

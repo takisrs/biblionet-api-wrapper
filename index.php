@@ -7,7 +7,7 @@ use Biblionet\ApiFetcher;
 
 $fetcher = new ApiFetcher("testuser", "testpsw");
 
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH)->filter('id', 252655, ">")->fill();
+$fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252822)->filter('place.name', "Αθήνα", "==")->fill();
 
 $fetchedItems = $fetcher->getFetchedItems();
 
