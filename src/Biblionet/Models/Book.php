@@ -109,9 +109,9 @@ class Book
         $this->summary = $data->Summary;
 
         $this->language = new Language($data->LanguageID, $data->Language);
-        
+
         $this->originaLanguage = new Language($data->LanguageOriginalID, $data->LanguageOriginal);
-        
+
         $this->translatedLanguage = new Language($data->LanguageTranslatedFromID, $data->LanguageTranslatedFrom);
 
         $this->publisher = new Company($data->PublisherID, $data->Publisher);
@@ -138,31 +138,49 @@ class Book
         $this->lastUpdated = $data->LastUpdate;
     }
 
-    public function setSubjects($data){
-        foreach ($data as $item){
-            if (!empty($item->SubjectsID)){
+    public function setSubjects($data)
+    {
+        foreach ($data as $item) {
+            if (!empty($item->SubjectsID)) {
                 $subject = new Subject($item->SubjectsID, $item->SubjectTitle, $item->SubjectDDC, $item->SubjectOrder);
                 array_push($this->subjects, $subject);
             }
         }
     }
 
-    public function setContributors($data){
-        foreach ($data as $item){
-            if (!empty($item->ContributorID)){
+    public function setContributors($data)
+    {
+        foreach ($data as $item) {
+            if (!empty($item->ContributorID)) {
                 $contributor = new Contributor($item->ContributorID, $item->ContributorFullName, $item->ContributorTypeID, $item->ContributorType, $item->PresentOrder);
                 array_push($this->contributors, $contributor);
             }
         }
     }
 
-    public function setCompanies($data){
-        foreach ($data as $item){
-            if (!empty($item->CompanyID)){
+    public function setCompanies($data)
+    {
+        foreach ($data as $item) {
+            if (!empty($item->CompanyID)) {
                 $company = new Company($item->CompanyID, $item->CompanyName, $item->ComKindID, $item->ComKindType, $item->PresentOrder);
                 array_push($this->companies, $company);
             }
         }
+    }
+
+    public function getSubjects()
+    {
+        return $this->subjects;
+    }
+
+    public function getContributors()
+    {
+        return $this->contributors;
+    }
+
+    public function getCompanies()
+    {
+        return $this->companies;
     }
 
     public function getId()
