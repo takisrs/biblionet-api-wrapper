@@ -8,6 +8,10 @@ Read more about [biblionet](https://biblionet.gr/) and their [api](https://bibli
 
 To be updated
 
+
+## Documentation
+You may read the full documentation [here](docs/index.html)
+
 ## How to use with examples
 
 ### Fetch a book by id, and display some basic info

@@ -21,15 +21,15 @@ Search.appendIndex(
             "summary": "Fetch\u0020books\u0020from\u0020biblionet\u0027s\u0020api.",
             "url": "classes/Biblionet-ApiFetcher.html#method_fetch"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003Afilter\u0028\u0029",
-            "name": "filter",
-            "summary": "Filter\u0020the\u0020already\u0020fetched\u0020items.",
-            "url": "classes/Biblionet-ApiFetcher.html#method_filter"
-        },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003Afill\u0028\u0029",
             "name": "fill",
             "summary": "Fill\u0020with\u0020extra\u0020data\u0020the\u0020already\u0020fetched\u0020items.",
             "url": "classes/Biblionet-ApiFetcher.html#method_fill"
+        },                {
+            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003Afilter\u0028\u0029",
+            "name": "filter",
+            "summary": "Filter\u0020the\u0020already\u0020fetched\u0020items.",
+            "url": "classes/Biblionet-ApiFetcher.html#method_filter"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A_makeRequest\u0028\u0029",
             "name": "_makeRequest",
@@ -43,32 +43,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFETCH_BY_MONTH",
             "name": "FETCH_BY_MONTH",
-            "summary": "Pass\u0020this\u0020to\u0020fetch\u0028\u0029,\u0020to\u0020fetch\u0020by\u0020month",
+            "summary": "",
             "url": "classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFETCH_BY_ID",
             "name": "FETCH_BY_ID",
-            "summary": "Pass\u0020this\u0020to\u0020fetch\u0028\u0029,\u0020to\u0020fetch\u0020by\u0020id",
+            "summary": "",
             "url": "classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_ID"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_CONTRIBUTORS",
             "name": "FILL_CONTRIBUTORS",
-            "summary": "Pass\u0020to\u0020fill\u0028\u0029\u0020to\u0020fetch\u0020books\u0027\u0020contributors",
+            "summary": "",
             "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_COMPANIES",
             "name": "FILL_COMPANIES",
-            "summary": "Pass\u0020to\u0020fill\u0028\u0029\u0020to\u0020fetch\u0020books\u0027\u0020companies",
+            "summary": "",
             "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_COMPANIES"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_SUBJECTS",
             "name": "FILL_SUBJECTS",
-            "summary": "Pass\u0020to\u0020fill\u0028\u0029\u0020to\u0020fetch\u0020books\u0027\u0020subjects",
+            "summary": "",
             "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_OPTIONS",
             "name": "FILL_OPTIONS",
-            "summary": "An\u0020array\u0020with\u0020all\u0020the\u0020available\u0020fill\u0020options",
+            "summary": "",
             "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_OPTIONS"
         },                {
             "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A\u0024apiUsername",
@@ -178,7 +178,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Biblionet\\Models\\Book",
             "name": "Book",
-            "summary": "The\u0020model\u0020class\u0020if\u0020Book",
+            "summary": "The\u0020model\u0020class\u0020of\u0020Book",
             "url": "classes/Biblionet-Models-Book.html"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A__construct\u0028\u0029",
@@ -188,32 +188,47 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AsetSubjects\u0028\u0029",
             "name": "setSubjects",
-            "summary": "",
+            "summary": "Init\u0020Book\u0027s\u0020subjects",
             "url": "classes/Biblionet-Models-Book.html#method_setSubjects"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AsetContributors\u0028\u0029",
             "name": "setContributors",
-            "summary": "",
+            "summary": "Init\u0020Book\u0027s\u0020contributors",
             "url": "classes/Biblionet-Models-Book.html#method_setContributors"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AsetCompanies\u0028\u0029",
             "name": "setCompanies",
-            "summary": "",
+            "summary": "Init\u0020Book\u0027s\u0020companies",
             "url": "classes/Biblionet-Models-Book.html#method_setCompanies"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubjects\u0028\u0029",
+            "name": "getSubjects",
+            "summary": "Get\u0020the\u0020array\u0020of\u0020Subject\u0020objs",
+            "url": "classes/Biblionet-Models-Book.html#method_getSubjects"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetContributors\u0028\u0029",
+            "name": "getContributors",
+            "summary": "Get\u0020the\u0020array\u0020of\u0020Contributor\u0020objs",
+            "url": "classes/Biblionet-Models-Book.html#method_getContributors"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetCompanies\u0028\u0029",
+            "name": "getCompanies",
+            "summary": "Get\u0020the\u0020array\u0020of\u0020Company\u0020objs",
+            "url": "classes/Biblionet-Models-Book.html#method_getCompanies"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020id",
             "url": "classes/Biblionet-Models-Book.html#method_getId"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetTitle\u0028\u0029",
             "name": "getTitle",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020title",
             "url": "classes/Biblionet-Models-Book.html#method_getTitle"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetCategory\u0028\u0029",
             "name": "getCategory",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020category",
             "url": "classes/Biblionet-Models-Book.html#method_getCategory"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetImage\u0028\u0029",
@@ -313,17 +328,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetPrice\u0028\u0029",
             "name": "getPrice",
-            "summary": "Get\u0020the\u0020value\u0020of\u0020price",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020price\u0020\u0028euros\u0029",
             "url": "classes/Biblionet-Models-Book.html#method_getPrice"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetVat\u0028\u0029",
             "name": "getVat",
-            "summary": "Get\u0020the\u0020value\u0020of\u0020vat",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020vat\u0020\u0028percentage\u0029",
             "url": "classes/Biblionet-Models-Book.html#method_getVat"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetWeight\u0028\u0029",
             "name": "getWeight",
-            "summary": "Get\u0020the\u0020value\u0020of\u0020weight",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020weight\u0020\u0028grams\u0029",
             "url": "classes/Biblionet-Models-Book.html#method_getWeight"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetAgeFrom\u0028\u0029",
@@ -361,11 +376,6 @@ Search.appendIndex(
             "summary": "Get\u0020the\u0020value\u0020of\u0020series",
             "url": "classes/Biblionet-Models-Book.html#method_getSeries"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubseries\u0028\u0029",
-            "name": "getSubseries",
-            "summary": "Get\u0020the\u0020value\u0020of\u0020subseries",
-            "url": "classes/Biblionet-Models-Book.html#method_getSubseries"
-        },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetMultiVolumeTitle\u0028\u0029",
             "name": "getMultiVolumeTitle",
             "summary": "Get\u0020the\u0020value\u0020of\u0020multiVolumeTitle",
@@ -396,199 +406,234 @@ Search.appendIndex(
             "summary": "Get\u0020the\u0020value\u0020of\u0020lastUpdated",
             "url": "classes/Biblionet-Models-Book.html#method_getLastUpdated"
         },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSeriesNo\u0028\u0029",
+            "name": "getSeriesNo",
+            "summary": "Get\u0020mapped\u0020to\u0020SeriesNo",
+            "url": "classes/Biblionet-Models-Book.html#method_getSeriesNo"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubSeries\u0028\u0029",
+            "name": "getSubSeries",
+            "summary": "Get\u0020mapped\u0020to\u0020SubSeries",
+            "url": "classes/Biblionet-Models-Book.html#method_getSubSeries"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubSeriesNo\u0028\u0029",
+            "name": "getSubSeriesNo",
+            "summary": "Get\u0020mapped\u0020to\u0020SubSeriesNo",
+            "url": "classes/Biblionet-Models-Book.html#method_getSubSeriesNo"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetVolumeCount\u0028\u0029",
+            "name": "getVolumeCount",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020volumeCount",
+            "url": "classes/Biblionet-Models-Book.html#method_getVolumeCount"
+        },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024id",
             "name": "id",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020TitlesID",
             "url": "classes/Biblionet-Models-Book.html#property_id"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024title",
             "name": "title",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Title",
             "url": "classes/Biblionet-Models-Book.html#property_title"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024image",
             "name": "image",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020CoverImage",
             "url": "classes/Biblionet-Models-Book.html#property_image"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subtitle",
             "name": "subtitle",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Subtitle",
             "url": "classes/Biblionet-Models-Book.html#property_subtitle"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024alternativeTitle",
             "name": "alternativeTitle",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020AlternativeTitle",
             "url": "classes/Biblionet-Models-Book.html#property_alternativeTitle"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024originalTitle",
             "name": "originalTitle",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020OriginalTitle",
             "url": "classes/Biblionet-Models-Book.html#property_originalTitle"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn",
             "name": "isbn",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020ISBN",
             "url": "classes/Biblionet-Models-Book.html#property_isbn"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn2",
             "name": "isbn2",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020ISBN_2",
             "url": "classes/Biblionet-Models-Book.html#property_isbn2"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn3",
             "name": "isbn3",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020ISBN_3",
             "url": "classes/Biblionet-Models-Book.html#property_isbn3"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024publisher",
             "name": "publisher",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Publisher,\u0020PublisherID",
             "url": "classes/Biblionet-Models-Book.html#property_publisher"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024writer",
             "name": "writer",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Writer,\u0020WriterID,\u0020WriterName",
             "url": "classes/Biblionet-Models-Book.html#property_writer"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024firstPublishDate",
             "name": "firstPublishDate",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020FirstPublishDate",
             "url": "classes/Biblionet-Models-Book.html#property_firstPublishDate"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024currentPublishDate",
             "name": "currentPublishDate",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020CurrentPublishDate",
             "url": "classes/Biblionet-Models-Book.html#property_currentPublishDate"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024futurePublishDate",
             "name": "futurePublishDate",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020FuturePublishDate",
             "url": "classes/Biblionet-Models-Book.html#property_futurePublishDate"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024place",
             "name": "place",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020PlaceID,\u0020Place",
             "url": "classes/Biblionet-Models-Book.html#property_place"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024type",
             "name": "type",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020TitleType",
             "url": "classes/Biblionet-Models-Book.html#property_type"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024editionNo",
             "name": "editionNo",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020EditionNo",
             "url": "classes/Biblionet-Models-Book.html#property_editionNo"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024cover",
             "name": "cover",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Cover",
             "url": "classes/Biblionet-Models-Book.html#property_cover"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024dimensions",
             "name": "dimensions",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Dimensions",
             "url": "classes/Biblionet-Models-Book.html#property_dimensions"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024pageNo",
             "name": "pageNo",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020PageNo",
             "url": "classes/Biblionet-Models-Book.html#property_pageNo"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024availability",
             "name": "availability",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Availability",
             "url": "classes/Biblionet-Models-Book.html#property_availability"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024price",
             "name": "price",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Price",
             "url": "classes/Biblionet-Models-Book.html#property_price"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024vat",
             "name": "vat",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020VAT",
             "url": "classes/Biblionet-Models-Book.html#property_vat"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024weight",
             "name": "weight",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Weight",
             "url": "classes/Biblionet-Models-Book.html#property_weight"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024ageFrom",
             "name": "ageFrom",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020AgeFrom",
             "url": "classes/Biblionet-Models-Book.html#property_ageFrom"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024ageTo",
             "name": "ageTo",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020AgeTo",
             "url": "classes/Biblionet-Models-Book.html#property_ageTo"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024summary",
             "name": "summary",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Summary",
             "url": "classes/Biblionet-Models-Book.html#property_summary"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024language",
             "name": "language",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020LanguageID,\u0020Language",
             "url": "classes/Biblionet-Models-Book.html#property_language"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024originalLanguage",
             "name": "originalLanguage",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020LanguageOriginalID,\u0020LanguageOriginal",
             "url": "classes/Biblionet-Models-Book.html#property_originalLanguage"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024translatedLanguage",
             "name": "translatedLanguage",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020LanguageTranslatedFromID,\u0020LanguageTranslatedFrom",
             "url": "classes/Biblionet-Models-Book.html#property_translatedLanguage"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024series",
             "name": "series",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Series",
             "url": "classes/Biblionet-Models-Book.html#property_series"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subseries",
-            "name": "subseries",
-            "summary": "",
-            "url": "classes/Biblionet-Models-Book.html#property_subseries"
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024seriesNo",
+            "name": "seriesNo",
+            "summary": "Mapped\u0020to\u0020SeriesNo",
+            "url": "classes/Biblionet-Models-Book.html#property_seriesNo"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subSeries",
+            "name": "subSeries",
+            "summary": "Mapped\u0020to\u0020SubSeries",
+            "url": "classes/Biblionet-Models-Book.html#property_subSeries"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subSeriesNo",
+            "name": "subSeriesNo",
+            "summary": "Mapped\u0020to\u0020SubSeriesNo",
+            "url": "classes/Biblionet-Models-Book.html#property_subSeriesNo"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024multiVolumeTitle",
             "name": "multiVolumeTitle",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020MultiVolumeTitle",
             "url": "classes/Biblionet-Models-Book.html#property_multiVolumeTitle"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024volumeNo",
             "name": "volumeNo",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020VolumeNo",
             "url": "classes/Biblionet-Models-Book.html#property_volumeNo"
+        },                {
+            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024volumeCount",
+            "name": "volumeCount",
+            "summary": "Mapped\u0020to\u0020VolumeCount",
+            "url": "classes/Biblionet-Models-Book.html#property_volumeCount"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024specifications",
             "name": "specifications",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Specifications",
             "url": "classes/Biblionet-Models-Book.html#property_specifications"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024webAddress",
             "name": "webAddress",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020WebAddress",
             "url": "classes/Biblionet-Models-Book.html#property_webAddress"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024comments",
             "name": "comments",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020Comments",
             "url": "classes/Biblionet-Models-Book.html#property_comments"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024category",
             "name": "category",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020CategoryID,\u0020Category",
             "url": "classes/Biblionet-Models-Book.html#property_category"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024lastUpdated",
             "name": "lastUpdated",
-            "summary": "",
+            "summary": "Mapped\u0020to\u0020LastUpdate",
             "url": "classes/Biblionet-Models-Book.html#property_lastUpdated"
         },                {
             "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subjects",
@@ -608,7 +653,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Biblionet\\Models\\Category",
             "name": "Category",
-            "summary": "The\u0020mode\u0020class\u0020of\u0020Category",
+            "summary": "The\u0020model\u0020class\u0020of\u0020Category",
             "url": "classes/Biblionet-Models-Category.html"
         },                {
             "fqsen": "\\Biblionet\\Models\\Category\u003A\u003A__construct\u0028\u0029",
@@ -818,7 +863,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Biblionet\\Models\\Subject",
             "name": "Subject",
-            "summary": "The\u0020model\u0020class\u0020of\u0020subject",
+            "summary": "The\u0020model\u0020class\u0020of\u0020Subject",
             "url": "classes/Biblionet-Models-Subject.html"
         },                {
             "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003A__construct\u0028\u0029",
