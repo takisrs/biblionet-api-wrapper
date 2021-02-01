@@ -4,6 +4,8 @@ namespace Biblionet\Models;
 
 /**
  * The model class of Book
+ * 
+ * @author Panagiots Pantazopoulos <takispadaz@gmail.com>
  */
 class Book
 {
@@ -218,9 +220,20 @@ class Book
      */ 
     private \Datetime $lastUpdated;
 
-    private array $subjects = [];
-    private array $contributors = [];
-    private array $companies = [];
+    /**
+     * @var Subject[]
+     */
+    private $subjects = [];
+
+    /**
+     * @var Contributor[]
+     */
+    private $contributors = [];
+
+    /**
+     * @var Company[]
+     */
+    private $companies = [];
 
     public function __construct($data)
     {

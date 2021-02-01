@@ -4,6 +4,8 @@ namespace Biblionet\Models;
 
 /**
  * The model class of Language
+ * 
+ * @author Panagiots Pantazopoulos <takispadaz@gmail.com>
  */
 class Language
 {

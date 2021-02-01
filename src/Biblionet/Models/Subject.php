@@ -4,6 +4,8 @@ namespace Biblionet\Models;
 
 /**
  * The model class of Subject
+ * 
+ * @author Panagiots Pantazopoulos <takispadaz@gmail.com>
  */
 class Subject
 {

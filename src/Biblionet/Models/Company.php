@@ -4,6 +4,8 @@ namespace Biblionet\Models;
 
 /**
  * The model class of Company (ex. publisher)
+ * 
+ * @author Panagiots Pantazopoulos <takispadaz@gmail.com>
  */
 class Company
 {

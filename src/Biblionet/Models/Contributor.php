@@ -4,6 +4,8 @@ namespace Biblionet\Models;
 
 /**
  * The model class of Contributor (ex. writer)
+ * 
+ * @author Panagiots Pantazopoulos <takispadaz@gmail.com>
  */
 class Contributor
 {
