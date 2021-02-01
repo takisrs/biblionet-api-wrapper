@@ -3,7 +3,7 @@
 namespace Biblionet\Models;
 
 /**
- * The model class of subject
+ * The model class of Subject
  */
 class Subject
 {
@@ -16,25 +16,25 @@ class Subject
     /**
      * Subject constructor
      *
-     * @param integer $id
+     * @param int $id
      * @param string $name
      * @param string $ddc
-     * @param integer $order
+     * @param int $order
      */
     public function __construct($id, $name, $ddc, $order)
     {
         $this->id = $id;
         $this->name = $name;
         $this->ddc = $ddc;
-        $this->order = $order;
+        $this->order = (int)$order;
     }
 
     /**
      * Get the id of subject
      *
-     * @return integer
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
@@ -44,23 +44,27 @@ class Subject
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
      * Get the DDC of subject
-     */ 
-    public function getDdc()
+     * 
+     * @return string
+     */
+    public function getDdc(): string
     {
         return $this->ddc;
     }
 
     /**
      * Get the order of subject
-     */ 
-    public function getOrder()
+     * 
+     * @return int
+     */
+    public function getOrder(): int
     {
         return $this->order;
     }

@@ -3,9 +3,10 @@
 namespace Biblionet\Models;
 
 /**
- * The mode class of Category
+ * The model class of Category
  */
-class Category{
+class Category
+{
 
     private int $id;
     private string $name;
@@ -17,23 +18,27 @@ class Category{
      */
     public function __construct($id, $name)
     {
-        $this->id = $id;
+        $this->id = (int)$id;
         $this->name = $name;
     }
 
     /**
      * get the id of the category
+     * 
      * @return int
      */
-    public function getId(){
+    public function getId(): int
+    {
         return $this->id;
     }
 
     /**
      * get the name of the category
+     * 
      * @return string
      */
-    public function getName(){
+    public function getName(): string
+    {
         return $this->name;
     }
 }

@@ -14,9 +14,9 @@ class Helper
      * Checks if a string is json
      *
      * @param string $str the input string to check
-     * @return boolean
+     * @return bool
      */
-    public static function isJson($str)
+    public static function isJson(string $str): bool
     {
         json_decode($str);
         return (json_last_error() == JSON_ERROR_NONE);
@@ -25,9 +25,9 @@ class Helper
     /**
      * Checks if the script has been called through cli
      *
-     * @return boolean
+     * @return bool
      */
-    public static function isCli()
+    public static function isCli(): bool
     {
         return PHP_SAPI === 'cli';
     }
@@ -39,7 +39,7 @@ class Helper
      * @param integer $total the total number of items
      * @return float the percentage
      */
-    public static function getPercentage($current, $total)
+    public static function getPercentage(int $current, int $total): float
     {
         return number_format((100 * $current) / $total, 2);
     }
@@ -50,9 +50,9 @@ class Helper
      * @param int|string $var1 The first of the variables to compare
      * @param int|string $var2 The second of the variables to compare
      * @param string $operator The oprator to use ==, !=, >=, <=, >, <
-     * @return boolean The result of the comparison
+     * @return bool The result of the comparison
      */
-    public static function compare($var1, $var2, $operator)
+    public static function compare(mixed $var1, mixed $var2, string $operator): bool
     {
         switch ($operator) {
             case "==":

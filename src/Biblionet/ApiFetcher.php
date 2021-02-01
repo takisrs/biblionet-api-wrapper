@@ -4,6 +4,7 @@ namespace Biblionet;
 
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Exception\ServerException;
 
 use Biblionet\Helper;
 use GuzzleHttp\Client;
@@ -13,7 +14,7 @@ use Biblionet\Models\Book;
 /**
  * A wrapper php class for biblionet api.
  * 
- * This library will help you fetch books' data from biblionei database.
+ * This library will help you fetch books' data from biblionet database.
  * It provides some helpful methods that simplify the communication with their api.
  * 
  * @link https://biblionet.gr/webservice/ Biblionet API documentation
@@ -24,34 +25,12 @@ use Biblionet\Models\Book;
 class ApiFetcher
 {
 
-    /**
-     * Pass this to fetch(), to fetch by month
-     */
     const FETCH_BY_MONTH = 1;
-
-    /**
-     * Pass this to fetch(), to fetch by id
-     */
     const FETCH_BY_ID = 2;
 
-    /**
-     * Pass to fill() to fetch books' contributors
-     */
     const FILL_CONTRIBUTORS = 'get_contributors';
-
-    /**
-     * Pass to fill() to fetch books' companies
-     */
     const FILL_COMPANIES = 'get_title_companies';
-
-    /**
-     * Pass to fill() to fetch books' subjects
-     */
     const FILL_SUBJECTS = 'get_title_subject';
-
-    /**
-     * An array with all the available fill options
-     */
     const FILL_OPTIONS = [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS];
 
     /**
@@ -81,6 +60,7 @@ class ApiFetcher
      */
     private array $fetchedItems = [];
 
+
     /**
      * ApiFetcher constructor
      * 
@@ -105,15 +85,16 @@ class ApiFetcher
         $this->logger = new Logger($log);
     }
 
+
     /**
      * Returns the fetched items.
      * 
      * Use this method to get all the data that have been fetch from biblionet's api.
      *
-     * @return array an array of Book objects
+     * @return Book[] an array of Book objects
      * @see \Biblionet\Models\Book Book model class
      */
-    public function getFetchedItems()
+    public function getFetchedItems(): array
     {
         return $this->fetchedItems;
     }
@@ -129,10 +110,10 @@ class ApiFetcher
      * @param string|int|array $param1 Depending on the fetch type, you may input a month or an array with specific book id
      * @param date $param2 Used only when fetchType = ApiFetcher::FETCH_BY_MONTH.
      * 
-     * @return object $this
+     * @return ApiFetcher
      * 
      */
-    public function fetch($fetchType = ApiFetcher::FETCH_BY_MONTH, $param1 = NULL, $param2 = NULL)
+    public function fetch($fetchType = ApiFetcher::FETCH_BY_MONTH, $param1 = NULL, $param2 = NULL): ApiFetcher
     {
         switch ($fetchType) {
             case ApiFetcher::FETCH_BY_MONTH:
@@ -206,51 +187,15 @@ class ApiFetcher
 
 
     /**
-     * Filter the already fetched items.
-     * 
-     * Use this method to narrow down book that have already been fetched.
-     * You may, for example, use this method to keep only the hardcopy books from the fetched items.
-     *
-     * @param string $field provide a book property
-     * @param string $value the value to search for in the property
-     * @param string $operator the operation to use for the comparison
-     * @return object
-     */
-    public function filter($field, $value, $operator = "==")
-    {
-        $totalCount = count($this->fetchedItems);
-        $filteredCount = $totalCount;
-        $properties = explode('.', $field);
-        if ($totalCount > 0) {
-            if (property_exists($this->fetchedItems[0], $properties[0])) {
-                $this->fetchedItems = array_filter($this->fetchedItems, function ($item) use ($properties, $value, $operator) {
-                    $command = '';
-                    foreach ($properties as $prop){
-                        $command.='->get'.ucfirst($prop).'()';
-                    }
-                    $getter = 'return $item'.$command.';';
-                    return Helper::compare(eval($getter), $value, $operator);
-                });
-                $filteredCount = count($this->fetchedItems);
-                $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . $value, 'filtered:' . $filteredCount . '/' . $totalCount);
-           }
-        }
-
-
-        return $this;
-    }
-
-
-    /**
      * Fill with extra data the already fetched items.
      * 
      * You may use this method to fetch extra data from biblionet's api for the books that you have fetch with the fetch() method.
      * This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow.
      *
      * @param array $types
-     * @return object
+     * @return ApiFetcher
      */
-    public function fill($types = self::FILL_OPTIONS)
+    public function fill($types = self::FILL_OPTIONS): ApiFetcher
     {
 
         if (count($this->fetchedItems) == 0) {
@@ -292,6 +237,43 @@ class ApiFetcher
         return $this;
     }
 
+
+    /**
+     * Filter the already fetched items.
+     * 
+     * Use this method to narrow down book that have already been fetched.
+     * You may, for example, use this method to keep only the hardcopy books from the fetched items.
+     *
+     * @param string $field provide a book property
+     * @param string|int $value the value to search for in the property
+     * @param string $operator the operation to use for the comparison
+     * @return ApiFetcher
+     */
+    public function filter(string $field, string $value, string $operator = "=="): ApiFetcher
+    {
+        $totalCount = count($this->fetchedItems);
+        $filteredCount = $totalCount;
+        $properties = explode('.', $field);
+        if ($totalCount > 0) {
+            if (property_exists($this->fetchedItems[0], $properties[0])) {
+                $this->fetchedItems = array_filter($this->fetchedItems, function ($item) use ($properties, $value, $operator) {
+                    $command = '';
+                    foreach ($properties as $prop){
+                        $command.='->get'.ucfirst($prop).'()';
+                    }
+                    $getter = 'return $item'.$command.';';
+                    return Helper::compare(eval($getter), $value, $operator);
+                });
+                $filteredCount = count($this->fetchedItems);
+                $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . $value, 'filtered:' . $filteredCount . '/' . $totalCount);
+           }
+        }
+
+
+        return $this;
+    }
+
+
     /**
      * Makes the api request.
      * 
@@ -299,11 +281,11 @@ class ApiFetcher
      *
      * @param string $method the api method
      * @param array $params an array with params for the api call except authentication params
-     * @return null|array
+     * @return mixed
      */
-    private function _makeRequest($method, $params)
+    private function _makeRequest($method, $params): mixed
     {
-        $this->logger->log(Logger::INFO, 'api', "request", json_encode($params));
+        $this->logger->log(Logger::INFO, 'api', 'request', json_encode($params));
 
         $requestParams = [
             'username' => $this->apiUsername,
@@ -327,6 +309,8 @@ class ApiFetcher
             $this->logger->log(Logger::ERROR, 'api', 'ClientException', $e->getMessage());
         } catch (ConnectException $e) {
             $this->logger->log(Logger::ERROR, 'api', 'ConnectException', $e->getMessage());
+        } catch (ServerException $e) {
+            $this->logger->log(Logger::ERROR, 'api', 'ServerException', $e->getMessage());
         }
     }
 
@@ -337,7 +321,7 @@ class ApiFetcher
      * @param array $responseData the data returned by the api request
      * @return array a list of Book std objects
      */
-    private function _mapResponseToObjects($responseData)
+    private function _mapResponseToObjects($responseData): array
     {
         $books = [];
         if (is_array($responseData)) foreach ($responseData as $bookData) {

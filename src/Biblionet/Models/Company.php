@@ -17,27 +17,27 @@ class Company
     /**
      * Company constructor
      *
-     * @param integer $id category id
+     * @param int $id category id
      * @param string $name category name
-     * @param integer $typeId category type id
+     * @param int $typeId category type id
      * @param string $typeName category type name
-     * @param integer $order category order
+     * @param int $order category order
      */
     public function __construct($id, $name, $typeId = 1, $typeName = 'Εκδότης', $order = 0)
     {
-        $this->id = $id;
+        $this->id = (int)$id;
         $this->name = $name;
-        $this->typeId = $typeId;
+        $this->typeId = (int)$typeId;
         $this->typeName = $typeName;
-        $this->order = $order;
+        $this->order = (int)$order;
     }
 
     /**
      * Get the id of the category
      *
-     * @return integer
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
@@ -47,7 +47,7 @@ class Company
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -55,9 +55,9 @@ class Company
     /**
      * Get the type id of the category
      * 
-     * @return integer
-     */ 
-    public function getTypeId()
+     * @return int
+     */
+    public function getTypeId(): int
     {
         return $this->typeId;
     }
@@ -66,8 +66,8 @@ class Company
      * Get the type name of the category
      * 
      * @return string
-     */ 
-    public function getTypeName()
+     */
+    public function getTypeName(): string
     {
         return $this->typeName;
     }
@@ -75,9 +75,9 @@ class Company
     /**
      * Get the order of the category
      * 
-     * @return integer
-     */ 
-    public function getOrder()
+     * @return int
+     */
+    public function getOrder(): int
     {
         return $this->order;
     }

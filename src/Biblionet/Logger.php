@@ -65,7 +65,7 @@ class Logger
      *
      * @return void
      */
-    public function enable()
+    public function enable(): void
     {
         $this->debug = true;
     }
@@ -75,7 +75,7 @@ class Logger
      *
      * @return void
      */
-    public function disable()
+    public function disable(): void
     {
         $this->debug = false;
     }
@@ -90,7 +90,7 @@ class Logger
      * @param string $percentage A value indicating the percentage of completion
      * @return void
      */
-    public function log($type, $entity, $title, $text = "", $percentage = NULL)
+    public function log($type, $entity, $title, $text = "", $percentage = NULL): void
     {
 
         if (in_array($type, $this->show)) {

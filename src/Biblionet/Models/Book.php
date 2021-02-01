@@ -3,73 +3,220 @@
 namespace Biblionet\Models;
 
 /**
- * The model class if Book
+ * The model class of Book
  */
 class Book
 {
 
+    /**
+     * Mapped to TitlesID
+     */
     private int $id;
+
+    /**
+     * Mapped to Title
+     */
     private string $title;
+
+    /**
+     * Mapped to CoverImage
+     */
     private string $image;
+
+    /**
+     * Mapped to Subtitle
+     */
     private string $subtitle;
+
+    /**
+     * Mapped to AlternativeTitle
+     */
     private string $alternativeTitle;
+
+    /**
+     * Mapped to OriginalTitle
+     */
     private string $originalTitle;
 
+    /**
+     * Mapped to ISBN
+     */
     private string $isbn;
+
+    /**
+     * Mapped to ISBN_2
+     */
     private string $isbn2;
+
+    /**
+     * Mapped to ISBN_3
+     */
     private string $isbn3;
 
+    /**
+     * Mapped to Publisher, PublisherID
+     */
     private Company $publisher;
 
+    /**
+     * Mapped to Writer, WriterID, WriterName
+     */
     private Contributor $writer;
 
-    private $firstPublishDate;
-    private $currentPublishDate;
+    /**
+     * Mapped to FirstPublishDate
+     */
+    private \Datetime $firstPublishDate;
 
-    private $futurePublishDate;
+    /**
+     * Mapped to CurrentPublishDate
+     */
+    private \Datetime $currentPublishDate;
 
-    private $place;
+    /**
+     * Mapped to FuturePublishDate
+     */
+    private \Datetime $futurePublishDate;
 
-    private $type;
+    /**
+     * Mapped to PlaceID, Place
+     */
+    private Place $place;
 
-    private $editionNo;
-    private $cover;
-    private $dimensions;
-    private $pageNo;
+    /**
+     * Mapped to TitleType
+     */
+    private string $type;
 
-    private $availability;
+    /**
+     * Mapped to EditionNo
+     */
+    private string $editionNo;
 
-    private $price;
-    private $vat;
-    private $weight;
+    /**
+     * Mapped to Cover
+     */    
+    private string $cover;
 
-    private $ageFrom;
-    private $ageTo;
+    /**
+     * Mapped to Dimensions
+     */
+    private string $dimensions;
 
-    private $summary;
+    /**
+     * Mapped to PageNo
+     */
+    private int $pageNo;
 
-    private $language;
+    /**
+     * Mapped to Availability
+     */
+    private string $availability;
 
-    private $originalLanguage;
+    /**
+     * Mapped to Price
+     */
+    private float $price;
 
-    private $translatedLanguage;
+    /**
+     * Mapped to VAT
+     */
+    private float $vat;
 
-    private $series;
+    /**
+     * Mapped to Weight
+     */
+    private int $weight;
 
-    private $subseries;
+    /**
+     * Mapped to AgeFrom
+     */
+    private int $ageFrom;
 
-    private $multiVolumeTitle;
+    /**
+     * Mapped to AgeTo
+     */
+    private int $ageTo;
 
-    private $volumeNo;
+    /**
+     * Mapped to Summary
+     */
+    private string $summary;
 
-    private $specifications;
-    private $webAddress;
+    /**
+     * Mapped to LanguageID, Language
+     */
+    private Language $language;
 
-    private $comments;
+    /**
+     * Mapped to LanguageOriginalID, LanguageOriginal
+     */
+    private Language $originalLanguage;
 
-    private $category;
+    /**
+     * Mapped to LanguageTranslatedFromID, LanguageTranslatedFrom
+     */
+    private Language $translatedLanguage;
 
-    private $lastUpdated;
+    /**
+     * Mapped to Series
+     */
+    private string $series;
+
+    /**
+     * Mapped to SeriesNo
+     */
+    private string $seriesNo;
+
+    /**
+     * Mapped to SubSeries
+     */
+    private string $subSeries;
+
+    /**
+     * Mapped to SubSeriesNo
+     */
+    private string $subSeriesNo;
+
+    /**
+     * Mapped to MultiVolumeTitle
+     */  
+    private string $multiVolumeTitle;
+
+    /**
+     * Mapped to VolumeNo
+     */ 
+    private string $volumeNo;
+
+    /**
+     * Mapped to VolumeCount
+     */ 
+    private string $volumeCount;
+
+    /**
+     * Mapped to Specifications
+     */ 
+    private string $specifications;
+
+    /**
+     * Mapped to WebAddress
+     */ 
+    private string $webAddress;
+
+    /**
+     * Mapped to Comments
+     */ 
+    private string $comments;
+
+    /**
+     * Mapped to CategoryID, Category
+     */ 
+    private Category $category;
+
+    /**
+     * Mapped to LastUpdate
+     */ 
+    private \Datetime $lastUpdated;
 
     private array $subjects = [];
     private array $contributors = [];
@@ -77,67 +224,79 @@ class Book
 
     public function __construct($data)
     {
-        $this->id = $data->TitlesID;
+        $this->id = (int)$data->TitlesID;
         $this->title = $data->Title;
         $this->subtitle = $data->Subtitle;
         $this->alternativeTitle = $data->AlternativeTitle;
         $this->originalTitle = $data->OriginalTitle;
+
         $this->isbn = $data->ISBN;
         $this->isbn2 = $data->ISBN_2;
         $this->isbn3 = $data->ISBN_3;
 
-        $this->firstPublishDate = $data->FirstPublishDate;
-        $this->currentPublishDate = $data->CurrentPublishDate;
-        $this->futurePublishDate = $data->FuturePublishDate;
+        if (!empty($data->FirstPublishDate) && $data->FirstPublishDate !== "0000-00-00")
+            $this->firstPublishDate = new \Datetime($data->FirstPublishDate);
+
+        if (!empty($data->CurrentPublishDate) && $data->CurrentPublishDate !== "0000-00-00")
+            $this->currentPublishDate = new \Datetime($data->CurrentPublishDate);
+
+        if (!empty($data->FuturePublishDate) && $data->FuturePublishDate !== "0000-00-00")
+            $this->futurePublishDate = new \Datetime($data->FuturePublishDate);
 
         $this->type = $data->TitleType;
 
         $this->editionNo = $data->EditionNo;
         $this->cover = $data->Cover;
         $this->dimensions = $data->Dimensions;
-        $this->pageNo = $data->PageNo;
+        $this->pageNo = (int)$data->PageNo;
+
+        $this->weight = (int)$data->Weight;
 
         $this->availability = $data->Availability;
 
-        $this->price = $data->Price;
+        $this->price = round((float)$data->Price, 2);
         $this->vat = $data->VAT;
-
-        $this->weight = $data->Weight;
-        $this->ageFrom = $data->AgeFrom;
-        $this->ageTo = $data->AgeTo;
+        
+        $this->ageFrom = (int)$data->AgeFrom;
+        $this->ageTo = (int)$data->AgeTo;
 
         $this->summary = $data->Summary;
 
         $this->language = new Language($data->LanguageID, $data->Language);
-
         $this->originaLanguage = new Language($data->LanguageOriginalID, $data->LanguageOriginal);
-
         $this->translatedLanguage = new Language($data->LanguageTranslatedFromID, $data->LanguageTranslatedFrom);
 
         $this->publisher = new Company($data->PublisherID, $data->Publisher);
         $this->writer = new Contributor($data->WriterID, $data->WriterName);
+
         $this->category = new Category($data->CategoryID, $data->Category);
 
         $this->place = new Place($data->PlaceID, $data->Place);
 
-
         $this->series = $data->Series;
-        //$this->series = $data->Series;
-
-        $this->subseries = $data->SubSeries;
+        $this->seriesNo = $data->SeriesNo;
+        $this->subSeries = $data->SubSeries;
+        $this->subSeriesNo = $data->SubSeriesNo;
 
         $this->multiVolumeTitle = $data->MultiVolumeTitle;
-
         $this->volumeNo = $data->VolumeNo;
+        $this->volumeCount = $data->VolumeCount;
 
         $this->specifications = $data->Specifications;
         $this->webAddress = $data->WebAddress;
 
         $this->comments = $data->Comments;
 
-        $this->lastUpdated = $data->LastUpdate;
+        if (!empty($data->LastUpdate) && $data->LastUpdate !== "0000-00-00")
+            $this->lastUpdated = new \Datetime($data->LastUpdate);
     }
 
+    /**
+     * Init Book's subjects
+     *
+     * @param array $data
+     * @return void
+     */
     public function setSubjects($data)
     {
         foreach ($data as $item) {
@@ -148,6 +307,12 @@ class Book
         }
     }
 
+    /**
+     * Init Book's contributors
+     *
+     * @param array $data
+     * @return void
+     */
     public function setContributors($data)
     {
         foreach ($data as $item) {
@@ -158,6 +323,12 @@ class Book
         }
     }
 
+    /**
+     * Init Book's companies
+     *
+     * @param array $data
+     * @return void
+     */
     public function setCompanies($data)
     {
         foreach ($data as $item) {
@@ -168,105 +339,152 @@ class Book
         }
     }
 
-    public function getSubjects()
+    /**
+     * Get the array of Subject objs
+     * 
+     * @return Subject[]
+     */
+    public function getSubjects(): array
     {
         return $this->subjects;
     }
 
-    public function getContributors()
+    /**
+     * Get the array of Contributor objs
+     * 
+     * @return Contributor[]
+     */
+    public function getContributors(): array
     {
         return $this->contributors;
     }
 
-    public function getCompanies()
+    /**
+     * Get the array of Company objs
+     * 
+     * @return Company[]
+     */
+    public function getCompanies(): array
     {
         return $this->companies;
     }
 
-    public function getId()
+    /**
+     * Get the value of id
+     * 
+     * @return int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getTitle()
+    /**
+     * Get the value of title
+     * 
+     * @return string
+     */
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function getCategory()
+    /**
+     * Get the value of category
+     * 
+     * @return Category
+     */
+    public function getCategory(): Category
     {
         return $this->category;
     }
 
-
     /**
      * Get the value of image
+     * 
+     * @return string
      */
-    public function getImage()
+    public function getImage(): string
     {
         return $this->image;
     }
 
     /**
      * Get the value of subtitle
+     * 
+     * @return string
      */
-    public function getSubtitle()
+    public function getSubtitle(): string
     {
         return $this->subtitle;
     }
 
     /**
      * Get the value of alternativeTitle
+     * 
+     * @return string
      */
-    public function getAlternativeTitle()
+    public function getAlternativeTitle(): string
     {
         return $this->alternativeTitle;
     }
 
     /**
      * Get the value of originalTitle
+     * 
+     * @return string
      */
-    public function getOriginalTitle()
+    public function getOriginalTitle(): string
     {
         return $this->originalTitle;
     }
 
     /**
      * Get the value of isbn
+     * 
+     * @return string
      */
-    public function getIsbn()
+    public function getIsbn(): string
     {
         return $this->isbn;
     }
 
     /**
      * Get the value of isbn2
+     * 
+     * @return string
      */
-    public function getIsbn2()
+    public function getIsbn2(): string
     {
         return $this->isbn2;
     }
 
     /**
      * Get the value of isbn3
+     * 
+     * @return string
      */
-    public function getIsbn3()
+    public function getIsbn3(): string
     {
         return $this->isbn3;
     }
 
     /**
      * Get the value of publisher
+     * 
+     * @return Company
      */
-    public function getPublisher()
+    public function getPublisher(): Company
     {
         return $this->publisher;
     }
 
     /**
      * Get the value of writer
+     * 
+     * @return Contributor
      */
-    public function getWriter()
+    public function getWriter(): Contributor
     {
         return $this->writer;
     }
@@ -274,7 +492,7 @@ class Book
     /**
      * Get the value of firstPublishDate
      */
-    public function getFirstPublishDate()
+    public function getFirstPublishDate(): \Datetime
     {
         return $this->firstPublishDate;
     }
@@ -282,7 +500,7 @@ class Book
     /**
      * Get the value of currentPublishDate
      */
-    public function getCurrentPublishDate()
+    public function getCurrentPublishDate(): \Datetime
     {
         return $this->currentPublishDate;
     }
@@ -290,200 +508,278 @@ class Book
     /**
      * Get the value of futurePublishDate
      */
-    public function getFuturePublishDate()
+    public function getFuturePublishDate(): \Datetime
     {
         return $this->futurePublishDate;
     }
 
     /**
      * Get the value of place
+     * 
+     * @return Place
      */
-    public function getPlace()
+    public function getPlace(): Place
     {
         return $this->place;
     }
 
     /**
      * Get the value of type
+     * 
+     * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
      * Get the value of editionNo
+     * 
+     * @return string
      */
-    public function getEditionNo()
+    public function getEditionNo(): string
     {
         return $this->editionNo;
     }
 
     /**
      * Get the value of cover
+     * 
+     * @return string
      */
-    public function getCover()
+    public function getCover(): string
     {
         return $this->cover;
     }
 
     /**
      * Get the value of dimensions
+     * 
+     * @return string
      */
-    public function getDimensions()
+    public function getDimensions(): string
     {
         return $this->dimensions;
     }
 
     /**
      * Get the value of pageNo
+     * 
+     * @return int
      */
-    public function getPageNo()
+    public function getPageNo(): int
     {
         return $this->pageNo;
     }
 
     /**
      * Get the value of availability
+     * 
+     * @return string
      */
-    public function getAvailability()
+    public function getAvailability(): string
     {
         return $this->availability;
     }
 
     /**
-     * Get the value of price
+     * Get the value of price (euros)
+     * 
+     * @return float
      */
-    public function getPrice()
+    public function getPrice(): float
     {
         return $this->price;
     }
 
     /**
-     * Get the value of vat
+     * Get the value of vat (percentage)
+     * 
+     * @return float
      */
-    public function getVat()
+    public function getVat(): float
     {
         return $this->vat;
     }
 
     /**
-     * Get the value of weight
+     * Get the value of weight (grams)
+     * 
+     * @return int
      */
-    public function getWeight()
+    public function getWeight(): int
     {
         return $this->weight;
     }
 
     /**
      * Get the value of ageFrom
+     * 
+     * @return int
      */
-    public function getAgeFrom()
+    public function getAgeFrom(): int
     {
         return $this->ageFrom;
     }
 
     /**
      * Get the value of ageTo
+     * 
+     * @return int
      */
-    public function getAgeTo()
+    public function getAgeTo(): int
     {
         return $this->ageTo;
     }
 
     /**
      * Get the value of summary
+     * 
+     * @return string
      */
-    public function getSummary()
+    public function getSummary(): string
     {
         return $this->summary;
     }
 
     /**
      * Get the value of language
+     * 
+     * @return Language
      */
-    public function getLanguage()
+    public function getLanguage(): Language
     {
         return $this->language;
     }
 
     /**
      * Get the value of originalLanguage
+     * 
+     * @return Language
      */
-    public function getOriginalLanguage()
+    public function getOriginalLanguage(): Language
     {
         return $this->originalLanguage;
     }
 
     /**
      * Get the value of translatedLanguage
+     * 
+     * @return Language
      */
-    public function getTranslatedLanguage()
+    public function getTranslatedLanguage(): Language
     {
         return $this->translatedLanguage;
     }
 
     /**
      * Get the value of series
+     * 
+     * @return string
      */
-    public function getSeries()
+    public function getSeries(): string
     {
         return $this->series;
     }
 
     /**
-     * Get the value of subseries
-     */
-    public function getSubseries()
-    {
-        return $this->subseries;
-    }
-
-    /**
      * Get the value of multiVolumeTitle
+     * 
+     * @return string
      */
-    public function getMultiVolumeTitle()
+    public function getMultiVolumeTitle(): string
     {
         return $this->multiVolumeTitle;
     }
 
     /**
      * Get the value of volumeNo
+     * 
+     * @return string
      */
-    public function getVolumeNo()
+    public function getVolumeNo(): string
     {
         return $this->volumeNo;
     }
 
     /**
      * Get the value of specifications
+     * 
+     * @return string
      */
-    public function getSpecifications()
+    public function getSpecifications(): string
     {
         return $this->specifications;
     }
 
     /**
      * Get the value of webAddress
+     * 
+     * @return string
      */
-    public function getWebAddress()
+    public function getWebAddress(): string
     {
         return $this->webAddress;
     }
 
     /**
      * Get the value of comments
+     * 
+     * @return string
      */
-    public function getComments()
+    public function getComments(): string
     {
         return $this->comments;
     }
 
     /**
      * Get the value of lastUpdated
+     * 
+     * @return \Datetime
      */
-    public function getLastUpdated()
+    public function getLastUpdated(): \Datetime
     {
         return $this->lastUpdated;
+    }
+
+    /**
+     * Get mapped to SeriesNo
+     * 
+     * @return string
+     */ 
+    public function getSeriesNo(): string
+    {
+        return $this->seriesNo;
+    }
+
+    /**
+     * Get mapped to SubSeries
+     * 
+     * @return string
+     */ 
+    public function getSubSeries(): string
+    {
+        return $this->subSeries;
+    }
+
+    /**
+     * Get mapped to SubSeriesNo
+     * 
+     * @return string
+     */ 
+    public function getSubSeriesNo(): string
+    {
+        return $this->subSeriesNo;
+    }
+
+    /**
+     * Get the value of volumeCount
+     * 
+     * @return string
+     */ 
+    public function getVolumeCount(): string
+    {
+        return $this->volumeCount;
     }
 }

@@ -14,21 +14,21 @@ class Language
     /**
      * The language constructor
      *
-     * @param integer $id
+     * @param int $id
      * @param string $name
      */
     public function __construct($id, $name)
     {
-        $this->id = $id;
+        $this->id = (int)$id;
         $this->name = $name;
     }
 
     /**
      * Get the id of the language
      *
-     * @return integer
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
@@ -38,7 +38,7 @@ class Language
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }

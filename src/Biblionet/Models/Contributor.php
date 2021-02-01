@@ -17,27 +17,27 @@ class Contributor
     /**
      * Contributor constructor
      *
-     * @param integer $id contributor id
+     * @param int $id contributor id
      * @param string $name contributor name
-     * @param integer $typeId contributor type id
+     * @param int $typeId contributor type id
      * @param string $typeName contributor type name
-     * @param integer $order contributor order
+     * @param int $order contributor order
      */
     public function __construct($id, $name, $typeId = 1, $typeName = 'Συγγραφέας', $order = 0)
     {
-        $this->id = $id;
+        $this->id = (int)$id;
         $this->name = $name;
-        $this->typeId = $typeId;
+        $this->typeId = (int)$typeId;
         $this->typeName = $typeName;
-        $this->order = $order;
+        $this->order = (int)$order;
     }
 
     /**
      * Get the id of the contributor
      *
-     * @return integer
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
@@ -45,9 +45,9 @@ class Contributor
     /**
      * Get the name of the contributor
      *
-     * @return void
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -55,9 +55,9 @@ class Contributor
     /**
      * Get the type id of the contributor
      *
-     * @return integer
+     * @return int
      */
-    public function getTypeId()
+    public function getTypeId(): int
     {
         return $this->typeId;
     }
@@ -67,15 +67,17 @@ class Contributor
      *
      * @return string
      */
-    public function getTypeName()
+    public function getTypeName(): string
     {
         return $this->typeName;
     }
 
     /**
      * Get the order of the contributor
-     */ 
-    public function getOrder()
+     * 
+     * @return int
+     */
+    public function getOrder(): int
     {
         return $this->order;
     }
