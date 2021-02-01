@@ -1,7 +1,8 @@
 {
-    "name": "takisrs/biblionet",
-    "description": "Biblionet api wrapper",
+    "name": "takisrs/biblionet-api-wrapper",
+    "description": "A wrapper php library for biblionet's api",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Panos Pantazopoulos",
@@ -9,10 +10,11 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.0",
-        "cvuorinen/phpdoc-markdown-public": "^0.2.0"
+        "guzzlehttp/guzzle": "^7.0"
     },
     "autoload": {
-        "psr-0": {"": "src/"}
+        "psr-4": {
+            "Biblionet\\": "src/Biblionet/"
+        }
     }
 }
