@@ -50,15 +50,18 @@ class ApiFetcher
 
     /**
      * an instance of the logger class
-     * @see Biblionet\Logger the logger class
+     * @see Logger the logger class
      */
     private Logger $logger;
 
     /**
      * keep the array of fetched items as Biblionet\Models\Book objects
-     * @see Biblionet\Models\Book the model of Book
+     * 
+     * @var Book[]
+     * 
+     * @see Models\Book the model of Book
      */
-    private array $fetchedItems = [];
+    private $fetchedItems = [];
 
 
     /**
@@ -92,7 +95,7 @@ class ApiFetcher
      * Use this method to get all the data that have been fetch from biblionet's api.
      *
      * @return Book[] an array of Book objects
-     * @see \Biblionet\Models\Book Book model class
+     * @see Models\Book Book model class
      */
     public function getFetchedItems(): array
     {

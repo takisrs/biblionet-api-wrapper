@@ -3,7 +3,7 @@
 namespace Biblionet;
 
 /**
- * A helper class to output some logs.
+ * A helper class to output logs.
  * 
  * @todo Add extra output options: file, mail etc
  * @author Panagiotis Pantazopoulos <takispadaz@gmail.com>
