@@ -4,37 +4,13 @@ A wrapper library for biblionet's API, written in PHP, to help you fetch books' 
 
 Read more about [biblionet](https://biblionet.gr/) and their [api](https://biblionet.gr/webservice/)
 
+
 ## Installation
 
 `composer require takisrs/biblionet-api-wrapper`
 
+
 ## How to use
-
-### Examples on how to use the fetch method
-
-```php
-$fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252986); // specific book
-$fetcher->fetch(ApiFetcher::FETCH_BY_ID, [253064, 252986, 252976]); // specific books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH); // current month's books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10"); // specific month's books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10", "2021-01"); // specific period's books
-```   
-You may also combine all the above. ex:   
-```php
-// January's book of the last 3 years
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01");
-```   
-
-### Examples on how to use the filter method
-
-```php
-$fetcher->filter('type', 'e-book', '=='); // Keep only the ebooks
-$fetcher->filter('place.name', 'Αθήνα', '=='); // Keep only those published in Athens
-$fetcher->filter('cover', 'Μαλακό εξώφυλλο', '=='); // Keep only those with a soft cover
-$fetcher->filter('availability', 'Κυκλοφορεί', '=='); // Keep only the available ones
-$fetcher->filter('id', 253064, '>='); // Keep the books with an id >= 253064
-```   
-You may also combine all the above.    
 
 ### Fetch a book by id and display some info
 ```php
@@ -54,7 +30,6 @@ if ($fetchedBook){
     echo $fetchedBook->getTitle() . " => " . $fetchedBook->getLanguage()->getName().PHP_EOL;
 }
 ```
-
 
 ### Fetch current month's hardcopy books with their contributors and display some info
 ```php
@@ -90,9 +65,36 @@ foreach ($fetchedItems as $item) {
 }
 ```
 
+### Examples on how to use the fetch method
+
+```php
+$fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252986); // specific book
+$fetcher->fetch(ApiFetcher::FETCH_BY_ID, [253064, 252986, 252976]); // specific books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH); // current month's books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10"); // specific month's books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10", "2021-01"); // specific period's books
+```   
+You may also combine all the above. ex:   
+```php
+// January's book of the last 3 years
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01");
+```   
+
+### Examples on how to use the filter method
+
+```php
+$fetcher->filter('type', 'e-book', '=='); // Keep only the ebooks
+$fetcher->filter('place.name', 'Αθήνα', '=='); // Keep only those published in Athens
+$fetcher->filter('cover', 'Μαλακό εξώφυλλο', '=='); // Keep only those with a soft cover
+$fetcher->filter('availability', 'Κυκλοφορεί', '=='); // Keep only the available ones
+$fetcher->filter('id', 253064, '>='); // Keep the books with an id >= 253064
+```   
+You may also combine all the above.    
+
 ### More Examples
 
 You may check for more examples in the [examples](examples/) folder on this repository.
+
 
 
 ## Documentation
