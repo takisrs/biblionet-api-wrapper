@@ -97,7 +97,7 @@ class Logger
      * @param string $percentage A value indicating the percentage of completion
      * @return void
      */
-    public function log($type, $entity, $title, $text = "", $percentage = NULL): void
+    public function log(string $type, string $entity, string $title, string $text = "", float $percentage = NULL): void
     {
 
         if ($this->debug && in_array($type, $this->show)) {

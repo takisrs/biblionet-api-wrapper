@@ -251,7 +251,7 @@ class ApiFetcher
      * @param string $operator the operation to use for the comparison
      * @return ApiFetcher
      */
-    public function filter(string $field, mixed $value, string $operator = "=="): ApiFetcher
+    public function filter(string $field, $value, string $operator = "=="): ApiFetcher
     {
         $totalCount = count($this->fetchedItems);
         $filteredCount = $totalCount;
@@ -285,7 +285,7 @@ class ApiFetcher
      * @param array $params an array with params for the api call except authentication params
      * @return mixed
      */
-    private function _makeRequest($method, $params): mixed
+    private function _makeRequest($method, $params)
     {
         $this->logger->log(Logger::INFO, 'api', 'request', json_encode($params));
 

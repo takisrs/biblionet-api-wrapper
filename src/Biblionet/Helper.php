@@ -47,12 +47,12 @@ class Helper
     /**
      * Makes a comparison between two variables
      *
-     * @param int|string $var1 The first of the variables to compare
-     * @param int|string $var2 The second of the variables to compare
+     * @param mixed $var1 The first of the variables to compare
+     * @param mixed $var2 The second of the variables to compare
      * @param string $operator The oprator to use ==, !=, >=, <=, >, <
      * @return bool The result of the comparison
      */
-    public static function compare(mixed $var1, mixed $var2, string $operator): bool
+    public static function compare($var1, $var2, string $operator): bool
     {
         switch ($operator) {
             case "==":
