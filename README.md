@@ -8,9 +8,95 @@ Read more about [biblionet](https://biblionet.gr/) and their [api](https://bibli
 
 `composer require takisrs/biblionet-api-wrapper`
 
+## How to use
+
+### Examples on how to use the fetch method
+
+```php
+$fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252986); // specific book
+$fetcher->fetch(ApiFetcher::FETCH_BY_ID, [253064, 252986, 252976]); // specific books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH); // current month's books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10"); // specific month's books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10", "2021-01"); // specific period's books
+```   
+You may also combine all the above. ex:   
+```php
+// January's book of the last 3 years
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01");
+```   
+
+### Examples on how to use the filter method
+
+```php
+$fetcher->filter('type', 'e-book', '=='); // Keep only the ebooks
+$fetcher->filter('place.name', 'Αθήνα', '=='); // Keep only those published in Athens
+$fetcher->filter('cover', 'Μαλακό εξώφυλλο', '=='); // Keep only those with a soft cover
+$fetcher->filter('availability', 'Κυκλοφορεί', '=='); // Keep only the available ones
+$fetcher->filter('id', 253064, '>='); // Keep the books with an id >= 253064
+```   
+You may also combine all the above.    
+
+### Fetch a book by id and display some info
+```php
+use takisrs\Biblionet\ApiFetcher;
+
+// Initialize the fetcher class
+$fetcher = new ApiFetcher("testuser", "testpsw");
+
+// Fetch a book
+$fetchedItems = $fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252822)->getItems();
+
+// Get the Book object
+$fetchedBook = reset($fetchedItems);
+
+// Output some info with the help of getters
+if ($fetchedBook){
+    echo $fetchedBook->getTitle() . " => " . $fetchedBook->getLanguage()->getName().PHP_EOL;
+}
+```
+
+
+### Fetch current month's hardcopy books with their contributors and display some info
+```php
+use takisrs\Biblionet\ApiFetcher;
+
+$fetcher = new ApiFetcher("testuser", "testpsw");
+
+// Fetch current month's books
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, date("Y-m"));
+
+// Keep only the hardcopy books
+$fetcher->filter('type', 'Βιβλίο', '==');
+
+// Fill the rest with extra data (contributors)
+$fetcher->fill([ApiFetcher::FILL_CONTRIBUTORS]);
+
+// Get an array of books
+$fetchedItems = $fetcher->getItems();
+
+// Display some info
+foreach ($fetchedItems as $item) {
+    echo "**** " . $item->getTitle() . " ****" . PHP_EOL;
+    echo "Publication Date: " . $item->getFirstPublishDate()->format("d/m/y") . PHP_EOL;
+    echo "Weight: " . $item->getWeight() . ' g' . PHP_EOL;
+    echo "Price: " . $item->getPrice() . ' €' . PHP_EOL;
+
+    $contributors = $item->getContributors();
+
+    foreach ($contributors as $contributor) {
+        echo $contributor->getTypeName() . ": " . $contributor->getName() . PHP_EOL;
+    }
+    echo PHP_EOL;
+}
+```
+
+### More Examples
+
+You may check for more examples in the [examples](examples/) folder on this repository.
+
 
 ## Documentation
-You may read the full documentation [here](docs/index.html) or check the docs bellow.   
+You may read the full documentation [here](https://takisrs.github.io/biblionet-api-wrapper/) or check the docs bellow.   
 
 
 - [\takisrs\Biblionet\ApiFetcher](#class-takisrsbiblionetapifetcher)
@@ -201,92 +287,3 @@ You may read the full documentation [here](docs/index.html) or check the docs be
 | public | <strong>__construct(</strong><em>int</em> <strong>$id</strong>, <em>string</em> <strong>$name</strong>)</strong> : <em>void</em><br /><em>The language constructor</em> |
 | public | <strong>getId()</strong> : <em>int</em><br /><em>Get the id of the language</em> |
 | public | <strong>getName()</strong> : <em>string</em><br /><em>Get the name of the language</em> |
-
-
-
-
-## How to use with examples
-
-### Examples on how to use the fetch method
-
-```php
-$fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252986); // specific book
-$fetcher->fetch(ApiFetcher::FETCH_BY_ID, [253064, 252986, 252976]); // specific books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH); // current month's books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10"); // specific month's books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10", "2021-01"); // specific period's books
-```   
-You may also combine all the above. ex:   
-```php
-// January's book of the last 3 years
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01");
-```   
-
-### Examples on how to use the filter method
-
-```php
-$fetcher->filter('type', 'e-book', '=='); // Keep only the ebooks
-$fetcher->filter('place.name', 'Αθήνα', '=='); // Keep only those published in Athens
-$fetcher->filter('cover', 'Μαλακό εξώφυλλο', '=='); // Keep only those with a soft cover
-$fetcher->filter('availability', 'Κυκλοφορεί', '=='); // Keep only the available ones
-$fetcher->filter('id', 253064, '>='); // Keep the books with an id >= 253064
-```   
-You may also combine all the above.    
-
-### Fetch a book by id and display some info
-```php
-use takisrs\Biblionet\ApiFetcher;
-
-// Initialize the fetcher class
-$fetcher = new ApiFetcher("testuser", "testpsw");
-
-// Fetch a book
-$fetchedItems = $fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252822)->getItems();
-
-// Get the Book object
-$fetchedBook = reset($fetchedItems);
-
-// Output some info with the help of getters
-if ($fetchedBook){
-    echo $fetchedBook->getTitle() . " => " . $fetchedBook->getLanguage()->getName().PHP_EOL;
-}
-```
-
-
-### Fetch current month's hardcopy books with their contributors and display some info
-```php
-use takisrs\Biblionet\ApiFetcher;
-
-$fetcher = new ApiFetcher("testuser", "testpsw");
-
-// Fetch current month's books
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, date("Y-m"));
-
-// Keep only the hardcopy books
-$fetcher->filter('type', 'Βιβλίο', '==');
-
-// Fill the rest with extra data (contributors)
-$fetcher->fill([ApiFetcher::FILL_CONTRIBUTORS]);
-
-// Get an array of books
-$fetchedItems = $fetcher->getItems();
-
-// Display some info
-foreach ($fetchedItems as $item) {
-    echo "**** " . $item->getTitle() . " ****" . PHP_EOL;
-    echo "Publication Date: " . $item->getFirstPublishDate()->format("d/m/y") . PHP_EOL;
-    echo "Weight: " . $item->getWeight() . ' g' . PHP_EOL;
-    echo "Price: " . $item->getPrice() . ' €' . PHP_EOL;
-
-    $contributors = $item->getContributors();
-
-    foreach ($contributors as $contributor) {
-        echo $contributor->getTypeName() . ": " . $contributor->getName() . PHP_EOL;
-    }
-    echo PHP_EOL;
-}
-```
-
-### More Examples
-
-You may check for more examples in the [examples](examples/) folder on this repository.
