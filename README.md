@@ -1,6 +1,6 @@
 # A wrapper library for biblionet's API
 
-A wrapper library for biblionet's API, written in PHP, to help you fetch book's data easily.
+A wrapper library for biblionet's API, written in PHP, to help you fetch books' data easily.
 
 Read more about [biblionet](https://biblionet.gr/) and their [api](https://biblionet.gr/webservice/)
 
@@ -10,7 +10,7 @@ To be updated
 
 
 ## Documentation
-You may read the full documentation [here](docs/index.html)
+You may read the full documentation [here](docs/index.html) or check the docs bellow.   
 
 
 - [\takisrs\Biblionet\ApiFetcher](#class-takisrsbiblionetapifetcher)
@@ -35,7 +35,7 @@ You may read the full documentation [here](docs/index.html)
 | public | <strong>__construct(</strong><em>string</em> <strong>$username</strong>, <em>string</em> <strong>$password</strong>, <em>array</em> <strong>$log=array()</strong>, <em>integer</em> <strong>$requestTimeout=10</strong>, <em>integer</em> <strong>$resultsPerPage=50</strong>)</strong> : <em>void</em><br /><em>ApiFetcher constructor</em> |
 | public | <strong>fetch(</strong><em>string</em> <strong>$fetchType=1</strong>, <em>string/int/array</em> <strong>$param1=null</strong>, <em>string</em> <strong>$param2=null</strong>)</strong> : <em>[\takisrs\Biblionet\ApiFetcher](#class-takisrsbiblionetapifetcher)</em><br /><em>Fetch books from biblionet's api. You may call with method to fetch data for a specific book, or provide a month to fetch books published in that month. You may also provide two months to fetch books published in that period.</em> |
 | public | <strong>fill(</strong><em>array</em> <strong>$types=array()</strong>)</strong> : <em>[\takisrs\Biblionet\ApiFetcher](#class-takisrsbiblionetapifetcher)</em><br /><em>Fill with extra data the already fetched items. You may use this method to fetch extra data from biblionet's api for the books that you have fetch with the fetch() method. This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow. Use this method if you want to fetch book's subjects, contributors or companies.</em> |
-| public | <strong>filter(</strong><em>\string</em> <strong>$field</strong>, <em>\takisrs\Biblionet\mixed</em> <strong>$value</strong>, <em>\string</em> <strong>$operator=`'=='`</strong>)</strong> : <em>[\takisrs\Biblionet\ApiFetcher](#class-takisrsbiblionetapifetcher)</em><br /><em>Filter the already fetched items. Use this method to narrow down the number of books that have already been fetched depending on specific filters. You may, for example, use this method to keep only the hardcopy books from the fetched items.</em> |
+| public | <strong>filter(</strong><em>\string</em> <strong>$field</strong>, <em>mixed</em> <strong>$value</strong>, <em>\string</em> <strong>$operator=`'=='`</strong>)</strong> : <em>[\takisrs\Biblionet\ApiFetcher](#class-takisrsbiblionetapifetcher)</em><br /><em>Filter the already fetched items. Use this method to narrow down the number of books that have already been fetched depending on specific filters. You may, for example, use this method to keep only the hardcopy books from the fetched items.</em> |
 | public | <strong>getItems()</strong> : <em>Book[] an array of Book objects</em><br /><em>Returns the fetched items. Use this method to get all the data that have been fetch from biblionet's api.</em> |
 
 <hr />
@@ -46,7 +46,7 @@ You may read the full documentation [here](docs/index.html)
 
 | Visibility | Function |
 |:-----------|:---------|
-| public static | <strong>compare(</strong><em>int/string/\takisrs\Biblionet\mixed</em> <strong>$var1</strong>, <em>int/string/\takisrs\Biblionet\mixed</em> <strong>$var2</strong>, <em>\string</em> <strong>$operator</strong>)</strong> : <em>bool The result of the comparison</em><br /><em>Makes a comparison between two variables</em> |
+| public static | <strong>compare(</strong><em>mixed</em> <strong>$var1</strong>, <em>mixed</em> <strong>$var2</strong>, <em>\string</em> <strong>$operator</strong>)</strong> : <em>bool The result of the comparison</em><br /><em>Makes a comparison between two variables</em> |
 | public static | <strong>getPercentage(</strong><em>integer/\int</em> <strong>$current</strong>, <em>integer/\int</em> <strong>$total</strong>)</strong> : <em>float the percentage</em><br /><em>Calculates and return a percentage of completion</em> |
 | public static | <strong>isCli()</strong> : <em>bool</em><br /><em>Checks if the script has been called through cli</em> |
 | public static | <strong>isJson(</strong><em>\string</em> <strong>$str</strong>)</strong> : <em>bool</em><br /><em>Checks if a string is json</em> |
@@ -62,7 +62,7 @@ You may read the full documentation [here](docs/index.html)
 | public | <strong>__construct(</strong><em>array</em> <strong>$show=array()</strong>)</strong> : <em>void</em><br /><em>Constructor.</em> |
 | public | <strong>disable()</strong> : <em>void</em><br /><em>Disables the logging</em> |
 | public | <strong>enable()</strong> : <em>void</em><br /><em>Enables the logging</em> |
-| public | <strong>log(</strong><em>string</em> <strong>$type</strong>, <em>string</em> <strong>$entity</strong>, <em>string</em> <strong>$title</strong>, <em>string</em> <strong>$text=`''`</strong>, <em>string</em> <strong>$percentage=null</strong>)</strong> : <em>void</em><br /><em>Logs an entry.</em> |
+| public | <strong>log(</strong><em>\string</em> <strong>$type</strong>, <em>\string</em> <strong>$entity</strong>, <em>\string</em> <strong>$title</strong>, <em>\string</em> <strong>$text=`''`</strong>, <em>\float</em> <strong>$percentage=null</strong>)</strong> : <em>void</em><br /><em>Logs an entry.</em> |
 
 <hr />
 
@@ -218,7 +218,8 @@ $fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-10", "2021-01"); // specific p
 ```   
 You may also combine all the above. ex:   
 ```php
-$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01"); // January's book of the last 3 years
+// January's book of the last 3 years
+$fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01");
 ```   
 
 ### Examples on how use filter method
@@ -288,4 +289,4 @@ foreach ($fetchedItems as $item) {
 
 ### More Examples
 
-You may check for more examples in the `examples/` folder on this repository.
+You may check for more examples in the [examples](examples/) folder on this repository.
