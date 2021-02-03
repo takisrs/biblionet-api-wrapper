@@ -1,6 +1,6 @@
 <?php
 
-namespace Biblionet;
+namespace takisrs\Biblionet;
 
 /**
  * A helper class that provides some static functions.

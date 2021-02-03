@@ -1,6 +1,6 @@
 <?php
 
-namespace Biblionet\Models;
+namespace takisrs\Biblionet\Models;
 
 /**
  * The model class of Book
@@ -163,52 +163,52 @@ class Book
     /**
      * Mapped to Series
      */
-    private string $series;
+    private ?string $series;
 
     /**
      * Mapped to SeriesNo
      */
-    private string $seriesNo;
+    private ?string $seriesNo;
 
     /**
      * Mapped to SubSeries
      */
-    private string $subSeries;
+    private ?string $subSeries;
 
     /**
      * Mapped to SubSeriesNo
      */
-    private string $subSeriesNo;
+    private ?string $subSeriesNo;
 
     /**
      * Mapped to MultiVolumeTitle
      */  
-    private string $multiVolumeTitle;
+    private ?string $multiVolumeTitle;
 
     /**
      * Mapped to VolumeNo
      */ 
-    private string $volumeNo;
+    private ?string $volumeNo;
 
     /**
      * Mapped to VolumeCount
      */ 
-    private string $volumeCount;
+    private ?string $volumeCount;
 
     /**
      * Mapped to Specifications
      */ 
-    private string $specifications;
+    private ?string $specifications;
 
     /**
      * Mapped to WebAddress
      */ 
-    private string $webAddress;
+    private ?string $webAddress;
 
     /**
      * Mapped to Comments
      */ 
-    private string $comments;
+    private ?string $comments;
 
     /**
      * Mapped to CategoryID, Category
@@ -268,7 +268,7 @@ class Book
         $this->availability = $data->Availability;
 
         $this->price = round((float)$data->Price, 2);
-        $this->vat = $data->VAT;
+        $this->vat = (float)$data->VAT;
         
         $this->ageFrom = (int)$data->AgeFrom;
         $this->ageTo = (int)$data->AgeTo;

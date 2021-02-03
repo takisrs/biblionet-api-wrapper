@@ -14,7 +14,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Biblionet\\": "src/Biblionet/"
+            "takisrs\\": "src/"
         }
+    },
+    "require-dev": {
+        "victorjonsson/markdowndocs": "^1.3"
     }
 }

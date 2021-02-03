@@ -1,11 +1,12 @@
 <?php
 
-namespace Biblionet;
+namespace takisrs\Biblionet;
 
 /**
  * A helper class to output logs.
  * 
  * @todo Add extra output options: file, mail etc
+ * @todo handle errors with exit codes
  * @author Panagiotis Pantazopoulos <takispadaz@gmail.com>
  */
 class Logger
@@ -36,7 +37,7 @@ class Logger
      *
      * @var array
      */
-    private $show = [];
+    private array $show = [];
 
     /**
      * The colors for each log type. For cli or web server output.
@@ -51,12 +52,18 @@ class Logger
     ];
 
     /**
+     * logs enabled or not
+     */
+    private bool $debug;
+
+    /**
      * Constructor.
      * 
      * @param array $show An array with the error types to be handled by the class
      */
     public function __construct($show = [self::SUCCESS, self::ERROR, self::INFO, self::WARNING])
     {
+        $this->enable(); // enable the logs output
         $this->show = $show;
     }
 
@@ -93,7 +100,7 @@ class Logger
     public function log($type, $entity, $title, $text = "", $percentage = NULL): void
     {
 
-        if (in_array($type, $this->show)) {
+        if ($this->debug && in_array($type, $this->show)) {
             if (ob_get_level() == 0) ob_start();
             $Timestamp = new \Datetime;
             if (Helper::isCli()) {
@@ -121,4 +128,5 @@ class Logger
             flush();
         }
     }
+
 }

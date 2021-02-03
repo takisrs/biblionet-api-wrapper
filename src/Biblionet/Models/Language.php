@@ -1,6 +1,6 @@
 <?php
 
-namespace Biblionet\Models;
+namespace takisrs\Biblionet\Models;
 
 /**
  * The model class of Language

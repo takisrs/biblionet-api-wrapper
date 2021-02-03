@@ -1,18 +1,17 @@
 <?php
 
-namespace Biblionet;
+namespace takisrs\Biblionet;
 
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\ServerException;
 
-use Biblionet\Helper;
 use GuzzleHttp\Client;
 
-use Biblionet\Models\Book;
+use takisrs\Biblionet\Models\Book;
 
 /**
- * A wrapper php class for biblionet api.
+ * A wrapper class for biblionet's api.
  * 
  * This library will help you fetch books' data from biblionet database.
  * It provides some helpful methods that simplify the communication with their api.
@@ -31,7 +30,6 @@ class ApiFetcher
     const FILL_CONTRIBUTORS = 'get_contributors';
     const FILL_COMPANIES = 'get_title_companies';
     const FILL_SUBJECTS = 'get_title_subject';
-    const FILL_OPTIONS = [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS];
 
     /**
      * biblionet api username
@@ -55,7 +53,7 @@ class ApiFetcher
     private Logger $logger;
 
     /**
-     * keep the array of fetched items as Biblionet\Models\Book objects
+     * keeps the array of fetched items as Book objects
      * 
      * @var Book[]
      * 
@@ -97,7 +95,7 @@ class ApiFetcher
      * @return Book[] an array of Book objects
      * @see Models\Book Book model class
      */
-    public function getFetchedItems(): array
+    public function getItems(): array
     {
         return $this->fetchedItems;
     }
@@ -107,11 +105,11 @@ class ApiFetcher
      * Fetch books from biblionet's api.
      * 
      * You may call with method to fetch data for a specific book, or provide a month to fetch books published in that month. 
-     * You may also provide two months to fetch books published in that range.
+     * You may also provide two months to fetch books published in that period.
      * 
      * @param string $fetchType Provide the fetch type.
      * @param string|int|array $param1 Depending on the fetch type, you may input a month or an array with specific book id
-     * @param date $param2 Used only when fetchType = ApiFetcher::FETCH_BY_MONTH.
+     * @param string $param2 Used only when fetchType = ApiFetcher::FETCH_BY_MONTH.
      * 
      * @return ApiFetcher
      * 
@@ -194,11 +192,12 @@ class ApiFetcher
      * 
      * You may use this method to fetch extra data from biblionet's api for the books that you have fetch with the fetch() method.
      * This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow.
+     * Use this method if you want to fetch book's subjects, contributors or companies.
      *
-     * @param array $types
+     * @param array $types Provide the extra types of data that you want to fetch from the api. Accepted values are: ApiFetcher::FILL_CONTRIBUTORS, ApiFetcher::FILL_COMPANIES, ApiFetcher::FILL_SUBJECTS
      * @return ApiFetcher
      */
-    public function fill($types = self::FILL_OPTIONS): ApiFetcher
+    public function fill($types = [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]): ApiFetcher
     {
 
         if (count($this->fetchedItems) == 0) {
@@ -207,7 +206,7 @@ class ApiFetcher
         }
 
         foreach ($types as $type) {
-            if (!in_array($type, self::FILL_OPTIONS)) {
+            if (!in_array($type, [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS])) {
                 $this->logger->log(Logger::ERROR, 'api', 'fill', 'wrong input => ' . $type);
                 continue;
             }
@@ -244,15 +243,15 @@ class ApiFetcher
     /**
      * Filter the already fetched items.
      * 
-     * Use this method to narrow down book that have already been fetched.
+     * Use this method to narrow down the number of books that have already been fetched depending on specific filters.
      * You may, for example, use this method to keep only the hardcopy books from the fetched items.
      *
      * @param string $field provide a book property
-     * @param string|int $value the value to search for in the property
+     * @param mixed $value the value to search for in the property
      * @param string $operator the operation to use for the comparison
      * @return ApiFetcher
      */
-    public function filter(string $field, string $value, string $operator = "=="): ApiFetcher
+    public function filter(string $field, mixed $value, string $operator = "=="): ApiFetcher
     {
         $totalCount = count($this->fetchedItems);
         $filteredCount = $totalCount;
@@ -268,7 +267,7 @@ class ApiFetcher
                     return Helper::compare(eval($getter), $value, $operator);
                 });
                 $filteredCount = count($this->fetchedItems);
-                $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . $value, 'filtered:' . $filteredCount . '/' . $totalCount);
+                $this->logger->log(Logger::INFO, 'filter', 'filter by ' . $field . $operator . serialize($value), 'filtered:' . $filteredCount . '/' . $totalCount);
            }
         }
 
