@@ -6,7 +6,7 @@ Read more about [biblionet](https://biblionet.gr/) and their [api](https://bibli
 
 ## Installation
 
-To be updated
+`composer require takisrs/biblionet-api-wrapper`
 
 
 ## Documentation
@@ -207,7 +207,7 @@ You may read the full documentation [here](docs/index.html) or check the docs be
 
 ## How to use with examples
 
-### Examples on how use fetch method
+### Examples on how to use the fetch method
 
 ```php
 $fetcher->fetch(ApiFetcher::FETCH_BY_ID, 252986); // specific book
@@ -222,7 +222,7 @@ You may also combine all the above. ex:
 $fetcher->fetch(ApiFetcher::FETCH_BY_MONTH, "2019-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2020-01")->fetch(ApiFetcher::FETCH_BY_MONTH, "2021-01");
 ```   
 
-### Examples on how use filter method
+### Examples on how to use the filter method
 
 ```php
 $fetcher->filter('type', 'e-book', '=='); // Keep only the ebooks
