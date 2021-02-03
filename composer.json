@@ -1,14 +1,26 @@
 {
     "name": "takisrs/biblionet-api-wrapper",
-    "description": "A wrapper php library for biblionet's api",
+    "description": "A wrapper library for biblionet's api",
+    "keywords": [
+        "api wrapper",
+        "biblionet",
+        "books"
+    ],
     "type": "library",
     "license": "MIT",
+    "readme": "README.md",
+    "homepage": "https://github.com/takisrs/biblionet-api-wrapper",
     "authors": [
         {
             "name": "Panos Pantazopoulos",
-            "email": "takispadaz@gmail.com"
+            "email": "takispadaz@gmail.com",
+            "homepage": "https://github.com/takisrs",
+            "role": "Full Stack Developer"
         }
     ],
+    "support": {
+        "email": "takispadaz@gmail.com"
+    },
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },
