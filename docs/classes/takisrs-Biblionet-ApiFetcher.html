@@ -50,9 +50,9 @@
         
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/biblionet.html"><abbr title="\Biblionet">Biblionet</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/takisrs.html"><abbr title="\takisrs">takisrs</abbr></a></h4>
                 <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/biblionet-models.html"><abbr title="\Biblionet\Models">Models</abbr></a></li>
+                                            <li><a href="namespaces/takisrs-biblionet.html"><abbr title="\takisrs\Biblionet">Biblionet</abbr></a></li>
                                     </ul>
                         </section>
 
@@ -72,7 +72,8 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/biblionet.html">Biblionet</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/takisrs.html">takisrs</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/takisrs-biblionet.html">Biblionet</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -87,10 +88,10 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 </aside>
 
-            <p class="phpdocumentor-summary">A wrapper php class for biblionet api.</p>
+            <p class="phpdocumentor-summary">A wrapper class for biblionet&#039;s api.</p>
 
     <section class="phpdocumentor-description"><p>This library will help you fetch books' data from biblionet database.
 It provides some helpful methods that simplify the communication with their api.</p>
@@ -133,126 +134,119 @@ It provides some helpful methods that simplify the communication with their api.
 
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_ID">FETCH_BY_ID</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FETCH_BY_ID">FETCH_BY_ID</a>
     <span>
         &nbsp;= 2                    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH">FETCH_BY_MONTH</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH">FETCH_BY_MONTH</a>
     <span>
         &nbsp;= 1                    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_COMPANIES">FILL_COMPANIES</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_COMPANIES">FILL_COMPANIES</a>
     <span>
         &nbsp;= &#039;get_title_companies&#039;                    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS">FILL_CONTRIBUTORS</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS">FILL_CONTRIBUTORS</a>
     <span>
         &nbsp;= &#039;get_contributors&#039;                    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_OPTIONS">FILL_OPTIONS</a>
-    <span>
-        &nbsp;= [self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]                    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS">FILL_SUBJECTS</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS">FILL_SUBJECTS</a>
     <span>
         &nbsp;= &#039;get_title_subject&#039;                    </span>
 </dt>
 <dd></dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-ApiFetcher.html#property_apiPassword">$apiPassword</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_apiPassword">$apiPassword</a>
     <span>
                 &nbsp;: string            </span>
 </dt>
 <dd>biblionet api password</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-ApiFetcher.html#property_apiUsername">$apiUsername</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_apiUsername">$apiUsername</a>
     <span>
                 &nbsp;: string            </span>
 </dt>
 <dd>biblionet api username</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-ApiFetcher.html#property_fetchedItems">$fetchedItems</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_fetchedItems">$fetchedItems</a>
     <span>
-                &nbsp;: array&lt;string|int, <a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a>&gt;            </span>
+                &nbsp;: array&lt;string|int, <a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a>&gt;            </span>
 </dt>
-<dd>keep the array of fetched items as Biblionet\Models\Book objects</dd>
+<dd>keeps the array of fetched items as Book objects</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-ApiFetcher.html#property_logger">$logger</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_logger">$logger</a>
     <span>
-                &nbsp;: <a href="classes/Biblionet-Logger.html"><abbr title="\Biblionet\Logger">Logger</abbr></a>            </span>
+                &nbsp;: <a href="classes/takisrs-Biblionet-Logger.html"><abbr title="\takisrs\Biblionet\Logger">Logger</abbr></a>            </span>
 </dt>
 <dd>an instance of the logger class</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-ApiFetcher.html#property_resultsPerPage">$resultsPerPage</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_resultsPerPage">$resultsPerPage</a>
     <span>
                 &nbsp;: int            </span>
 </dt>
 <dd>the num of results that requested per call</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-ApiFetcher.html#method___construct">__construct()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
 <dd>ApiFetcher constructor</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-ApiFetcher.html#method_fetch">fetch()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_fetch">fetch()</a>
     <span>
-                        &nbsp;: <a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a>    </span>
+                        &nbsp;: <a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a>    </span>
 </dt>
 <dd>Fetch books from biblionet&#039;s api.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-ApiFetcher.html#method_fill">fill()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_fill">fill()</a>
     <span>
-                        &nbsp;: <a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a>    </span>
+                        &nbsp;: <a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a>    </span>
 </dt>
 <dd>Fill with extra data the already fetched items.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-ApiFetcher.html#method_filter">filter()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_filter">filter()</a>
     <span>
-                        &nbsp;: <a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a>    </span>
+                        &nbsp;: <a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a>    </span>
 </dt>
 <dd>Filter the already fetched items.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-ApiFetcher.html#method_getFetchedItems">getFetchedItems()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_getItems">getItems()</a>
     <span>
-                        &nbsp;: array&lt;string|int, <a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a>&gt;    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a>&gt;    </span>
 </dt>
 <dd>Returns the fetched items.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Biblionet-ApiFetcher.html#method__makeRequest">_makeRequest()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method__makeRequest">_makeRequest()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
 <dd>Makes the api request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Biblionet-ApiFetcher.html#method__mapResponseToObjects">_mapResponseToObjects()</a>
+    <a href="classes/takisrs-Biblionet-ApiFetcher.html#method__mapResponseToObjects">_mapResponseToObjects()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
@@ -266,18 +260,18 @@ It provides some helpful methods that simplify the communication with their api.
     <section class="phpdocumentor-constants">
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
-            <a href="classes/Biblionet-ApiFetcher.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/takisrs-Biblionet-ApiFetcher.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_FETCH_BY_ID">
         FETCH_BY_ID
-        <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_ID" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FETCH_BY_ID" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 </aside>
 
     
@@ -296,13 +290,13 @@ It provides some helpful methods that simplify the communication with their api.
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_FETCH_BY_MONTH">
         FETCH_BY_MONTH
-        <a href="classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 </aside>
 
     
@@ -321,13 +315,13 @@ It provides some helpful methods that simplify the communication with their api.
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_FILL_COMPANIES">
         FILL_COMPANIES
-        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_COMPANIES" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_COMPANIES" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 </aside>
 
     
@@ -346,13 +340,13 @@ It provides some helpful methods that simplify the communication with their api.
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_FILL_CONTRIBUTORS">
         FILL_CONTRIBUTORS
-        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 </aside>
 
     
@@ -369,40 +363,15 @@ It provides some helpful methods that simplify the communication with their api.
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_FILL_OPTIONS">
-        FILL_OPTIONS
-        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_OPTIONS" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">34</span>
-</aside>
-
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">FILL_OPTIONS</span>
-    = <span class="phpdocumentor-signature__default-value">[self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]</span>
-</code>
-
-
-    
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_FILL_SUBJECTS">
         FILL_SUBJECTS
-        <a href="classes/Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 </aside>
 
     
@@ -424,7 +393,7 @@ It provides some helpful methods that simplify the communication with their api.
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Biblionet-ApiFetcher.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/takisrs-Biblionet-ApiFetcher.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -435,14 +404,14 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="property_apiPassword">
         $apiPassword
-        <a href="classes/Biblionet-ApiFetcher.html#property_apiPassword" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_apiPassword" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 </aside>
 
         <p class="phpdocumentor-summary">biblionet api password</p>
@@ -467,14 +436,14 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="property_apiUsername">
         $apiUsername
-        <a href="classes/Biblionet-ApiFetcher.html#property_apiUsername" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_apiUsername" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 </aside>
 
         <p class="phpdocumentor-summary">biblionet api username</p>
@@ -499,21 +468,21 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="property_fetchedItems">
         $fetchedItems
-        <a href="classes/Biblionet-ApiFetcher.html#property_fetchedItems" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_fetchedItems" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 </aside>
 
-        <p class="phpdocumentor-summary">keep the array of fetched items as Biblionet\Models\Book objects</p>
+        <p class="phpdocumentor-summary">keeps the array of fetched items as Book objects</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">array&lt;string|int, <a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a>&gt;</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, <a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a>&gt;</span>
     <span class="phpdocumentor-signature__name">$fetchedItems</span>
      = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
@@ -529,7 +498,7 @@ It provides some helpful methods that simplify the communication with their api.
                     <span class="phpdocumentor-tag__name">see</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a></span>
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a></span>
                                         
                                                  <section class="phpdocumentor-description"><p>the model of Book</p>
 </section>
@@ -547,21 +516,21 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="property_logger">
         $logger
-        <a href="classes/Biblionet-ApiFetcher.html#property_logger" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_logger" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 </aside>
 
         <p class="phpdocumentor-summary">an instance of the logger class</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/Biblionet-Logger.html"><abbr title="\Biblionet\Logger">Logger</abbr></a></span>
+        <span class="phpdocumentor-signature__type"><a href="classes/takisrs-Biblionet-Logger.html"><abbr title="\takisrs\Biblionet\Logger">Logger</abbr></a></span>
     <span class="phpdocumentor-signature__name">$logger</span>
     </code>
 
@@ -577,7 +546,7 @@ It provides some helpful methods that simplify the communication with their api.
                     <span class="phpdocumentor-tag__name">see</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\Biblionet\Biblionet\Logger">Logger</abbr></span>
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/takisrs-Biblionet-Logger.html"><abbr title="\takisrs\Biblionet\Logger">Logger</abbr></a></span>
                                         
                                                  <section class="phpdocumentor-description"><p>the logger class</p>
 </section>
@@ -595,14 +564,14 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="property_resultsPerPage">
         $resultsPerPage
-        <a href="classes/Biblionet-ApiFetcher.html#property_resultsPerPage" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#property_resultsPerPage" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 </aside>
 
         <p class="phpdocumentor-summary">the num of results that requested per call</p>
@@ -623,7 +592,7 @@ It provides some helpful methods that simplify the communication with their api.
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Biblionet-ApiFetcher.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/takisrs-Biblionet-ApiFetcher.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -633,12 +602,12 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Biblionet-ApiFetcher.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 </aside>
 
         <p class="phpdocumentor-summary">ApiFetcher constructor</p>
@@ -715,22 +684,22 @@ It provides some helpful methods that simplify the communication with their api.
 >
     <h4 class="phpdocumentor-element__name" id="method_fetch">
         fetch()
-        <a href="classes/Biblionet-ApiFetcher.html#method_fetch" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_fetch" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">119</span>
+    <span class="phpdocumentor-element-found-in__line">117</span>
 </aside>
 
         <p class="phpdocumentor-summary">Fetch books from biblionet&#039;s api.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">fetch</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fetchType</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">ApiFetcher::FETCH_BY_MONTH</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|int|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param1</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param2</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">fetch</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fetchType</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">ApiFetcher::FETCH_BY_MONTH</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|int|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param1</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param2</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span></code>
 
         <section class="phpdocumentor-description"><p>You may call with method to fetch data for a specific book, or provide a month to fetch books published in that month.
-You may also provide two months to fetch books published in that range.</p>
+You may also provide two months to fetch books published in that period.</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -755,7 +724,7 @@ You may also provide two months to fetch books published in that range.</p>
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$param2</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Biblionet\date">date</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">NULL</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>Used only when fetchType = ApiFetcher::FETCH_BY_MONTH.</p>
@@ -767,7 +736,7 @@ You may also provide two months to fetch books published in that range.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -781,22 +750,23 @@ You may also provide two months to fetch books published in that range.</p>
 >
     <h4 class="phpdocumentor-element__name" id="method_fill">
         fill()
-        <a href="classes/Biblionet-ApiFetcher.html#method_fill" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_fill" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">200</span>
 </aside>
 
         <p class="phpdocumentor-summary">Fill with extra data the already fetched items.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">fill</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$types</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::FILL_OPTIONS</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">fill</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$types</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span></code>
 
         <section class="phpdocumentor-description"><p>You may use this method to fetch extra data from biblionet's api for the books that you have fetch with the fetch() method.
-This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow.</p>
+This method, depending the params, makes extra api requests to the api to fetch the requested data, so it may be slow.
+Use this method if you want to fetch book's subjects, contributors or companies.</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -804,9 +774,10 @@ This method, depending the params, makes extra api requests to the api to fetch 
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$types</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">self::FILL_OPTIONS</span>            </dt>
+                 = <span class="phpdocumentor-signature__argument__default-value">[self::FILL_CONTRIBUTORS, self::FILL_COMPANIES, self::FILL_SUBJECTS]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
+                    <section class="phpdocumentor-description"><p>Provide the extra types of data that you want to fetch from the api. Accepted values are: ApiFetcher::FILL_CONTRIBUTORS, ApiFetcher::FILL_COMPANIES, ApiFetcher::FILL_SUBJECTS</p>
+</section>
 
             </dd>
             </dl>
@@ -814,7 +785,7 @@ This method, depending the params, makes extra api requests to the api to fetch 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -828,21 +799,21 @@ This method, depending the params, makes extra api requests to the api to fetch 
 >
     <h4 class="phpdocumentor-element__name" id="method_filter">
         filter()
-        <a href="classes/Biblionet-ApiFetcher.html#method_filter" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_filter" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">255</span>
+    <span class="phpdocumentor-element-found-in__line">254</span>
 </aside>
 
         <p class="phpdocumentor-summary">Filter the already fetched items.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$operator</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&quot;==&quot;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$field</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$operator</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&quot;==&quot;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span></code>
 
-        <section class="phpdocumentor-description"><p>Use this method to narrow down book that have already been fetched.
+        <section class="phpdocumentor-description"><p>Use this method to narrow down the number of books that have already been fetched depending on specific filters.
 You may, for example, use this method to keep only the hardcopy books from the fetched items.</p>
 </section>
 
@@ -859,7 +830,7 @@ You may, for example, use this method to keep only the hardcopy books from the f
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$value</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>the value to search for in the property</p>
@@ -880,7 +851,7 @@ You may, for example, use this method to keep only the hardcopy books from the f
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Biblionet-ApiFetcher.html"><abbr title="\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/takisrs-Biblionet-ApiFetcher.html"><abbr title="\takisrs\Biblionet\ApiFetcher">ApiFetcher</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
@@ -892,21 +863,21 @@ You may, for example, use this method to keep only the hardcopy books from the f
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getFetchedItems">
-        getFetchedItems()
-        <a href="classes/Biblionet-ApiFetcher.html#method_getFetchedItems" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getItems">
+        getItems()
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method_getItems" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">100</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the fetched items.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFetchedItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a>&gt;</span></code>
+                <span class="phpdocumentor-signature__name">getItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a>&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>Use this method to get all the data that have been fetch from biblionet's api.</p>
 </section>
@@ -922,7 +893,7 @@ You may, for example, use this method to keep only the hardcopy books from the f
                     <span class="phpdocumentor-tag__name">see</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a></span>
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a></span>
                                         
                                                  <section class="phpdocumentor-description"><p>Book model class</p>
 </section>
@@ -931,7 +902,7 @@ You may, for example, use this method to keep only the hardcopy books from the f
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Biblionet-Models-Book.html"><abbr title="\Biblionet\Models\Book">Book</abbr></a>&gt;</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/takisrs-Biblionet-Models-Book.html"><abbr title="\takisrs\Biblionet\Models\Book">Book</abbr></a>&gt;</span>
             &mdash;
             <section class="phpdocumentor-description"><p>an array of Book objects</p>
 </section>
@@ -946,12 +917,12 @@ You may, for example, use this method to keep only the hardcopy books from the f
 >
     <h4 class="phpdocumentor-element__name" id="method__makeRequest">
         _makeRequest()
-        <a href="classes/Biblionet-ApiFetcher.html#method__makeRequest" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method__makeRequest" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">289</span>
+    <span class="phpdocumentor-element-found-in__line">288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Makes the api request.</p>
@@ -1002,12 +973,12 @@ You may, for example, use this method to keep only the hardcopy books from the f
 >
     <h4 class="phpdocumentor-element__name" id="method__mapResponseToObjects">
         _mapResponseToObjects()
-        <a href="classes/Biblionet-ApiFetcher.html#method__mapResponseToObjects" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#method__mapResponseToObjects" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/ApiFetcher.php"><a href="files/src-biblionet-apifetcher.html"><abbr title="src/Biblionet/ApiFetcher.php">ApiFetcher.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">327</span>
+    <span class="phpdocumentor-element-found-in__line">326</span>
 </aside>
 
         <p class="phpdocumentor-summary">Maps api response to the predefined models.</p>
@@ -1057,7 +1028,7 @@ You may, for example, use this method to keep only the hardcopy books from the f
 </section>
             </div>
         </div>
-        <a href="classes/Biblionet-ApiFetcher.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/takisrs-Biblionet-ApiFetcher.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

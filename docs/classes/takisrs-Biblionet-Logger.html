@@ -50,9 +50,9 @@
         
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/biblionet.html"><abbr title="\Biblionet">Biblionet</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/takisrs.html"><abbr title="\takisrs">takisrs</abbr></a></h4>
                 <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/biblionet-models.html"><abbr title="\Biblionet\Models">Models</abbr></a></li>
+                                            <li><a href="namespaces/takisrs-biblionet.html"><abbr title="\takisrs\Biblionet">Biblionet</abbr></a></li>
                                     </ul>
                         </section>
 
@@ -72,7 +72,8 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/biblionet.html">Biblionet</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/takisrs.html">takisrs</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/takisrs-biblionet.html">Biblionet</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
@@ -87,10 +88,10 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 </aside>
 
-            <p class="phpdocumentor-summary">A helper class to output some logs.</p>
+            <p class="phpdocumentor-summary">A helper class to output logs.</p>
 
     <section class="phpdocumentor-description"></section>
 
@@ -106,6 +107,15 @@
                 <dd class="phpdocumentor-tag-list__definition">
                                                                                 
                                                  <section class="phpdocumentor-description"><p>Add extra output options: file, mail etc</p>
+</section>
+
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">todo</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>handle errors with exit codes</p>
 </section>
 
                                     </dd>
@@ -132,70 +142,77 @@
 
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-Logger.html#constant_ERROR">ERROR</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#constant_ERROR">ERROR</a>
     <span>
         &nbsp;= &#039;error&#039;                    </span>
 </dt>
 <dd>Error log type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-Logger.html#constant_INFO">INFO</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#constant_INFO">INFO</a>
     <span>
         &nbsp;= &#039;info&#039;                    </span>
 </dt>
 <dd>Info log type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-Logger.html#constant_SUCCESS">SUCCESS</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#constant_SUCCESS">SUCCESS</a>
     <span>
         &nbsp;= &#039;success&#039;                    </span>
 </dt>
 <dd>Success log type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a href="classes/Biblionet-Logger.html#constant_WARNING">WARNING</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#constant_WARNING">WARNING</a>
     <span>
         &nbsp;= &#039;warning&#039;                    </span>
 </dt>
 <dd>Warning log type</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-Logger.html#property_colors">$colors</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#property_colors">$colors</a>
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd>The colors for each log type. For cli or web server output.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Biblionet-Logger.html#property_show">$show</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#property_debug">$debug</a>
+    <span>
+                &nbsp;: bool            </span>
+</dt>
+<dd>logs enabled or not</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/takisrs-Biblionet-Logger.html#property_show">$show</a>
     <span>
                 &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd>The log types to handle</dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Logger.html#method___construct">__construct()</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
 <dd>Constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Logger.html#method_disable">disable()</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#method_disable">disable()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
 <dd>Disables the logging</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Logger.html#method_enable">enable()</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#method_enable">enable()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
 <dd>Enables the logging</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Biblionet-Logger.html#method_log">log()</a>
+    <a href="classes/takisrs-Biblionet-Logger.html#method_log">log()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
@@ -209,18 +226,18 @@
     <section class="phpdocumentor-constants">
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
-            <a href="classes/Biblionet-Logger.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/takisrs-Biblionet-Logger.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_ERROR">
         ERROR
-        <a href="classes/Biblionet-Logger.html#constant_ERROR" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#constant_ERROR" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 </aside>
 
         <p class="phpdocumentor-summary">Error log type</p>
@@ -241,13 +258,13 @@
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_INFO">
         INFO
-        <a href="classes/Biblionet-Logger.html#constant_INFO" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#constant_INFO" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 </aside>
 
         <p class="phpdocumentor-summary">Info log type</p>
@@ -268,13 +285,13 @@
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_SUCCESS">
         SUCCESS
-        <a href="classes/Biblionet-Logger.html#constant_SUCCESS" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#constant_SUCCESS" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 </aside>
 
         <p class="phpdocumentor-summary">Success log type</p>
@@ -295,13 +312,13 @@
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_WARNING">
         WARNING
-        <a href="classes/Biblionet-Logger.html#constant_WARNING" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#constant_WARNING" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 </aside>
 
         <p class="phpdocumentor-summary">Warning log type</p>
@@ -325,7 +342,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Biblionet-Logger.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/takisrs-Biblionet-Logger.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -336,14 +353,14 @@
 >
     <h4 class="phpdocumentor-element__name" id="property_colors">
         $colors
-        <a href="classes/Biblionet-Logger.html#property_colors" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#property_colors" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 </aside>
 
         <p class="phpdocumentor-summary">The colors for each log type. For cli or web server output.</p>
@@ -366,16 +383,48 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_show">
-        $show
-        <a href="classes/Biblionet-Logger.html#property_show" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_debug">
+        $debug
+        <a href="classes/takisrs-Biblionet-Logger.html#property_debug" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
+</aside>
+
+        <p class="phpdocumentor-summary">logs enabled or not</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">bool</span>
+    <span class="phpdocumentor-signature__name">$debug</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_show">
+        $show
+        <a href="classes/takisrs-Biblionet-Logger.html#property_show" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
 </aside>
 
         <p class="phpdocumentor-summary">The log types to handle</p>
@@ -396,7 +445,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Biblionet-Logger.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/takisrs-Biblionet-Logger.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -406,12 +455,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Biblionet-Logger.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 </aside>
 
         <p class="phpdocumentor-summary">Constructor.</p>
@@ -452,12 +501,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_disable">
         disable()
-        <a href="classes/Biblionet-Logger.html#method_disable" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#method_disable" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">78</span>
+    <span class="phpdocumentor-element-found-in__line">85</span>
 </aside>
 
         <p class="phpdocumentor-summary">Disables the logging</p>
@@ -486,12 +535,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_enable">
         enable()
-        <a href="classes/Biblionet-Logger.html#method_enable" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#method_enable" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">68</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 </aside>
 
         <p class="phpdocumentor-summary">Enables the logging</p>
@@ -520,12 +569,12 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_log">
         log()
-        <a href="classes/Biblionet-Logger.html#method_log" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#method_log" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Biblionet/Logger.php"><a href="files/src-biblionet-logger.html"><abbr title="src/Biblionet/Logger.php">Logger.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">100</span>
 </aside>
 
         <p class="phpdocumentor-summary">Logs an entry.</p>
@@ -609,7 +658,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Biblionet-Logger.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/takisrs-Biblionet-Logger.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

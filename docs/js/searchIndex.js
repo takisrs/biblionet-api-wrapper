@@ -1,929 +1,934 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Biblionet\\ApiFetcher",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher",
             "name": "ApiFetcher",
-            "summary": "A\u0020wrapper\u0020php\u0020class\u0020for\u0020biblionet\u0020api.",
-            "url": "classes/Biblionet-ApiFetcher.html"
+            "summary": "A\u0020wrapper\u0020class\u0020for\u0020biblionet\u0027s\u0020api.",
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "ApiFetcher\u0020constructor",
-            "url": "classes/Biblionet-ApiFetcher.html#method___construct"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AgetFetchedItems\u0028\u0029",
-            "name": "getFetchedItems",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003AgetItems\u0028\u0029",
+            "name": "getItems",
             "summary": "Returns\u0020the\u0020fetched\u0020items.",
-            "url": "classes/Biblionet-ApiFetcher.html#method_getFetchedItems"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method_getItems"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003Afetch\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003Afetch\u0028\u0029",
             "name": "fetch",
             "summary": "Fetch\u0020books\u0020from\u0020biblionet\u0027s\u0020api.",
-            "url": "classes/Biblionet-ApiFetcher.html#method_fetch"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method_fetch"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003Afill\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003Afill\u0028\u0029",
             "name": "fill",
             "summary": "Fill\u0020with\u0020extra\u0020data\u0020the\u0020already\u0020fetched\u0020items.",
-            "url": "classes/Biblionet-ApiFetcher.html#method_fill"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method_fill"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003Afilter\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003Afilter\u0028\u0029",
             "name": "filter",
             "summary": "Filter\u0020the\u0020already\u0020fetched\u0020items.",
-            "url": "classes/Biblionet-ApiFetcher.html#method_filter"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method_filter"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A_makeRequest\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A_makeRequest\u0028\u0029",
             "name": "_makeRequest",
             "summary": "Makes\u0020the\u0020api\u0020request.",
-            "url": "classes/Biblionet-ApiFetcher.html#method__makeRequest"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method__makeRequest"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A_mapResponseToObjects\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A_mapResponseToObjects\u0028\u0029",
             "name": "_mapResponseToObjects",
             "summary": "Maps\u0020api\u0020response\u0020to\u0020the\u0020predefined\u0020models.",
-            "url": "classes/Biblionet-ApiFetcher.html#method__mapResponseToObjects"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#method__mapResponseToObjects"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFETCH_BY_MONTH",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003AFETCH_BY_MONTH",
             "name": "FETCH_BY_MONTH",
             "summary": "",
-            "url": "classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#constant_FETCH_BY_MONTH"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFETCH_BY_ID",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003AFETCH_BY_ID",
             "name": "FETCH_BY_ID",
             "summary": "",
-            "url": "classes/Biblionet-ApiFetcher.html#constant_FETCH_BY_ID"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#constant_FETCH_BY_ID"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_CONTRIBUTORS",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003AFILL_CONTRIBUTORS",
             "name": "FILL_CONTRIBUTORS",
             "summary": "",
-            "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_CONTRIBUTORS"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_COMPANIES",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003AFILL_COMPANIES",
             "name": "FILL_COMPANIES",
             "summary": "",
-            "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_COMPANIES"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_COMPANIES"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_SUBJECTS",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003AFILL_SUBJECTS",
             "name": "FILL_SUBJECTS",
             "summary": "",
-            "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#constant_FILL_SUBJECTS"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003AFILL_OPTIONS",
-            "name": "FILL_OPTIONS",
-            "summary": "",
-            "url": "classes/Biblionet-ApiFetcher.html#constant_FILL_OPTIONS"
-        },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A\u0024apiUsername",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A\u0024apiUsername",
             "name": "apiUsername",
             "summary": "biblionet\u0020api\u0020username",
-            "url": "classes/Biblionet-ApiFetcher.html#property_apiUsername"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#property_apiUsername"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A\u0024apiPassword",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A\u0024apiPassword",
             "name": "apiPassword",
             "summary": "biblionet\u0020api\u0020password",
-            "url": "classes/Biblionet-ApiFetcher.html#property_apiPassword"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#property_apiPassword"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A\u0024resultsPerPage",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A\u0024resultsPerPage",
             "name": "resultsPerPage",
             "summary": "the\u0020num\u0020of\u0020results\u0020that\u0020requested\u0020per\u0020call",
-            "url": "classes/Biblionet-ApiFetcher.html#property_resultsPerPage"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#property_resultsPerPage"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A\u0024logger",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A\u0024logger",
             "name": "logger",
             "summary": "an\u0020instance\u0020of\u0020the\u0020logger\u0020class",
-            "url": "classes/Biblionet-ApiFetcher.html#property_logger"
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#property_logger"
         },                {
-            "fqsen": "\\Biblionet\\ApiFetcher\u003A\u003A\u0024fetchedItems",
+            "fqsen": "\\takisrs\\Biblionet\\ApiFetcher\u003A\u003A\u0024fetchedItems",
             "name": "fetchedItems",
-            "summary": "keep\u0020the\u0020array\u0020of\u0020fetched\u0020items\u0020as\u0020Biblionet\\Models\\Book\u0020objects",
-            "url": "classes/Biblionet-ApiFetcher.html#property_fetchedItems"
+            "summary": "keeps\u0020the\u0020array\u0020of\u0020fetched\u0020items\u0020as\u0020Book\u0020objects",
+            "url": "classes/takisrs-Biblionet-ApiFetcher.html#property_fetchedItems"
         },                {
-            "fqsen": "\\Biblionet\\Helper",
+            "fqsen": "\\takisrs\\Biblionet\\Helper",
             "name": "Helper",
             "summary": "A\u0020helper\u0020class\u0020that\u0020provides\u0020some\u0020static\u0020functions.",
-            "url": "classes/Biblionet-Helper.html"
+            "url": "classes/takisrs-Biblionet-Helper.html"
         },                {
-            "fqsen": "\\Biblionet\\Helper\u003A\u003AisJson\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Helper\u003A\u003AisJson\u0028\u0029",
             "name": "isJson",
             "summary": "Checks\u0020if\u0020a\u0020string\u0020is\u0020json",
-            "url": "classes/Biblionet-Helper.html#method_isJson"
+            "url": "classes/takisrs-Biblionet-Helper.html#method_isJson"
         },                {
-            "fqsen": "\\Biblionet\\Helper\u003A\u003AisCli\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Helper\u003A\u003AisCli\u0028\u0029",
             "name": "isCli",
             "summary": "Checks\u0020if\u0020the\u0020script\u0020has\u0020been\u0020called\u0020through\u0020cli",
-            "url": "classes/Biblionet-Helper.html#method_isCli"
+            "url": "classes/takisrs-Biblionet-Helper.html#method_isCli"
         },                {
-            "fqsen": "\\Biblionet\\Helper\u003A\u003AgetPercentage\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Helper\u003A\u003AgetPercentage\u0028\u0029",
             "name": "getPercentage",
             "summary": "Calculates\u0020and\u0020return\u0020a\u0020percentage\u0020of\u0020completion",
-            "url": "classes/Biblionet-Helper.html#method_getPercentage"
+            "url": "classes/takisrs-Biblionet-Helper.html#method_getPercentage"
         },                {
-            "fqsen": "\\Biblionet\\Helper\u003A\u003Acompare\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Helper\u003A\u003Acompare\u0028\u0029",
             "name": "compare",
             "summary": "Makes\u0020a\u0020comparison\u0020between\u0020two\u0020variables",
-            "url": "classes/Biblionet-Helper.html#method_compare"
+            "url": "classes/takisrs-Biblionet-Helper.html#method_compare"
         },                {
-            "fqsen": "\\Biblionet\\Logger",
+            "fqsen": "\\takisrs\\Biblionet\\Logger",
             "name": "Logger",
-            "summary": "A\u0020helper\u0020class\u0020to\u0020output\u0020some\u0020logs.",
-            "url": "classes/Biblionet-Logger.html"
+            "summary": "A\u0020helper\u0020class\u0020to\u0020output\u0020logs.",
+            "url": "classes/takisrs-Biblionet-Logger.html"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Constructor.",
-            "url": "classes/Biblionet-Logger.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Logger.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003Aenable\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003Aenable\u0028\u0029",
             "name": "enable",
             "summary": "Enables\u0020the\u0020logging",
-            "url": "classes/Biblionet-Logger.html#method_enable"
+            "url": "classes/takisrs-Biblionet-Logger.html#method_enable"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003Adisable\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003Adisable\u0028\u0029",
             "name": "disable",
             "summary": "Disables\u0020the\u0020logging",
-            "url": "classes/Biblionet-Logger.html#method_disable"
+            "url": "classes/takisrs-Biblionet-Logger.html#method_disable"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003Alog\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003Alog\u0028\u0029",
             "name": "log",
             "summary": "Logs\u0020an\u0020entry.",
-            "url": "classes/Biblionet-Logger.html#method_log"
+            "url": "classes/takisrs-Biblionet-Logger.html#method_log"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003ASUCCESS",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003ASUCCESS",
             "name": "SUCCESS",
             "summary": "Success\u0020log\u0020type",
-            "url": "classes/Biblionet-Logger.html#constant_SUCCESS"
+            "url": "classes/takisrs-Biblionet-Logger.html#constant_SUCCESS"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003AERROR",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003AERROR",
             "name": "ERROR",
             "summary": "Error\u0020log\u0020type",
-            "url": "classes/Biblionet-Logger.html#constant_ERROR"
+            "url": "classes/takisrs-Biblionet-Logger.html#constant_ERROR"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003AINFO",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003AINFO",
             "name": "INFO",
             "summary": "Info\u0020log\u0020type",
-            "url": "classes/Biblionet-Logger.html#constant_INFO"
+            "url": "classes/takisrs-Biblionet-Logger.html#constant_INFO"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003AWARNING",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003AWARNING",
             "name": "WARNING",
             "summary": "Warning\u0020log\u0020type",
-            "url": "classes/Biblionet-Logger.html#constant_WARNING"
+            "url": "classes/takisrs-Biblionet-Logger.html#constant_WARNING"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003A\u0024show",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003A\u0024show",
             "name": "show",
             "summary": "The\u0020log\u0020types\u0020to\u0020handle",
-            "url": "classes/Biblionet-Logger.html#property_show"
+            "url": "classes/takisrs-Biblionet-Logger.html#property_show"
         },                {
-            "fqsen": "\\Biblionet\\Logger\u003A\u003A\u0024colors",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003A\u0024colors",
             "name": "colors",
             "summary": "The\u0020colors\u0020for\u0020each\u0020log\u0020type.\u0020For\u0020cli\u0020or\u0020web\u0020server\u0020output.",
-            "url": "classes/Biblionet-Logger.html#property_colors"
+            "url": "classes/takisrs-Biblionet-Logger.html#property_colors"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book",
+            "fqsen": "\\takisrs\\Biblionet\\Logger\u003A\u003A\u0024debug",
+            "name": "debug",
+            "summary": "logs\u0020enabled\u0020or\u0020not",
+            "url": "classes/takisrs-Biblionet-Logger.html#property_debug"
+        },                {
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book",
             "name": "Book",
             "summary": "The\u0020model\u0020class\u0020of\u0020Book",
-            "url": "classes/Biblionet-Models-Book.html"
+            "url": "classes/takisrs-Biblionet-Models-Book.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/Biblionet-Models-Book.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AsetSubjects\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AsetSubjects\u0028\u0029",
             "name": "setSubjects",
             "summary": "Init\u0020Book\u0027s\u0020subjects",
-            "url": "classes/Biblionet-Models-Book.html#method_setSubjects"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_setSubjects"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AsetContributors\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AsetContributors\u0028\u0029",
             "name": "setContributors",
             "summary": "Init\u0020Book\u0027s\u0020contributors",
-            "url": "classes/Biblionet-Models-Book.html#method_setContributors"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_setContributors"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AsetCompanies\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AsetCompanies\u0028\u0029",
             "name": "setCompanies",
             "summary": "Init\u0020Book\u0027s\u0020companies",
-            "url": "classes/Biblionet-Models-Book.html#method_setCompanies"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_setCompanies"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubjects\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSubjects\u0028\u0029",
             "name": "getSubjects",
             "summary": "Get\u0020the\u0020array\u0020of\u0020Subject\u0020objs",
-            "url": "classes/Biblionet-Models-Book.html#method_getSubjects"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSubjects"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetContributors\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetContributors\u0028\u0029",
             "name": "getContributors",
             "summary": "Get\u0020the\u0020array\u0020of\u0020Contributor\u0020objs",
-            "url": "classes/Biblionet-Models-Book.html#method_getContributors"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getContributors"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetCompanies\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetCompanies\u0028\u0029",
             "name": "getCompanies",
             "summary": "Get\u0020the\u0020array\u0020of\u0020Company\u0020objs",
-            "url": "classes/Biblionet-Models-Book.html#method_getCompanies"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getCompanies"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "Get\u0020the\u0020value\u0020of\u0020id",
-            "url": "classes/Biblionet-Models-Book.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetTitle\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetTitle\u0028\u0029",
             "name": "getTitle",
             "summary": "Get\u0020the\u0020value\u0020of\u0020title",
-            "url": "classes/Biblionet-Models-Book.html#method_getTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetCategory\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetCategory\u0028\u0029",
             "name": "getCategory",
             "summary": "Get\u0020the\u0020value\u0020of\u0020category",
-            "url": "classes/Biblionet-Models-Book.html#method_getCategory"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getCategory"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetImage\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetImage\u0028\u0029",
             "name": "getImage",
             "summary": "Get\u0020the\u0020value\u0020of\u0020image",
-            "url": "classes/Biblionet-Models-Book.html#method_getImage"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getImage"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubtitle\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSubtitle\u0028\u0029",
             "name": "getSubtitle",
             "summary": "Get\u0020the\u0020value\u0020of\u0020subtitle",
-            "url": "classes/Biblionet-Models-Book.html#method_getSubtitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSubtitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetAlternativeTitle\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetAlternativeTitle\u0028\u0029",
             "name": "getAlternativeTitle",
             "summary": "Get\u0020the\u0020value\u0020of\u0020alternativeTitle",
-            "url": "classes/Biblionet-Models-Book.html#method_getAlternativeTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getAlternativeTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetOriginalTitle\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetOriginalTitle\u0028\u0029",
             "name": "getOriginalTitle",
             "summary": "Get\u0020the\u0020value\u0020of\u0020originalTitle",
-            "url": "classes/Biblionet-Models-Book.html#method_getOriginalTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getOriginalTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetIsbn\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetIsbn\u0028\u0029",
             "name": "getIsbn",
             "summary": "Get\u0020the\u0020value\u0020of\u0020isbn",
-            "url": "classes/Biblionet-Models-Book.html#method_getIsbn"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getIsbn"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetIsbn2\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetIsbn2\u0028\u0029",
             "name": "getIsbn2",
             "summary": "Get\u0020the\u0020value\u0020of\u0020isbn2",
-            "url": "classes/Biblionet-Models-Book.html#method_getIsbn2"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getIsbn2"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetIsbn3\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetIsbn3\u0028\u0029",
             "name": "getIsbn3",
             "summary": "Get\u0020the\u0020value\u0020of\u0020isbn3",
-            "url": "classes/Biblionet-Models-Book.html#method_getIsbn3"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getIsbn3"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetPublisher\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetPublisher\u0028\u0029",
             "name": "getPublisher",
             "summary": "Get\u0020the\u0020value\u0020of\u0020publisher",
-            "url": "classes/Biblionet-Models-Book.html#method_getPublisher"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getPublisher"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetWriter\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetWriter\u0028\u0029",
             "name": "getWriter",
             "summary": "Get\u0020the\u0020value\u0020of\u0020writer",
-            "url": "classes/Biblionet-Models-Book.html#method_getWriter"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getWriter"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetFirstPublishDate\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetFirstPublishDate\u0028\u0029",
             "name": "getFirstPublishDate",
             "summary": "Get\u0020the\u0020value\u0020of\u0020firstPublishDate",
-            "url": "classes/Biblionet-Models-Book.html#method_getFirstPublishDate"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getFirstPublishDate"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetCurrentPublishDate\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetCurrentPublishDate\u0028\u0029",
             "name": "getCurrentPublishDate",
             "summary": "Get\u0020the\u0020value\u0020of\u0020currentPublishDate",
-            "url": "classes/Biblionet-Models-Book.html#method_getCurrentPublishDate"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getCurrentPublishDate"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetFuturePublishDate\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetFuturePublishDate\u0028\u0029",
             "name": "getFuturePublishDate",
             "summary": "Get\u0020the\u0020value\u0020of\u0020futurePublishDate",
-            "url": "classes/Biblionet-Models-Book.html#method_getFuturePublishDate"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getFuturePublishDate"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetPlace\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetPlace\u0028\u0029",
             "name": "getPlace",
             "summary": "Get\u0020the\u0020value\u0020of\u0020place",
-            "url": "classes/Biblionet-Models-Book.html#method_getPlace"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getPlace"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetType\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetType\u0028\u0029",
             "name": "getType",
             "summary": "Get\u0020the\u0020value\u0020of\u0020type",
-            "url": "classes/Biblionet-Models-Book.html#method_getType"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getType"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetEditionNo\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetEditionNo\u0028\u0029",
             "name": "getEditionNo",
             "summary": "Get\u0020the\u0020value\u0020of\u0020editionNo",
-            "url": "classes/Biblionet-Models-Book.html#method_getEditionNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getEditionNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetCover\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetCover\u0028\u0029",
             "name": "getCover",
             "summary": "Get\u0020the\u0020value\u0020of\u0020cover",
-            "url": "classes/Biblionet-Models-Book.html#method_getCover"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getCover"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetDimensions\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetDimensions\u0028\u0029",
             "name": "getDimensions",
             "summary": "Get\u0020the\u0020value\u0020of\u0020dimensions",
-            "url": "classes/Biblionet-Models-Book.html#method_getDimensions"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getDimensions"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetPageNo\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetPageNo\u0028\u0029",
             "name": "getPageNo",
             "summary": "Get\u0020the\u0020value\u0020of\u0020pageNo",
-            "url": "classes/Biblionet-Models-Book.html#method_getPageNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getPageNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetAvailability\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetAvailability\u0028\u0029",
             "name": "getAvailability",
             "summary": "Get\u0020the\u0020value\u0020of\u0020availability",
-            "url": "classes/Biblionet-Models-Book.html#method_getAvailability"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getAvailability"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetPrice\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetPrice\u0028\u0029",
             "name": "getPrice",
             "summary": "Get\u0020the\u0020value\u0020of\u0020price\u0020\u0028euros\u0029",
-            "url": "classes/Biblionet-Models-Book.html#method_getPrice"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getPrice"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetVat\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetVat\u0028\u0029",
             "name": "getVat",
             "summary": "Get\u0020the\u0020value\u0020of\u0020vat\u0020\u0028percentage\u0029",
-            "url": "classes/Biblionet-Models-Book.html#method_getVat"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getVat"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetWeight\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetWeight\u0028\u0029",
             "name": "getWeight",
             "summary": "Get\u0020the\u0020value\u0020of\u0020weight\u0020\u0028grams\u0029",
-            "url": "classes/Biblionet-Models-Book.html#method_getWeight"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getWeight"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetAgeFrom\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetAgeFrom\u0028\u0029",
             "name": "getAgeFrom",
             "summary": "Get\u0020the\u0020value\u0020of\u0020ageFrom",
-            "url": "classes/Biblionet-Models-Book.html#method_getAgeFrom"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getAgeFrom"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetAgeTo\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetAgeTo\u0028\u0029",
             "name": "getAgeTo",
             "summary": "Get\u0020the\u0020value\u0020of\u0020ageTo",
-            "url": "classes/Biblionet-Models-Book.html#method_getAgeTo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getAgeTo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSummary\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSummary\u0028\u0029",
             "name": "getSummary",
             "summary": "Get\u0020the\u0020value\u0020of\u0020summary",
-            "url": "classes/Biblionet-Models-Book.html#method_getSummary"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSummary"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetLanguage\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetLanguage\u0028\u0029",
             "name": "getLanguage",
             "summary": "Get\u0020the\u0020value\u0020of\u0020language",
-            "url": "classes/Biblionet-Models-Book.html#method_getLanguage"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getLanguage"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetOriginalLanguage\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetOriginalLanguage\u0028\u0029",
             "name": "getOriginalLanguage",
             "summary": "Get\u0020the\u0020value\u0020of\u0020originalLanguage",
-            "url": "classes/Biblionet-Models-Book.html#method_getOriginalLanguage"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getOriginalLanguage"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetTranslatedLanguage\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetTranslatedLanguage\u0028\u0029",
             "name": "getTranslatedLanguage",
             "summary": "Get\u0020the\u0020value\u0020of\u0020translatedLanguage",
-            "url": "classes/Biblionet-Models-Book.html#method_getTranslatedLanguage"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getTranslatedLanguage"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSeries\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSeries\u0028\u0029",
             "name": "getSeries",
             "summary": "Get\u0020the\u0020value\u0020of\u0020series",
-            "url": "classes/Biblionet-Models-Book.html#method_getSeries"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSeries"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetMultiVolumeTitle\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetMultiVolumeTitle\u0028\u0029",
             "name": "getMultiVolumeTitle",
             "summary": "Get\u0020the\u0020value\u0020of\u0020multiVolumeTitle",
-            "url": "classes/Biblionet-Models-Book.html#method_getMultiVolumeTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getMultiVolumeTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetVolumeNo\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetVolumeNo\u0028\u0029",
             "name": "getVolumeNo",
             "summary": "Get\u0020the\u0020value\u0020of\u0020volumeNo",
-            "url": "classes/Biblionet-Models-Book.html#method_getVolumeNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getVolumeNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSpecifications\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSpecifications\u0028\u0029",
             "name": "getSpecifications",
             "summary": "Get\u0020the\u0020value\u0020of\u0020specifications",
-            "url": "classes/Biblionet-Models-Book.html#method_getSpecifications"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSpecifications"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetWebAddress\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetWebAddress\u0028\u0029",
             "name": "getWebAddress",
             "summary": "Get\u0020the\u0020value\u0020of\u0020webAddress",
-            "url": "classes/Biblionet-Models-Book.html#method_getWebAddress"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getWebAddress"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetComments\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetComments\u0028\u0029",
             "name": "getComments",
             "summary": "Get\u0020the\u0020value\u0020of\u0020comments",
-            "url": "classes/Biblionet-Models-Book.html#method_getComments"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getComments"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetLastUpdated\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetLastUpdated\u0028\u0029",
             "name": "getLastUpdated",
             "summary": "Get\u0020the\u0020value\u0020of\u0020lastUpdated",
-            "url": "classes/Biblionet-Models-Book.html#method_getLastUpdated"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getLastUpdated"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSeriesNo\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSeriesNo\u0028\u0029",
             "name": "getSeriesNo",
             "summary": "Get\u0020mapped\u0020to\u0020SeriesNo",
-            "url": "classes/Biblionet-Models-Book.html#method_getSeriesNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSeriesNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubSeries\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSubSeries\u0028\u0029",
             "name": "getSubSeries",
             "summary": "Get\u0020mapped\u0020to\u0020SubSeries",
-            "url": "classes/Biblionet-Models-Book.html#method_getSubSeries"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSubSeries"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetSubSeriesNo\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetSubSeriesNo\u0028\u0029",
             "name": "getSubSeriesNo",
             "summary": "Get\u0020mapped\u0020to\u0020SubSeriesNo",
-            "url": "classes/Biblionet-Models-Book.html#method_getSubSeriesNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getSubSeriesNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003AgetVolumeCount\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003AgetVolumeCount\u0028\u0029",
             "name": "getVolumeCount",
             "summary": "Get\u0020the\u0020value\u0020of\u0020volumeCount",
-            "url": "classes/Biblionet-Models-Book.html#method_getVolumeCount"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#method_getVolumeCount"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024id",
             "name": "id",
             "summary": "Mapped\u0020to\u0020TitlesID",
-            "url": "classes/Biblionet-Models-Book.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024title",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024title",
             "name": "title",
             "summary": "Mapped\u0020to\u0020Title",
-            "url": "classes/Biblionet-Models-Book.html#property_title"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_title"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024image",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024image",
             "name": "image",
             "summary": "Mapped\u0020to\u0020CoverImage",
-            "url": "classes/Biblionet-Models-Book.html#property_image"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_image"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subtitle",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024subtitle",
             "name": "subtitle",
             "summary": "Mapped\u0020to\u0020Subtitle",
-            "url": "classes/Biblionet-Models-Book.html#property_subtitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_subtitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024alternativeTitle",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024alternativeTitle",
             "name": "alternativeTitle",
             "summary": "Mapped\u0020to\u0020AlternativeTitle",
-            "url": "classes/Biblionet-Models-Book.html#property_alternativeTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_alternativeTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024originalTitle",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024originalTitle",
             "name": "originalTitle",
             "summary": "Mapped\u0020to\u0020OriginalTitle",
-            "url": "classes/Biblionet-Models-Book.html#property_originalTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_originalTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn",
             "name": "isbn",
             "summary": "Mapped\u0020to\u0020ISBN",
-            "url": "classes/Biblionet-Models-Book.html#property_isbn"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_isbn"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn2",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn2",
             "name": "isbn2",
             "summary": "Mapped\u0020to\u0020ISBN_2",
-            "url": "classes/Biblionet-Models-Book.html#property_isbn2"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_isbn2"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn3",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024isbn3",
             "name": "isbn3",
             "summary": "Mapped\u0020to\u0020ISBN_3",
-            "url": "classes/Biblionet-Models-Book.html#property_isbn3"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_isbn3"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024publisher",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024publisher",
             "name": "publisher",
             "summary": "Mapped\u0020to\u0020Publisher,\u0020PublisherID",
-            "url": "classes/Biblionet-Models-Book.html#property_publisher"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_publisher"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024writer",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024writer",
             "name": "writer",
             "summary": "Mapped\u0020to\u0020Writer,\u0020WriterID,\u0020WriterName",
-            "url": "classes/Biblionet-Models-Book.html#property_writer"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_writer"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024firstPublishDate",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024firstPublishDate",
             "name": "firstPublishDate",
             "summary": "Mapped\u0020to\u0020FirstPublishDate",
-            "url": "classes/Biblionet-Models-Book.html#property_firstPublishDate"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_firstPublishDate"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024currentPublishDate",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024currentPublishDate",
             "name": "currentPublishDate",
             "summary": "Mapped\u0020to\u0020CurrentPublishDate",
-            "url": "classes/Biblionet-Models-Book.html#property_currentPublishDate"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_currentPublishDate"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024futurePublishDate",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024futurePublishDate",
             "name": "futurePublishDate",
             "summary": "Mapped\u0020to\u0020FuturePublishDate",
-            "url": "classes/Biblionet-Models-Book.html#property_futurePublishDate"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_futurePublishDate"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024place",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024place",
             "name": "place",
             "summary": "Mapped\u0020to\u0020PlaceID,\u0020Place",
-            "url": "classes/Biblionet-Models-Book.html#property_place"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_place"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024type",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024type",
             "name": "type",
             "summary": "Mapped\u0020to\u0020TitleType",
-            "url": "classes/Biblionet-Models-Book.html#property_type"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_type"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024editionNo",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024editionNo",
             "name": "editionNo",
             "summary": "Mapped\u0020to\u0020EditionNo",
-            "url": "classes/Biblionet-Models-Book.html#property_editionNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_editionNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024cover",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024cover",
             "name": "cover",
             "summary": "Mapped\u0020to\u0020Cover",
-            "url": "classes/Biblionet-Models-Book.html#property_cover"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_cover"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024dimensions",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024dimensions",
             "name": "dimensions",
             "summary": "Mapped\u0020to\u0020Dimensions",
-            "url": "classes/Biblionet-Models-Book.html#property_dimensions"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_dimensions"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024pageNo",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024pageNo",
             "name": "pageNo",
             "summary": "Mapped\u0020to\u0020PageNo",
-            "url": "classes/Biblionet-Models-Book.html#property_pageNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_pageNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024availability",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024availability",
             "name": "availability",
             "summary": "Mapped\u0020to\u0020Availability",
-            "url": "classes/Biblionet-Models-Book.html#property_availability"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_availability"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024price",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024price",
             "name": "price",
             "summary": "Mapped\u0020to\u0020Price",
-            "url": "classes/Biblionet-Models-Book.html#property_price"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_price"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024vat",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024vat",
             "name": "vat",
             "summary": "Mapped\u0020to\u0020VAT",
-            "url": "classes/Biblionet-Models-Book.html#property_vat"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_vat"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024weight",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024weight",
             "name": "weight",
             "summary": "Mapped\u0020to\u0020Weight",
-            "url": "classes/Biblionet-Models-Book.html#property_weight"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_weight"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024ageFrom",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024ageFrom",
             "name": "ageFrom",
             "summary": "Mapped\u0020to\u0020AgeFrom",
-            "url": "classes/Biblionet-Models-Book.html#property_ageFrom"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_ageFrom"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024ageTo",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024ageTo",
             "name": "ageTo",
             "summary": "Mapped\u0020to\u0020AgeTo",
-            "url": "classes/Biblionet-Models-Book.html#property_ageTo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_ageTo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024summary",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024summary",
             "name": "summary",
             "summary": "Mapped\u0020to\u0020Summary",
-            "url": "classes/Biblionet-Models-Book.html#property_summary"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_summary"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024language",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024language",
             "name": "language",
             "summary": "Mapped\u0020to\u0020LanguageID,\u0020Language",
-            "url": "classes/Biblionet-Models-Book.html#property_language"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_language"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024originalLanguage",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024originalLanguage",
             "name": "originalLanguage",
             "summary": "Mapped\u0020to\u0020LanguageOriginalID,\u0020LanguageOriginal",
-            "url": "classes/Biblionet-Models-Book.html#property_originalLanguage"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_originalLanguage"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024translatedLanguage",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024translatedLanguage",
             "name": "translatedLanguage",
             "summary": "Mapped\u0020to\u0020LanguageTranslatedFromID,\u0020LanguageTranslatedFrom",
-            "url": "classes/Biblionet-Models-Book.html#property_translatedLanguage"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_translatedLanguage"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024series",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024series",
             "name": "series",
             "summary": "Mapped\u0020to\u0020Series",
-            "url": "classes/Biblionet-Models-Book.html#property_series"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_series"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024seriesNo",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024seriesNo",
             "name": "seriesNo",
             "summary": "Mapped\u0020to\u0020SeriesNo",
-            "url": "classes/Biblionet-Models-Book.html#property_seriesNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_seriesNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subSeries",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024subSeries",
             "name": "subSeries",
             "summary": "Mapped\u0020to\u0020SubSeries",
-            "url": "classes/Biblionet-Models-Book.html#property_subSeries"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_subSeries"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subSeriesNo",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024subSeriesNo",
             "name": "subSeriesNo",
             "summary": "Mapped\u0020to\u0020SubSeriesNo",
-            "url": "classes/Biblionet-Models-Book.html#property_subSeriesNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_subSeriesNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024multiVolumeTitle",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024multiVolumeTitle",
             "name": "multiVolumeTitle",
             "summary": "Mapped\u0020to\u0020MultiVolumeTitle",
-            "url": "classes/Biblionet-Models-Book.html#property_multiVolumeTitle"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_multiVolumeTitle"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024volumeNo",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024volumeNo",
             "name": "volumeNo",
             "summary": "Mapped\u0020to\u0020VolumeNo",
-            "url": "classes/Biblionet-Models-Book.html#property_volumeNo"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_volumeNo"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024volumeCount",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024volumeCount",
             "name": "volumeCount",
             "summary": "Mapped\u0020to\u0020VolumeCount",
-            "url": "classes/Biblionet-Models-Book.html#property_volumeCount"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_volumeCount"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024specifications",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024specifications",
             "name": "specifications",
             "summary": "Mapped\u0020to\u0020Specifications",
-            "url": "classes/Biblionet-Models-Book.html#property_specifications"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_specifications"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024webAddress",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024webAddress",
             "name": "webAddress",
             "summary": "Mapped\u0020to\u0020WebAddress",
-            "url": "classes/Biblionet-Models-Book.html#property_webAddress"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_webAddress"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024comments",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024comments",
             "name": "comments",
             "summary": "Mapped\u0020to\u0020Comments",
-            "url": "classes/Biblionet-Models-Book.html#property_comments"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_comments"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024category",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024category",
             "name": "category",
             "summary": "Mapped\u0020to\u0020CategoryID,\u0020Category",
-            "url": "classes/Biblionet-Models-Book.html#property_category"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_category"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024lastUpdated",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024lastUpdated",
             "name": "lastUpdated",
             "summary": "Mapped\u0020to\u0020LastUpdate",
-            "url": "classes/Biblionet-Models-Book.html#property_lastUpdated"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_lastUpdated"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024subjects",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024subjects",
             "name": "subjects",
             "summary": "",
-            "url": "classes/Biblionet-Models-Book.html#property_subjects"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_subjects"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024contributors",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024contributors",
             "name": "contributors",
             "summary": "",
-            "url": "classes/Biblionet-Models-Book.html#property_contributors"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_contributors"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Book\u003A\u003A\u0024companies",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Book\u003A\u003A\u0024companies",
             "name": "companies",
             "summary": "",
-            "url": "classes/Biblionet-Models-Book.html#property_companies"
+            "url": "classes/takisrs-Biblionet-Models-Book.html#property_companies"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Category",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Category",
             "name": "Category",
             "summary": "The\u0020model\u0020class\u0020of\u0020Category",
-            "url": "classes/Biblionet-Models-Category.html"
+            "url": "classes/takisrs-Biblionet-Models-Category.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Category\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Category\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "category\u0020constructor",
-            "url": "classes/Biblionet-Models-Category.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Category.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Category\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Category\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "get\u0020the\u0020id\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Category.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Category.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Category\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Category\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "get\u0020the\u0020name\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Category.html#method_getName"
+            "url": "classes/takisrs-Biblionet-Models-Category.html#method_getName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Category\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Category\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/Biblionet-Models-Category.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Category.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Category\u003A\u003A\u0024name",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Category\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/Biblionet-Models-Category.html#property_name"
+            "url": "classes/takisrs-Biblionet-Models-Category.html#property_name"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company",
             "name": "Company",
             "summary": "The\u0020model\u0020class\u0020of\u0020Company\u0020\u0028ex.\u0020publisher\u0029",
-            "url": "classes/Biblionet-Models-Company.html"
+            "url": "classes/takisrs-Biblionet-Models-Company.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Company\u0020constructor",
-            "url": "classes/Biblionet-Models-Company.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "Get\u0020the\u0020id\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Company.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Company.html#method_getName"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#method_getName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003AgetTypeId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003AgetTypeId\u0028\u0029",
             "name": "getTypeId",
             "summary": "Get\u0020the\u0020type\u0020id\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Company.html#method_getTypeId"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#method_getTypeId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003AgetTypeName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003AgetTypeName\u0028\u0029",
             "name": "getTypeName",
             "summary": "Get\u0020the\u0020type\u0020name\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Company.html#method_getTypeName"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#method_getTypeName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003AgetOrder\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003AgetOrder\u0028\u0029",
             "name": "getOrder",
             "summary": "Get\u0020the\u0020order\u0020of\u0020the\u0020category",
-            "url": "classes/Biblionet-Models-Company.html#method_getOrder"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#method_getOrder"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/Biblionet-Models-Company.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003A\u0024name",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/Biblionet-Models-Company.html#property_name"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#property_name"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003A\u0024typeId",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003A\u0024typeId",
             "name": "typeId",
             "summary": "",
-            "url": "classes/Biblionet-Models-Company.html#property_typeId"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#property_typeId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003A\u0024typeName",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003A\u0024typeName",
             "name": "typeName",
             "summary": "",
-            "url": "classes/Biblionet-Models-Company.html#property_typeName"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#property_typeName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Company\u003A\u003A\u0024order",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Company\u003A\u003A\u0024order",
             "name": "order",
             "summary": "",
-            "url": "classes/Biblionet-Models-Company.html#property_order"
+            "url": "classes/takisrs-Biblionet-Models-Company.html#property_order"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor",
             "name": "Contributor",
             "summary": "The\u0020model\u0020class\u0020of\u0020Contributor\u0020\u0028ex.\u0020writer\u0029",
-            "url": "classes/Biblionet-Models-Contributor.html"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Contributor\u0020constructor",
-            "url": "classes/Biblionet-Models-Contributor.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "Get\u0020the\u0020id\u0020of\u0020the\u0020contributor",
-            "url": "classes/Biblionet-Models-Contributor.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020contributor",
-            "url": "classes/Biblionet-Models-Contributor.html#method_getName"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#method_getName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003AgetTypeId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003AgetTypeId\u0028\u0029",
             "name": "getTypeId",
             "summary": "Get\u0020the\u0020type\u0020id\u0020of\u0020the\u0020contributor",
-            "url": "classes/Biblionet-Models-Contributor.html#method_getTypeId"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#method_getTypeId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003AgetTypeName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003AgetTypeName\u0028\u0029",
             "name": "getTypeName",
             "summary": "Get\u0020the\u0020type\u0020name\u0020of\u0020the\u0020contributor",
-            "url": "classes/Biblionet-Models-Contributor.html#method_getTypeName"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#method_getTypeName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003AgetOrder\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003AgetOrder\u0028\u0029",
             "name": "getOrder",
             "summary": "Get\u0020the\u0020order\u0020of\u0020the\u0020contributor",
-            "url": "classes/Biblionet-Models-Contributor.html#method_getOrder"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#method_getOrder"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/Biblionet-Models-Contributor.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003A\u0024name",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/Biblionet-Models-Contributor.html#property_name"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#property_name"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003A\u0024typeId",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003A\u0024typeId",
             "name": "typeId",
             "summary": "",
-            "url": "classes/Biblionet-Models-Contributor.html#property_typeId"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#property_typeId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003A\u0024typeName",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003A\u0024typeName",
             "name": "typeName",
             "summary": "",
-            "url": "classes/Biblionet-Models-Contributor.html#property_typeName"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#property_typeName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Contributor\u003A\u003A\u0024order",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Contributor\u003A\u003A\u0024order",
             "name": "order",
             "summary": "",
-            "url": "classes/Biblionet-Models-Contributor.html#property_order"
+            "url": "classes/takisrs-Biblionet-Models-Contributor.html#property_order"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Language",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Language",
             "name": "Language",
             "summary": "The\u0020model\u0020class\u0020of\u0020Language",
-            "url": "classes/Biblionet-Models-Language.html"
+            "url": "classes/takisrs-Biblionet-Models-Language.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Language\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Language\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "The\u0020language\u0020constructor",
-            "url": "classes/Biblionet-Models-Language.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Language.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Language\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Language\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "Get\u0020the\u0020id\u0020of\u0020the\u0020language",
-            "url": "classes/Biblionet-Models-Language.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Language.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Language\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Language\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020language",
-            "url": "classes/Biblionet-Models-Language.html#method_getName"
+            "url": "classes/takisrs-Biblionet-Models-Language.html#method_getName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Language\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Language\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/Biblionet-Models-Language.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Language.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Language\u003A\u003A\u0024name",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Language\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/Biblionet-Models-Language.html#property_name"
+            "url": "classes/takisrs-Biblionet-Models-Language.html#property_name"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Place",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Place",
             "name": "Place",
             "summary": "The\u0020model\u0020class\u0020of\u0020Place",
-            "url": "classes/Biblionet-Models-Place.html"
+            "url": "classes/takisrs-Biblionet-Models-Place.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Place\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Place\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Place\u0020constructor",
-            "url": "classes/Biblionet-Models-Place.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Place.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Place\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Place\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "Get\u0020the\u0020id\u0020of\u0020the\u0020place",
-            "url": "classes/Biblionet-Models-Place.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Place.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Place\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Place\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020place",
-            "url": "classes/Biblionet-Models-Place.html#method_getName"
+            "url": "classes/takisrs-Biblionet-Models-Place.html#method_getName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Place\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Place\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/Biblionet-Models-Place.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Place.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Place\u003A\u003A\u0024name",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Place\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/Biblionet-Models-Place.html#property_name"
+            "url": "classes/takisrs-Biblionet-Models-Place.html#property_name"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject",
             "name": "Subject",
             "summary": "The\u0020model\u0020class\u0020of\u0020Subject",
-            "url": "classes/Biblionet-Models-Subject.html"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Subject\u0020constructor",
-            "url": "classes/Biblionet-Models-Subject.html#method___construct"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#method___construct"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "Get\u0020the\u0020id\u0020of\u0020subject",
-            "url": "classes/Biblionet-Models-Subject.html#method_getId"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#method_getId"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "Get\u0020the\u0020name\u0020of\u0020subject",
-            "url": "classes/Biblionet-Models-Subject.html#method_getName"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#method_getName"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003AgetDdc\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003AgetDdc\u0028\u0029",
             "name": "getDdc",
             "summary": "Get\u0020the\u0020DDC\u0020of\u0020subject",
-            "url": "classes/Biblionet-Models-Subject.html#method_getDdc"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#method_getDdc"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003AgetOrder\u0028\u0029",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003AgetOrder\u0028\u0029",
             "name": "getOrder",
             "summary": "Get\u0020the\u0020order\u0020of\u0020subject",
-            "url": "classes/Biblionet-Models-Subject.html#method_getOrder"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#method_getOrder"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003A\u0024id",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/Biblionet-Models-Subject.html#property_id"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#property_id"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003A\u0024name",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/Biblionet-Models-Subject.html#property_name"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#property_name"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003A\u0024ddc",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003A\u0024ddc",
             "name": "ddc",
             "summary": "",
-            "url": "classes/Biblionet-Models-Subject.html#property_ddc"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#property_ddc"
         },                {
-            "fqsen": "\\Biblionet\\Models\\Subject\u003A\u003A\u0024order",
+            "fqsen": "\\takisrs\\Biblionet\\Models\\Subject\u003A\u003A\u0024order",
             "name": "order",
             "summary": "",
-            "url": "classes/Biblionet-Models-Subject.html#property_order"
+            "url": "classes/takisrs-Biblionet-Models-Subject.html#property_order"
         },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\Biblionet",
+            "fqsen": "\\takisrs\\Biblionet",
             "name": "Biblionet",
             "summary": "",
-            "url": "namespaces/biblionet.html"
+            "url": "namespaces/takisrs-biblionet.html"
         },                {
-            "fqsen": "\\Biblionet\\Models",
+            "fqsen": "\\takisrs",
+            "name": "takisrs",
+            "summary": "",
+            "url": "namespaces/takisrs.html"
+        },                {
+            "fqsen": "\\takisrs\\Biblionet\\Models",
             "name": "Models",
             "summary": "",
-            "url": "namespaces/biblionet-models.html"
+            "url": "namespaces/takisrs-biblionet-models.html"
         }            ]
 );
